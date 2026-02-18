@@ -152,7 +152,7 @@ public class RoundManager : MonoBehaviour
                 break;
             }
 
-            if (isPlayersTurn && currentCardInteger > playerCards.Length)
+            if (isPlayersTurn && currentCardInteger >= playerCards.Length)
             {
                 isPlayersTurn = false;
             }

@@ -587,7 +587,7 @@ public class PassiveManager : MonoBehaviour
                 {
                     if (friendlies[c].CardValues.resistanceType != ResistanceType.TimeLimit)
                     {
-                        if (lowestHP == null || lowestValue < friendlies[c].ResistanceValue)
+                        if (lowestHP == null || lowestValue > friendlies[c].ResistanceValue)
                         {
                             lowestHP = friendlies[c];
                             lowestValue = friendlies[c].ResistanceValue;

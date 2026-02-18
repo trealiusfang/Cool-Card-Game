@@ -21,7 +21,7 @@ public class EnemyDeckHandler : MonoBehaviour
     CardValues RandomFromPile()
     {
         if (EnemyCardPile.Count == 0) return null;
-        int r = Mathf.FloorToInt(Random.Range(0f, EnemyCardPile.Count));
+        int r = Mathf.FloorToInt(Random.Range(0, EnemyCardPile.Count));
         if (r == EnemyCardPile.Count) r -= 1;
 
         return EnemyCardPile[r];

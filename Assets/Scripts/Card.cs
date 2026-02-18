@@ -648,7 +648,7 @@ public class Card : MonoBehaviour
         List<Passive> passives = Passives.ToList();
         passives.Insert(integer,newPassive);
 
-        Mathf.Clamp(integer, 0, passiveValue.Length);
+        integer = Mathf.Clamp(integer, 0, passiveValue.Length);
         List<int> _passiveValue = passiveValue.ToList();
         _passiveValue.Insert(integer, newPassive.PassiveValue);
 
