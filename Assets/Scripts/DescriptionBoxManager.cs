@@ -139,9 +139,13 @@ public class DescriptionBoxManager : MonoBehaviour
         for (int i = 0; i < descriptionAndKeys.Length; i++)
         {
             string key = descriptionAndKeys[i].Key;
-            string localizedKey = LocalizationSettings.StringDatabase.GetLocalizedString("Description Names", key + "Name_Key");    
+            string localizedKey = LocalizationSettings.StringDatabase.GetLocalizedString("Description Keys", key + "Name_Key");    
 
-            string localizedExtraDescription = LocalizationSettings.StringDatabase.GetLocalizedString("Descriptions", key + "Desc_Key");
+            string localizedExtraDescription = LocalizationSettings.StringDatabase.GetLocalizedString("Extra Descriptions", key + "Desc_Key");
+            if (!Description.Contains(localizedKey))
+            {
+                Debug.LogWarning(localizedKey);
+            }
             if (localizedExtraDescription == "xd") localizedExtraDescription = "";
             if (Description.Contains(localizedKey) && localizedKey != Title)
             {
