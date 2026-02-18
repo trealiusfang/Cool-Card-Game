@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Extra Descriptions_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 0a3dd8a43b7b22a44902b85050f2cdc7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 17331466240
+    m_Localized: "Sava\u015F alan\u0131na, \xF6n taraftan bir kart ekler"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 961926475776
+    m_Localized: "Dayan\u0131kl\u0131l\u0131\u011F\u0131 \"Can\" olan kartlar\u0131n
+      dayan\u0131kl\u0131l\u0131k de\u011Ferinin artt\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1170236583936
+    m_Localized: "Kartlar\u0131n eylem ve dayan\u0131kl\u0131l\u0131k de\u011Ferleri"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1507794169856
+    m_Localized: "Al\u0131nacak hasar\u0131, \"hasar azalt\u0131c\u0131\" de\u011Feri
+      kadar azalt\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2305034891264
+    m_Localized: "Sald\u0131r\u0131ld\u0131\u011F\u0131nda, sald\u0131ran ki\u015Fi
+      2 hasar al\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4066558685184
+    m_Localized: "5 True Damage al\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4491135496192
+    m_Localized: "T\xFCm hasar de\u011Ferini de\u011Fi\u015Ftirebilecek etkenlerden
+      etkelenmeyen bir hasar tipi, bu hasar al\u0131nd\u0131\u011F\u0131nda pasifleri
+      tetiklemez"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5426398179328
+    m_Localized: "Verilen hasar\u0131 %50 azalt\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5773418115072
+    m_Localized: "Al\u0131nan iyile\u015Ftirmeleri %50 azalt\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6232283361280
+    m_Localized: "Al\u0131nan hasar\u0131 %50 azalt\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45553815478272
+    m_Localized: xd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 45594969989120
+    m_Localized: xd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 46477417996288
+    m_Localized: xd
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Main Menu_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: f09bf8f2caa6edc48b6a1eb7783b9364, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 29309117476864
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29354457903104
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29374175326208
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29392219222016
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29593231241216
+    m_Localized: Patch Notes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30112750317568
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30147567235072
+    m_Localized: SFX Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30417877544960
+    m_Localized: Resolution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30517399990272
+    m_Localized: Fullscreen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30682244526080
+    m_Localized: Run game in background
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31378171834368
+    m_Localized: Local 1v1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31380596142080
+    m_Localized: Custom Levels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31382559076352
+    m_Localized: Card Library
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33430352506880
+    m_Localized: List By
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33552763269120
+    m_Localized: Action
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33480742875136
+    m_Localized: Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33479056764928
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 33897241456640
+    m_Localized: Max Card Limit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34272845574144
+    m_Localized: Current Player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34533093748736
+    m_Localized: Player 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34554862186496
+    m_Localized: Player 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34690640195584
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 34673414189056
+    m_Localized: Ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35252584656896
+    m_Localized: Max Card Limit Reached!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1840480245342208
+    m_Localized: Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1840782541414400
+    m_Localized: Action
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1841252915830784
+    m_Localized: At least 1 player doesn't have a deck!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1851351617069056
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Passive Names_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 69e71cf1fbfcd1e43962090ab7760b1e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3449563983872
+    m_Localized: A+ LEVEL THREAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3597903933440
+    m_Localized: Ascension
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4039576727552
+    m_Localized: Chef's Delight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4142978904064
+    m_Localized: COPY KAT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4261488963584
+    m_Localized: Deterministic End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4713706237952
+    m_Localized: 'Evasion '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5206968971264
+    m_Localized: Execution
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5306520776704
+    m_Localized: Quick Hands
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5714085490688
+    m_Localized: For the Crew!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5865789272064
+    m_Localized: Force Pull
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6827719340032
+    m_Localized: Happy Ending
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7375944232960
+    m_Localized: On guard!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7737686175744
+    m_Localized: Lo Siento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9133382774784
+    m_Localized: Mega Threat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9520877744128
+    m_Localized: On Command
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9654910922752
+    m_Localized: One More Chance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9743461068800
+    m_Localized: Electrical Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10597299728384
+    m_Localized: Prickly
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10670611968000
+    m_Localized: Protective Aura
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11088654053376
+    m_Localized: Rock Tough
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11296980938752
+    m_Localized: Taunt!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11362978312192
+    m_Localized: Tick-Tock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11485678481408
+    m_Localized: Time Warp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11622907719680
+    m_Localized: Tough Conversion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11866261237760
+    m_Localized: Triple Action
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12571676061696
+    m_Localized: Unending Power
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12688390959104
+    m_Localized: Weakener
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12797593858048
+    m_Localized: Dark Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13299727544320
+    m_Localized: You Know The Drill
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14446899048448
+    m_Localized: Blood Dog
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14594135896064
+    m_Localized: Charming
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15039944273920
+    m_Localized: Loyal Servants
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15139324112896
+    m_Localized: Cute Threat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15213915615232
+    m_Localized: Drunk Magic
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15358572965888
+    m_Localized: Fierce Fighter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16126000574464
+    m_Localized: Clumsy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16242476396544
+    m_Localized: Tiresome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18810182393856
+    m_Localized: ABSOLUTION
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

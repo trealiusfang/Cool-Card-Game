@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Passive Descriptions_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: c0ee147f4a68a4e4a894fe13ab5163d5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 97031630848
+    m_Localized: "Sald\u0131rd\u0131\u011F\u0131nda, verdi\u011Fi hasar kadar kendini
+      \u0130yile\u015Ftirir, hasar ald\u0131\u011F\u0131nda ise ald\u0131\u011F\u0131nda
+      ise g\xFC\xE7lenir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1114699804672
+    m_Localized: "Turun ba\u015F\u0131nda d\xFC\u015Fman sava\u015F alan\u0131ndaki
+      en \xF6nde olan kart\u0131 Value tur boyunca kendi saf\u0131na \xE7eker"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2034728775680
+    m_Localized: "Her turun ba\u015Flang\u0131c\u0131nda kendi saf\u0131na bir kar\u0131nca
+      \xC7a\u011F\u0131r, sa\u011Fl\u0131\u011F\u0131n %50'nin alt\u0131na d\xFC\u015Ft\xFC\u011F\xFC
+      zaman ate\u015F kar\u0131ncalar\u0131n\u0131 \xE7a\u011F\u0131r\u0131r ve Eylem
+      Puan\u0131n\u0131 1 artt\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3777474670592
+    m_Localized: "Sadece 3 turda bir sald\u0131rabilir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3868000333824
+    m_Localized: "Bu kart\u0131n s\u0131ras\u0131 geldi\u011Finde d\xFC\u015Fman
+      saf\u0131ndaki en \xF6n kart\u0131n Eylem Puan\u0131n\u0131, Dayan\u0131kl\u0131l\u0131k
+      Puan\u0131 ile yer de\u011Fi\u015Ftirir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4213753589760
+    m_Localized: "Eylem Puan\u0131 bu kart\u0131n hedefledi\u011Fi kart\u0131n Dayan\u0131kl\u0131l\u0131k
+      Puan\u0131n\u0131n yar\u0131s\u0131na e\u015Fittir. En d\xFC\u015F\xFCk canl\u0131
+      tak\u0131m arkada\u015F\u0131n\u0131n\u0131n Dayan\u0131kl\u0131l\u0131k Puan\u0131n\u0131
+      birine vurdu\u011Fu zaman 1 artt\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4764880941056
+    m_Localized: "Sald\u0131rd\u0131\u011F\u0131 s\u0131rada %50 \u015Fans ile kendinede
+      1 hasar verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923123642368
+    m_Localized: "Her sald\u0131r\u0131 yapt\u0131\u011F\u0131 zaman Value kadar
+      Eylem Puan\u0131 kaybeder, Eylem Puan\u0131 2'den a\u015Fa\u011F\u0131ya d\xFC\u015Femez"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5399089065984
+    m_Localized: "Oyundaki t\xFCm pozitif pasiflere sahip olabilir... \u0130yi \u015Fanslar!
+      (Aktif Pasifler: Passives )"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5849435680768
+    m_Localized: "Bu kart\u0131n \xF6zel g\xFC\xE7leri a\xE7\u0131ld\u0131, art\u0131k
+      %Value \u015Fanslar kritik vurma \u015Fans\u0131 var (Her karta ekstra 2 Ger\xE7ek
+      Hasar vurur)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6321487818752
+    m_Localized: "Y\xFCkselme, bu kart Value tur hayatta kald\u0131ktan sonra a\xE7\u0131lacak.
+      Y\xFCkselme a\xE7\u0131ld\u0131\u011F\u0131 zaman kart\u0131n\u0131n \xF6zel
+      g\xFC\xE7leri a\xE7\u0131l\u0131r."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6633430790144
+    m_Localized: "Ba\u015Far\u0131l\u0131 bir sald\u0131r\u0131 yapt\u0131\u011F\u0131nda
+      t\xFCm arkada\u015Flar\u0131n\u0131 Value kadar iyile\u015Ftirir, ama bu kart
+      nakavt edildi\u011Finde d\xFC\u015Fman taraf\u0131ndan yenilir ve yiyen ki\u015Fi
+      +3 Dayan\u0131kl\u0131l\u0131k Puan\u0131 kazan\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6965552558080
+    m_Localized: "\xD6n\xFCndeki kart\u0131n \u0130statistiklerini ve pasiflerini
+      kopyalar ve Value kadar artt\u0131r\u0131r, ama her tur istatistikleri 1 de\u011Ferinde
+      azal\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7245874671616
+    m_Localized: "Bu kart nakavt oldu\u011Fu zaman \xF6n\xFCndeki karta +Value kadar
+      Eylem Puan\u0131 verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7491765743616
+    m_Localized: "Sald\u0131r\u0131ld\u0131\u011F\u0131 zaman %Value \u015Fans ile
+      sald\u0131r\u0131dan tamam\u0131 ile ka\xE7ar, her ba\u015Far\u0131l\u0131
+      ka\xE7\u0131\u015Fta bu \u015Fans 20 azal\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683558682624
+    m_Localized: "Sald\u0131rd\u0131\u011F\u0131 zaman e\u011Fer d\xFC\u015Fman\u0131n
+      Dayan\u0131kl\u0131l\u0131k Puan\u0131 Value ya da daha az ise vurulan kart
+      direkt nakavt olur"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7922348797952
+    m_Localized: Ne olursa olsun her zaman ilk oynar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8078100082688
+    m_Localized: "E\u011Fer sava\u015F alan\u0131n\u0131n en \xF6n\xFCne yerle\u015Ftirirse,
+      \u0130statistikleri Value artt\u0131r\u0131l\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217652965376
+    m_Localized: "D\xFC\u015Fman saf\u0131n\u0131n en arkadaki kart\u0131n\u0131,
+      kart sava\u015F alan\u0131na koyuldu\u011Funa en \xF6n safa \xE7ek"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8354194337792
+    m_Localized: "Nakavt an\u0131nda can\u0131 en az olan tak\u0131m arkada\u015F\u0131n\u0131
+      Value kadar \u0130yile\u015Ftir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8504132317184
+    m_Localized: "%Value \u015Fans ile vurdu\u011Fu d\xFC\u015Fman\u0131 sersemletir
+      ve sersemlemi\u015F d\xFC\u015Fmanlar oynamaz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8910182887424
+    m_Localized: "Kart ilk sava\u015F alan\u0131na eklendi\u011Finde 1 turlu\u011Funa
+      t\xFCm tak\u0131m arkada\u015Flar\u0131na +1 Hasar Azaltma verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9098112872448
+    m_Localized: "%Value \u015Fans ile vurdu\u011Fu d\xFC\u015Fman\u0131 sersemletir
+      (1 Tur) ve sersemlemi\u015F d\xFC\u015Fmanlar oynamaz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9421548236800
+    m_Localized: "3 turda bir rastgele bir d\xFC\u015Fmana Value hasar verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9713111085056
+    m_Localized: "\xD6n\xFCndeki t\xFCm kartlar, bu kart\u0131n hedefledi\u011Fi
+      karta Kilitler"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9980141449216
+    m_Localized: "Dayan\u0131kl\u0131l\u0131k Puan\u0131 0 veya alt\u0131na d\xFC\u015Ft\xFC\u011F\xFCnde
+      Dayan\u0131kl\u0131k puan\u0131n\u0131n %50sini kadar geri kazan\u0131r ve
+      kendini \xF6l\xFCmden kurtar\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10147674533888
+    m_Localized: "Rastgele bir d\xFC\u015Fmana sald\u0131r\u0131r ve \xF6n\xFCndeki
+      tak\u0131m arkada\u015F\u0131na Dikenli etkisini verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10446963290112
+    m_Localized: "Hasar ald\u0131\u011F\u0131nda, al\u0131nan hasar\u0131n -Value
+      'i kadar\u0131n\u0131 sald\u0131ran ki\u015Fiye geri g\xF6nderir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10725477658624
+    m_Localized: "\xD6n\xFCndeki tak\u0131m arkada\u015F\u0131n\u0131n Value turlu\u011Funa
+      hasar almas\u0131n\u0131 engeller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10852657344512
+    m_Localized: Tek seferde Value 'dan fazla hasar alamaz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11003392241664
+    m_Localized: "Sald\u0131rd\u0131\u011F\u0131 ki\u015Fiyi kendine sald\u0131rmas\u0131
+      i\xE7in Kilitler, bu sadece 1 turlu\u011Funa \xE7al\u0131\u015F\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11218039943168
+    m_Localized: "E\u011Fer 3 tur sonra hayatta ise, Patla ve t\xFCm d\xFC\u015Fmanlara
+      Value kadar hasar ver"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11433308401664
+    m_Localized: "Her bu kart\u0131n turu oynand\u0131\u011F\u0131nda \xF6n\xFCndeki
+      kart ikince kez oynar (Evet, \xE7ok dengeli de\u011Fil)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11594503892992
+    m_Localized: "Her Value turda kart\u0131nda kendisi 1 turlu\u011Funa Zay\u0131fl\u0131k
+      ve Koruma kazan\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11824888623104
+    m_Localized: "Bu kart 1 kez sald\u0131rmak yerine 3 kez ard\u0131 ard\u0131na
+      sald\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11933542068224
+    m_Localized: "Her turun sonunda Eylem Puan\u0131n\u0131 ve Dayan\u0131kl\u0131l\u0131k
+      Puan\u0131n\u0131 Value kadar att\u0131r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12089729560576
+    m_Localized: "Hasar verdi\u011Fi ki\u015Filere Zay\u0131fl\u0131k etkisini verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12189595938816
+    m_Localized: "Bu kart hedeflendi\u011Finde, hedefleyen ki\u015Fiye Derin Yara
+      etkisini verir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12466113818624
+    m_Localized: "Her turun ba\u015F\u0131nda Eylem ve Dayan\u0131kl\u0131l\u0131k
+      Puan\u0131n\u0131 1 artt\u0131r, bu kart e\u011Fer sahada ba\u015Fka kartlar
+      varsa asla hedeflenmez"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

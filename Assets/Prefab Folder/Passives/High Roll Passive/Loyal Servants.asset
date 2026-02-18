@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6b3ec0995d8ab4286b5409dd500b07, type: 3}
+  m_Name: Loyal Servants
+  m_EditorClassIdentifier: 
+  PassiveName: Loyal Servants
+  PassiveDescription: Each start of round you Inherit loyal ants, when health is
+    below %50 calls fire ants and action increases
+  PassiveValue: 0
+  PassiveTiming: 272
+  PassiveSprite: {fileID: 21300000, guid: a7dff71a14f4e914dae32849d68e23fb, type: 3}
+  PassiveAudio: {fileID: 0}
+  passiveColor: {r: 0.50021625, g: 0.9339623, b: 0.19824673, a: 1}

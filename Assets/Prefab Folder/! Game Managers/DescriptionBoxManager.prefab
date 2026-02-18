@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8066838980332988943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3490550764370609368}
+  - component: {fileID: 6578568511725727039}
+  m_Layer: 0
+  m_Name: DescriptionBoxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3490550764370609368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066838980332988943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8286453, y: 0.25665465, z: -0.026301688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6578568511725727039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066838980332988943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d58c51896fbed34ea5c10b6a6810240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DescriptionBoxPrefab: {fileID: 1381292193947125874, guid: d99af5491df1a8c4699f23666f003776, type: 3}
+  DescriptionBoxOffset: {x: 2, y: 1.65}
+  followMouse: 0
+  minLineAmount: 3
+  baseBoxSize: {x: 2.5, y: 1}
+  sizeByLine: 0.1
+  basePassiveColor: {r: 0.64339745, g: 0.8490566, b: 0.020024916, a: 1}
+  passiveValueColor: {r: 0.2783019, g: 0.9011373, b: 1, a: 1}
+  dimensionalDistancesPorEachBox: {x: 2.7, y: 0.3}
+  maxRowAmount: 2
+  descriptionAndKeys:
+  - Key: Inherit
+    KeyColor: {r: 1, g: 0.72604626, b: 0, a: 1}
+    Description: Adds a card to the battle field from the front
+  - Key: Heal
+    KeyColor: {r: 0, g: 1, b: 0.31141925, a: 1}
+    Description: Increases cards with health Resistance value
+  - Key: Stat
+    KeyColor: {r: 1, g: 0.5803922, b: 0, a: 1}
+    Description: Stats include Resistance and Action values
+  - Key: Resistance
+    KeyColor: {r: 1, g: 0.35671964, b: 0, a: 1}
+    Description: 
+  - Key: Action
+    KeyColor: {r: 1, g: 0.35671964, b: 0, a: 1}
+    Description: 
+  - Key: Damage Negation
+    KeyColor: {r: 0, g: 0.83967113, b: 1, a: 1}
+    Description: Lowers the incoming damage by damage negation amount.
+  - Key: Prickly
+    KeyColor: {r: 0.008032935, g: 0.4433962, b: 0, a: 1}
+    Description: When attacked deal 2 damage back
+  - Key: Explode
+    KeyColor: {r: 1, g: 0.46866044, b: 0.4198113, a: 1}
+    Description: Takes 5 True Damage
+  - Key: True Damage
+    KeyColor: {r: 0.9955661, g: 0.7877358, b: 1, a: 1}
+    Description: A damage type that ignores all resistances, on hurt passives don't
+      work
+  - Key: Weakness
+    KeyColor: {r: 0.7075472, g: 0.44818208, b: 0.0033374948, a: 1}
+    Description: Lowers damage by %50
+  - Key: Deep Wound
+    KeyColor: {r: 0.7058824, g: 0.003921579, b: 0.12880029, a: 1}
+    Description: Lowers effective healing by %50
+  - Key: Defense
+    KeyColor: {r: 0.003921579, g: 0.323107, b: 0.7058824, a: 1}
+    Description: Lowers incoming damage by %50
+  - Key: Lock
+    KeyColor: {r: 0.003921579, g: 0.62901103, b: 0.7058824, a: 1}
+    Description: 

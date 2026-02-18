@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7908952845310965628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5957284762230651817}
+  - component: {fileID: 7084524337075206840}
+  - component: {fileID: 6329602038172331364}
+  m_Layer: 0
+  m_Name: Card-Arranger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5957284762230651817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908952845310965628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7084524337075206840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908952845310965628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92bbff4658fab8245a5af331d0ebe903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allCards:
+  - {fileID: 11400000, guid: 043daf7f4e5614a4f80018ae201e6158, type: 2}
+  - {fileID: 11400000, guid: d2656372594afb24dbc53b96b8f8ff16, type: 2}
+  - {fileID: 11400000, guid: 0d5c470fdcaa498469dd72e89d0a92f6, type: 2}
+  - {fileID: 11400000, guid: 68c5327c759ca7e46a1300f76a2ff480, type: 2}
+  - {fileID: 11400000, guid: 18df48bee1e720c4ba7c6c5660731456, type: 2}
+  - {fileID: 11400000, guid: e59745d3b1b3f5d43b100799af6a09dc, type: 2}
+  - {fileID: 11400000, guid: 8f5d22149036c6148bbb8f079a6c7e83, type: 2}
+  - {fileID: 11400000, guid: 0109535a2f21ef644bacfda2d49b9da6, type: 2}
+  - {fileID: 11400000, guid: 93d9c98eea2ca344db50ccfa2c1a4074, type: 2}
+  - {fileID: 11400000, guid: a7ee16c1fe01e2f48afa5a886af2ace2, type: 2}
+  - {fileID: 11400000, guid: 9e5f721e697c55845a4a83dc916e330b, type: 2}
+  - {fileID: 11400000, guid: 4d18538eaeed6344f8678e5e74e3c48f, type: 2}
+  - {fileID: 11400000, guid: 33bca54a6ab23a04e970f63a91efff24, type: 2}
+  - {fileID: 11400000, guid: 2f0860999505536448ad9a9386c36dd8, type: 2}
+  - {fileID: 11400000, guid: 15684f7f7a385704db247a836e4e6320, type: 2}
+  - {fileID: 11400000, guid: bdc1f7ffff97ef74485ee06e928a9450, type: 2}
+  - {fileID: 11400000, guid: 496689448f682e04983146232835338b, type: 2}
+  - {fileID: 11400000, guid: cbabc89fafcc5b64c9ce1bb5011fa2b4, type: 2}
+  - {fileID: 11400000, guid: 7275df41768210d4cbf4cbd5870c6bf5, type: 2}
+  - {fileID: 11400000, guid: 552ad77ec7daf6b4cb155be0f9b6f128, type: 2}
+  - {fileID: 11400000, guid: 26e49232c83c7334f80bfda09f5c39ed, type: 2}
+  - {fileID: 11400000, guid: 1ee8694cf70cafa479eca86536a26165, type: 2}
+  - {fileID: 11400000, guid: a1f62cc4231717845850be2342082311, type: 2}
+  - {fileID: 11400000, guid: f7d48e15dd844ce409b92c0a143ebc9c, type: 2}
+  - {fileID: 11400000, guid: 691e8e9d8c036c44780aa337302813a5, type: 2}
+  - {fileID: 11400000, guid: 67e0782dade70eb4bbdb817b30e2128b, type: 2}
+  - {fileID: 11400000, guid: f54ab08d5291ec94aaafcf648138dacf, type: 2}
+  - {fileID: 11400000, guid: f922750261e01d5418e449b7efea291e, type: 2}
+  - {fileID: 11400000, guid: d5f5b29a5c3d1fa48a14d8c96d7d4c2d, type: 2}
+  - {fileID: 11400000, guid: 2c4320c108f74964f83645ea08fc48ba, type: 2}
+  - {fileID: 11400000, guid: 543c3f25546a47847a909790717ef338, type: 2}
+  - {fileID: 11400000, guid: b7f09222c5abb6e47a16bae882f9f49f, type: 2}
+  - {fileID: 11400000, guid: 45831eccf34da3e4da8eb50ccbdb4a83, type: 2}
+  - {fileID: 11400000, guid: 74ad519a4509e844ca8b6c2c95831f60, type: 2}
+  - {fileID: 11400000, guid: 25056a602075330489855a5d5d7f3f3b, type: 2}
+  - {fileID: 11400000, guid: 9b83ebdc629305649b8f19904d193d61, type: 2}
+  cardPrefab: {fileID: 1385911733151840410, guid: f6e709c6ea06fb647bff921364d50422, type: 3}
+  activeCards: []
+  cardSize: {x: 1, y: 1}
+  startPos: {x: -6.6, y: 1.75}
+  cardDistance: 3
+  cardRowDistance: 3.5
+  cardAmountPerRow: 5
+  amount: 24
+--- !u!210 &6329602038172331364
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7908952845310965628}
+  m_Enabled: 1
+  m_SortingLayerID: 132447557
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

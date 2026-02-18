@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
+  m_Name: Kooler Bird (Bossfight)
+  m_EditorClassIdentifier: 
+  CardName: Kooler Bird
+  actionType: 0
+  ActionValue: 4
+  resistanceType: 0
+  ResistanceValue: 3
+  preferredTargetSpots:
+    spot1: 0
+    spot2: 0
+    spot3: 1
+    spot4: 0
+  Passives:
+  - {fileID: 11400000, guid: 9ef8cbef696d93a41a3422baf9de3a20, type: 2}
+  - {fileID: 11400000, guid: 5c010da396734a849aa98770dbce720d, type: 2}
+  - {fileID: 11400000, guid: 093ba5d019e911e4383888aef2b5eb6f, type: 2}
+  - {fileID: 11400000, guid: 0d2b7f019f31e1743a0d991299fef1bf, type: 2}
+  - {fileID: 11400000, guid: 15a263df0555d2f4a8d44bcde07ed56a, type: 2}
+  - {fileID: 11400000, guid: dc2d0ac9533fe0b4d8d9097ed31c5cf2, type: 2}
+  - {fileID: 11400000, guid: 5d644d532a9af9b49aa32d147c6391b2, type: 2}
+  - {fileID: 11400000, guid: b45fa05932df2c8418a63e3538890e87, type: 2}
+  - {fileID: 11400000, guid: 811f9ff2f32815249b5e50bfb47875a2, type: 2}
+  - {fileID: 11400000, guid: 004ba77f128bd334fbcfe3d812818272, type: 2}
+  - {fileID: 11400000, guid: b1d1198c4cdaae047bb86665ad488983, type: 2}
+  - {fileID: 11400000, guid: c737c2bb60809d642bb081ebc341c05e, type: 2}
+  - {fileID: 11400000, guid: 0f52fca39609fbe46b292c23f0830074, type: 2}
+  - {fileID: 11400000, guid: 5f9ab74391fd86847987b4badc39d792, type: 2}
+  - {fileID: 11400000, guid: 0534356f979fdf2438a853f9089202be, type: 2}
+  - {fileID: 11400000, guid: 528471fe6f869e44d91e474759db48af, type: 2}
+  - {fileID: 11400000, guid: 36ff83124404d404893733894b67d329, type: 2}
+  - {fileID: 11400000, guid: e68e7f632c381684aaf3cddfdb0e7fa2, type: 2}
+  - {fileID: 11400000, guid: cd531481d20dc474ea8fff073c6c2367, type: 2}
+  - {fileID: 11400000, guid: 5612962bc45bbf24fad96d14a1fafc0b, type: 2}
+  - {fileID: 11400000, guid: b282b3618cc282d43adc3954ad3ccc35, type: 2}
+  - {fileID: 11400000, guid: 299c8625f07d2f44d966e4f18d36dfd5, type: 2}
+  - {fileID: 11400000, guid: 8c8d1d841fa8cfe48b7bed480cb0d69b, type: 2}
+  - {fileID: 11400000, guid: 99c93170cdeb7a246b229c053efbca39, type: 2}
+  - {fileID: 11400000, guid: 0245f121a45dcdf468b7e89cc08876fa, type: 2}
+  - {fileID: 11400000, guid: 686e4e791e03b1a44aa503cb9de449af, type: 2}
+  charSprite: {fileID: 21300000, guid: a2d6ee1ad40693747bbb0552f5ca928e, type: 3}
+  charAnimator: {fileID: 0}
+  charClip: {fileID: 0}
+  putOnPlaySound: {fileID: 8300000, guid: 93d61502a1d670d46945e3f8b672ce56, type: 3}
+  attackSound: {fileID: 8300000, guid: 61061c52f6bd25a40a7f0efb903aeb21, type: 3}
+  healSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: a4abab5e92eb08b49be7ca1944721cf5, type: 3}

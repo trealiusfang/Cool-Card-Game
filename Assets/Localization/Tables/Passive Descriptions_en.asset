@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Passive Descriptions_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: c0ee147f4a68a4e4a894fe13ab5163d5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 97031630848
+    m_Localized: On Attack Heal as much as it dealt damage,  when taking damage get
+      stronger by half the value of damage taken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1114699804672
+    m_Localized: At the start of round charms the front card of the enemy for Value
+      rounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2034728775680
+    m_Localized: Each start of round you Inherit loyal ants, when health is below
+      %50 calls fire ants and action increases
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3777474670592
+    m_Localized: Can only attack once every 3 turns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3868000333824
+    m_Localized: On this cards turn swaps the Action and Resistance values of the
+      front enemy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4213753589760
+    m_Localized: Action value is equal to half of targets Resistance, heals lowest
+      HP ally by 1 after attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4764880941056
+    m_Localized: On attack, has a %50 chance to deal 1 damage to self
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923123642368
+    m_Localized: On every attack loses Value action value, before stopping at 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5399089065984
+    m_Localized: 'Might have every positive passive in the game or smt idk actives:
+      Passives'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5849435680768
+    m_Localized: Power Unlocked, now has a %Value chance to crit (Deal every card
+      2 True Damage on crit)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6321487818752
+    m_Localized: ASCENSION WILL PROVOKE IF THIS CARD IS ALIVE AFTER Value TURN(S)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6633430790144
+    m_Localized: Heal allies by Value on attack, but on death it gets eaten, giving
+      +3 to the card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6965552558080
+    m_Localized: Copies the Stat and passives of the card in front of it and increases
+      by Value but loses 1 Stat each round
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7245874671616
+    m_Localized: On death, gives +Value Action to an ally in front of it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7491765743616
+    m_Localized: When attacked has a %Value chance to evade, every successful evade
+      drops the chance by 20
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683558682624
+    m_Localized: On attack, if the targets health is Value or lower insta-kill the
+      target
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7922348797952
+    m_Localized: Plays First
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8078100082688
+    m_Localized: If placed at the front of the deck, gain Value Action Value and
+      Resistance Value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217652965376
+    m_Localized: Pull an enemy from the backline to the front
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8354194337792
+    m_Localized: Upon death Heals an ally with the lowest HP by Value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8504132317184
+    m_Localized: Has a %Value chance to stun the target
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8910182887424
+    m_Localized: When card is on the field gives +1 Damage Negation to allies for
+      Value turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9098112872448
+    m_Localized: Has a %Value chance to stun the card for 1 turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9421548236800
+    m_Localized: Damages a random enemy by Value every 3 turns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9713111085056
+    m_Localized: Forces every ally card that is in front to Lock on the same target
+      as this card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9980141449216
+    m_Localized: When Resistance drops to 0 or less, restore it back up by %50. Preventing
+      death
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10147674533888
+    m_Localized: Attacks a random enemy and gives Prickly status effect to the card
+      that in front of it
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10446963290112
+    m_Localized: When hurt deals -Value of damage taken to the attacker
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10725477658624
+    m_Localized: Prevents damage for the ally in front of it Value time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10852657344512
+    m_Localized: Can't take more than Value damage when hurt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11003392241664
+    m_Localized: On Attack taunts the target enemy, making them Lock on this card
+      only for 1 turn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11218039943168
+    m_Localized: If alive after 3 turns, Explode and deal Value damage to all enemies
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11433308401664
+    m_Localized: Every end of turn the card infront of it plays for a second time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11594503892992
+    m_Localized: Gains Weakness and Defense for 1 round every Value rounds
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11824888623104
+    m_Localized: Attacks 3 times
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11933542068224
+    m_Localized: At the end of the turn increase damage and health by Value
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12089729560576
+    m_Localized: Applies Weakness status effect on attack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12189595938816
+    m_Localized: Applies Deep Wound when targeted
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12466113818624
+    m_Localized: Increase Action by Value every start of turn, and gets targeted
+      last
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

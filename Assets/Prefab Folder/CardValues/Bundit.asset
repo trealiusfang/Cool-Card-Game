@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
+  m_Name: Bundit
+  m_EditorClassIdentifier: 
+  CardName: Bundit
+  actionType: 0
+  ActionValue: 1
+  resistanceType: 0
+  ResistanceValue: 4
+  preferredTargetSpots:
+    spot1: 0
+    spot2: 0
+    spot3: 0
+    spot4: 1
+  Passives:
+  - {fileID: 11400000, guid: 811f9ff2f32815249b5e50bfb47875a2, type: 2}
+  charSprite: {fileID: 5208877613535064439, guid: ab5aa30e1c4e22249b2e2babd867f232, type: 3}
+  charAnimator: {fileID: 0}
+  charClip: {fileID: 0}
+  putOnPlaySound: {fileID: 0}
+  attackSound: {fileID: 0}
+  healSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 0}

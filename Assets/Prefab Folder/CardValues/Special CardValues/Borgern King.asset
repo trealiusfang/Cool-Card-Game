@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
+  m_Name: Borgern King
+  m_EditorClassIdentifier: 
+  CardName: Borgern King
+  actionType: 0
+  ActionValue: 1
+  resistanceType: 0
+  ResistanceValue: 5
+  preferredTargetSpots:
+    spot1: 1
+    spot2: 1
+    spot3: 1
+    spot4: 1
+  Passives:
+  - {fileID: 11400000, guid: 8c8d1d841fa8cfe48b7bed480cb0d69b, type: 2}
+  - {fileID: 11400000, guid: dc2d0ac9533fe0b4d8d9097ed31c5cf2, type: 2}
+  - {fileID: 11400000, guid: 0245f121a45dcdf468b7e89cc08876fa, type: 2}
+  charSprite: {fileID: 21300000, guid: f8cbbe6b171bb7c45a3b3e0c81cf77b4, type: 3}
+  charAnimator: {fileID: 0}
+  charClip: {fileID: 0}
+  putOnPlaySound: {fileID: 8300000, guid: 949ca5900c2929c4d8e3f4eaa8c98bb9, type: 3}
+  attackSound: {fileID: 8300000, guid: 56ac9fe24b5290e46bb9bebfd6c74422, type: 3}
+  healSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 8bb0ffa52db7ebb4fad6854d60d24aa8, type: 3}

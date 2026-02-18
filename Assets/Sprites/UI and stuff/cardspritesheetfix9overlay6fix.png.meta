@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 9afe68eede96d8a41bf43ad421ff68cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2889354506407055704
+    second: cardspritesheetfix9overlay6fix_0
+  - first:
+      213: 4970724123352320452
+    second: cardspritesheetfix9overlay6fix_1
+  - first:
+      213: 2680512414051242867
+    second: cardspritesheetfix9overlay6fix_2
+  - first:
+      213: 5578534926489386459
+    second: cardspritesheetfix9overlay6fix_3
+  - first:
+      213: 8302882986081816835
+    second: cardspritesheetfix9overlay6fix_4
+  - first:
+      213: -1747679998150632968
+    second: cardspritesheetfix9overlay6fix_5
+  - first:
+      213: 8974801039036643623
+    second: cardspritesheetfix9overlay6fix_6
+  - first:
+      213: -4355233803082618701
+    second: cardspritesheetfix9overlay6fix_7
+  - first:
+      213: 1256643917653158341
+    second: cardspritesheetfix9overlay6fix_8
+  - first:
+      213: -5989890421253719506
+    second: cardspritesheetfix9overlay6fix_9
+  - first:
+      213: -1154066823478304208
+    second: cardspritesheetfix9overlay6fix_10
+  - first:
+      213: 1274137066295465086
+    second: cardspritesheetfix9overlay6fix_11
+  - first:
+      213: -3717190957619146791
+    second: cardspritesheetfix9overlay6fix_12
+  - first:
+      213: 5657435341146179581
+    second: cardspritesheetfix9overlay6fix_13
+  - first:
+      213: 30783672761098814
+    second: cardspritesheetfix9overlay6fix_14
+  - first:
+      213: -4378503179707626011
+    second: cardspritesheetfix9overlay6fix_15
+  - first:
+      213: 7157242712962859040
+    second: cardspritesheetfix9overlay6fix_16
+  - first:
+      213: 4871188299581199750
+    second: cardspritesheetfix9overlay6fix_17
+  - first:
+      213: 8645856022726207256
+    second: cardspritesheetfix9overlay6fix_18
+  - first:
+      213: 5292102463640917467
+    second: cardspritesheetfix9overlay6fix_19
+  - first:
+      213: 124105328448365232
+    second: cardspritesheetfix9overlay6fix_20
+  - first:
+      213: -6568676425860541170
+    second: cardspritesheetfix9overlay6fix_21
+  - first:
+      213: 5094622997787359476
+    second: cardspritesheetfix9overlay6fix_22
+  - first:
+      213: -6929132268241244449
+    second: cardspritesheetfix9overlay6fix_23
+  - first:
+      213: 1473505118420614430
+    second: cardspritesheetfix9overlay6fix_24
+  - first:
+      213: -4426014360550524493
+    second: cardspritesheetfix9overlay6fix_25
+  - first:
+      213: 1696964078327201892
+    second: cardspritesheetfix9overlay6fix_26
+  - first:
+      213: 1893313211341982013
+    second: cardspritesheetfix9overlay6fix_27
+  - first:
+      213: 4536813917745488328
+    second: cardspritesheetfix9overlay6fix_28
+  - first:
+      213: -7934780344720606676
+    second: cardspritesheetfix9overlay6fix_29
+  - first:
+      213: -33723777765781955
+    second: cardspritesheetfix9overlay6fix_30
+  - first:
+      213: 7233766746338519478
+    second: cardspritesheetfix9overlay6fix_31
+  - first:
+      213: -4355309740255476128
+    second: cardspritesheetfix9overlay6fix_32
+  - first:
+      213: -813717803467645678
+    second: cardspritesheetfix9overlay6fix_33
+  - first:
+      213: -1335917941714753186
+    second: cardspritesheetfix9overlay6fix_34
+  - first:
+      213: 3512611737766957425
+    second: cardspritesheetfix9overlay6fix_35
+  - first:
+      213: -7980204469625140357
+    second: cardspritesheetfix9overlay6fix_36
+  - first:
+      213: 339314003831840118
+    second: cardspritesheetfix9overlay6fix_37
+  - first:
+      213: -8769709278342914521
+    second: cardspritesheetfix9overlay6fix_38
+  - first:
+      213: 7746027667285919982
+    second: cardspritesheetfix9overlay6fix_39
+  - first:
+      213: 5655650049953162026
+    second: cardspritesheetfix9overlay6fix_40
+  - first:
+      213: 3146301043645685874
+    second: cardspritesheetfix9overlay6fix_41
+  - first:
+      213: 191618530405156137
+    second: cardspritesheetfix9overlay6fix_42
+  - first:
+      213: -176044489079660402
+    second: cardspritesheetfix9overlay6fix_43
+  - first:
+      213: 4056580309793085785
+    second: cardspritesheetfix9overlay6fix_44
+  - first:
+      213: -6758798220718457084
+    second: cardspritesheetfix9overlay6fix_45
+  - first:
+      213: -8544121433727462294
+    second: cardspritesheetfix9overlay6fix_46
+  - first:
+      213: -5174957607205434538
+    second: cardspritesheetfix9overlay6fix_47
+  - first:
+      213: -4958966091381403347
+    second: cardspritesheetfix9overlay6fix_48
+  - first:
+      213: -492366543140114853
+    second: cardspritesheetfix9overlay6fix_49
+  - first:
+      213: -2908777569081708871
+    second: cardspritesheetfix9overlay6fix_50
+  - first:
+      213: -2891304169188396193
+    second: cardspritesheetfix9overlay6fix_51
+  - first:
+      213: -572005206185251569
+    second: cardspritesheetfix9overlay6fix_52
+  - first:
+      213: -3360307230527850561
+    second: cardspritesheetfix9overlay6fix_53
+  - first:
+      213: -4535083377634406619
+    second: cardspritesheetfix9overlay6fix_54
+  - first:
+      213: -5737994805910903643
+    second: cardspritesheetfix9overlay6fix_55
+  - first:
+      213: 9190829392140040653
+    second: cardspritesheetfix9overlay6fix_56
+  - first:
+      213: 6202166657378614980
+    second: cardspritesheetfix9overlay6fix_57
+  - first:
+      213: 2952101088467531976
+    second: cardspritesheetfix9overlay6fix_58
+  - first:
+      213: -7318390971612708788
+    second: cardspritesheetfix9overlay6fix_59
+  - first:
+      213: 5545387259847656900
+    second: cardspritesheetfix9overlay6fix_60
+  - first:
+      213: 3260039490520656192
+    second: cardspritesheetfix9overlay6fix_61
+  - first:
+      213: -2992024633193450207
+    second: cardspritesheetfix9overlay6fix_62
+  - first:
+      213: -2775440682189442522
+    second: cardspritesheetfix9overlay6fix_63
+  - first:
+      213: 5794655258709876940
+    second: cardspritesheetfix9overlay6fix_64
+  - first:
+      213: 8733201092530663098
+    second: cardspritesheetfix9overlay6fix_65
+  - first:
+      213: -2263647124283432184
+    second: cardspritesheetfix9overlay6fix_66
+  - first:
+      213: 3329887622944314507
+    second: cardspritesheetfix9overlay6fix_67
+  - first:
+      213: -474460261778028726
+    second: cardspritesheetfix9overlay6fix_68
+  - first:
+      213: -6269747729566835141
+    second: cardspritesheetfix9overlay6fix_69
+  - first:
+      213: 4211607309163428503
+    second: cardspritesheetfix9overlay6fix_70
+  - first:
+      213: 4637256136606971461
+    second: cardspritesheetfix9overlay6fix_71
+  - first:
+      213: 4052453343661425739
+    second: cardspritesheetfix9overlay6fix_72
+  - first:
+      213: 688876699270570595
+    second: cardspritesheetfix9overlay6fix_73
+  - first:
+      213: 7979004809103742941
+    second: cardspritesheetfix9overlay6fix_74
+  - first:
+      213: -8540312196425435876
+    second: cardspritesheetfix9overlay6fix_75
+  - first:
+      213: 8478269247886934523
+    second: cardspritesheetfix9overlay6fix_76
+  - first:
+      213: -2242805827699836852
+    second: cardspritesheetfix9overlay6fix_77
+  - first:
+      213: 5055215887194742013
+    second: cardspritesheetfix9overlay6fix_78
+  - first:
+      213: -4447283485360569840
+    second: cardspritesheetfix9overlay6fix_79
+  - first:
+      213: -4207972792248008228
+    second: cardspritesheetfix9overlay6fix_80
+  - first:
+      213: 567285808210858770
+    second: cardspritesheetfix9overlay6fix_81
+  - first:
+      213: 4827936195928864598
+    second: cardspritesheetfix9overlay6fix_82
+  - first:
+      213: 5736024216846480907
+    second: cardspritesheetfix9overlay6fix_83
+  - first:
+      213: 4226871543492621427
+    second: cardspritesheetfix9overlay6fix_84
+  - first:
+      213: -1249073022858881589
+    second: cardspritesheetfix9overlay6fix_85
+  - first:
+      213: 2832689049328585071
+    second: cardspritesheetfix9overlay6fix_86
+  - first:
+      213: 2768217953606825818
+    second: cardspritesheetfix9overlay6fix_87
+  - first:
+      213: -933640108511454930
+    second: cardspritesheetfix9overlay6fix_88
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_0
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 4
+        width: 57
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aeee678263f6e7d0800000000000000
+      internalID: -2889354506407055704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 4
+        width: 59
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c941e0114f8bf440800000000000000
+      internalID: 4970724123352320452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_2
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 1
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3739c8fa6d7133520800000000000000
+      internalID: 2680512414051242867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_3
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 71
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdd728495ffea6d40800000000000000
+      internalID: 5578534926489386459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_4
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1
+        width: 69
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3019a05d514c93370800000000000000
+      internalID: 8302882986081816835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fix_5
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 0
+        width: 71
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f91d212d4efeb7e0800000000000000
+      internalID: -1747679998150632968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e1607ff4ef0fbe04bb895908181f3880
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cardspritesheetfix9overlay6fix_0: -2889354506407055704
+      cardspritesheetfix9overlay6fix_1: 4970724123352320452
+      cardspritesheetfix9overlay6fix_2: 2680512414051242867
+      cardspritesheetfix9overlay6fix_3: 5578534926489386459
+      cardspritesheetfix9overlay6fix_4: 8302882986081816835
+      cardspritesheetfix9overlay6fix_5: -1747679998150632968
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

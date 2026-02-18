@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Gameplay Stuff_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: f5b66585a3ea27548a6b100c1a0e99b7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 6647799808
+    m_Localized: Oyun hizi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85257445376
+    m_Localized: Mactan cik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 228979466240
+    m_Localized: Oyuncu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 389457731584
+    m_Localized: kazandi!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 583645618176
+    m_Localized: kaybettin!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

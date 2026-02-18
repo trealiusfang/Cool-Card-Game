@@ -1,0 +1,424 @@
+fileFormatVersion: 2
+guid: 5393515d6d4cb294698bcc0df19277e6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -375839936727151528
+    second: PassivesSpriteSheet_0
+  - first:
+      213: 6444875149458437309
+    second: PassivesSpriteSheet_1
+  - first:
+      213: -851435398276607676
+    second: PassivesSpriteSheet_2
+  - first:
+      213: -5095453840903660132
+    second: PassivesSpriteSheet_3
+  - first:
+      213: -4619756124155478755
+    second: PassivesSpriteSheet_4
+  - first:
+      213: 7531879337956704636
+    second: PassivesSpriteSheet_5
+  - first:
+      213: 8028407692925349765
+    second: PassivesSpriteSheet_6
+  - first:
+      213: -923406028573611328
+    second: PassivesSpriteSheet_7
+  - first:
+      213: -4060632064004875433
+    second: PassivesSpriteSheet_8
+  - first:
+      213: 4735779806954126664
+    second: PassivesSpriteSheet_9
+  - first:
+      213: 143884780021504286
+    second: PassivesSpriteSheet_10
+  - first:
+      213: -3609812447832860836
+    second: PassivesSpriteSheet_11
+  - first:
+      213: 7653530361125422153
+    second: PassivesSpriteSheet_12
+  - first:
+      213: -6935199092008441591
+    second: PassivesSpriteSheet_13
+  - first:
+      213: -1520449304737083646
+    second: PassivesSpriteSheet_14
+  - first:
+      213: -2331829656799970298
+    second: PassivesSpriteSheet_15
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85c09fe919fb8caf0800000000000000
+      internalID: -375839936727151528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db476315dcbc07950800000000000000
+      internalID: 6444875149458437309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 441978034081f24f0800000000000000
+      internalID: -851435398276607676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d99838abf4949b0800000000000000
+      internalID: -5095453840903660132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1df6c6184453efb0800000000000000
+      internalID: -4619756124155478755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71830e2a5c968860800000000000000
+      internalID: 7531879337956704636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f24d8a242aa6f60800000000000000
+      internalID: 8028407692925349765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ca6a630c176f23f0800000000000000
+      internalID: -923406028573611328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b9d65e6acb5a7c0800000000000000
+      internalID: -4060632064004875433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84df7f7a4aed8b140800000000000000
+      internalID: 4735779806954126664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 0
+        width: 295.33334
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1954c1f17e2ff100800000000000000
+      internalID: 143884780021504286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PassivesSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 3249
+        y: 0
+        width: 295
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c57932d44be57edc0800000000000000
+      internalID: -3609812447832860836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: db07cfcb086d45b4f8ec27a89438ae94
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PassivesSpriteSheet_0: -375839936727151528
+      PassivesSpriteSheet_1: 6444875149458437309
+      PassivesSpriteSheet_10: 143884780021504286
+      PassivesSpriteSheet_11: -3609812447832860836
+      PassivesSpriteSheet_2: -851435398276607676
+      PassivesSpriteSheet_3: -5095453840903660132
+      PassivesSpriteSheet_4: -4619756124155478755
+      PassivesSpriteSheet_5: 7531879337956704636
+      PassivesSpriteSheet_6: 8028407692925349765
+      PassivesSpriteSheet_7: -923406028573611328
+      PassivesSpriteSheet_8: -4060632064004875433
+      PassivesSpriteSheet_9: 4735779806954126664
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

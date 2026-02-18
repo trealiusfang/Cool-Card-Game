@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
+  m_Name: E-Queen
+  m_EditorClassIdentifier: 
+  CardName: E-QUEEN
+  actionType: 0
+  ActionValue: 2
+  resistanceType: 0
+  ResistanceValue: 10
+  preferredTargetSpots:
+    spot1: 1
+    spot2: 1
+    spot3: 1
+    spot4: 1
+  Passives:
+  - {fileID: 11400000, guid: cf32ac1ce553dbf49a2900c70429f91f, type: 2}
+  - {fileID: 11400000, guid: cd531481d20dc474ea8fff073c6c2367, type: 2}
+  - {fileID: 11400000, guid: 093ba5d019e911e4383888aef2b5eb6f, type: 2}
+  - {fileID: 11400000, guid: dc2d0ac9533fe0b4d8d9097ed31c5cf2, type: 2}
+  - {fileID: 11400000, guid: 0245f121a45dcdf468b7e89cc08876fa, type: 2}
+  - {fileID: 11400000, guid: 0d2b7f019f31e1743a0d991299fef1bf, type: 2}
+  charSprite: {fileID: 21300000, guid: a38fe927d07a473439c4c087afbfcafa, type: 3}
+  charAnimator: {fileID: 0}
+  charClip: {fileID: 32900000, guid: a10f2d47b6abc9042a945373019a951b, type: 3}
+  putOnPlaySound: {fileID: 8300000, guid: a731da3984ca9294bb0f4229c60cb1df, type: 3}
+  attackSound: {fileID: 0}
+  healSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: e69c648836f35824caacef3a074e88c8, type: 3}

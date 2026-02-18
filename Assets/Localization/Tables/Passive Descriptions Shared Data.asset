@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Passive Descriptions Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Passive Descriptions
+  m_TableCollectionNameGuidString: c0ee147f4a68a4e4a894fe13ab5163d5
+  m_Entries:
+  - m_Id: 97031630848
+    m_Key: Blood Dog Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1114699804672
+    m_Key: Charming Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2034728775680
+    m_Key: Loyal Servants Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3777474670592
+    m_Key: cute threat Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3868000333824
+    m_Key: Drunk Magic Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4213753589760
+    m_Key: Fierce Fighter Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4764880941056
+    m_Key: Hot Hands Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4923123642368
+    m_Key: Tiresome Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5399089065984
+    m_Key: A+ LEVEL THREAT Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5849435680768
+    m_Key: ABSOLUTION Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6321487818752
+    m_Key: Ascension Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6633430790144
+    m_Key: Chef's Delight Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6965552558080
+    m_Key: COPY_CAT Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7245874671616
+    m_Key: Deterministic End Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7491765743616
+    m_Key: Evasion Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7683558682624
+    m_Key: Execution Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7922348797952
+    m_Key: Fast Hands Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8078100082688
+    m_Key: For the Crew! Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8217652965376
+    m_Key: Forcepull Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8354194337792
+    m_Key: Happy Ending Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8504132317184
+    m_Key: Heavy Artillery Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8910182887424
+    m_Key: Homie Protector Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9098112872448
+    m_Key: Lo Siento Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9421548236800
+    m_Key: Mega Threat Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9713111085056
+    m_Key: On Command Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9980141449216
+    m_Key: One More Chance... Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10147674533888
+    m_Key: Electrical Magic Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10446963290112
+    m_Key: Prickly Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10725477658624
+    m_Key: Protective Aura Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10852657344512
+    m_Key: Rock-Tough Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11003392241664
+    m_Key: Taunt! Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11218039943168
+    m_Key: Tick-Tock Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11433308401664
+    m_Key: Time Warp Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11594503892992
+    m_Key: Tough Conversion Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11824888623104
+    m_Key: Triple Action Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11933542068224
+    m_Key: Unending Power Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12089729560576
+    m_Key: Weakener Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12189595938816
+    m_Key: Wise Choice Desc_Key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12466113818624
+    m_Key: You know the drill Desc_Key
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1298592903990083585
+  references:
+    version: 2
+    RefIds:
+    - rid: 1298592903990083585
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1771352917877

@@ -1,0 +1,509 @@
+fileFormatVersion: 2
+guid: aa88f9a92c5e3f64e8f9ac1048467446
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1241241530557415792
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_0
+  - first:
+      213: -7661111772557638839
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_1
+  - first:
+      213: 6779984454658696422
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_2
+  - first:
+      213: -6818994327652990893
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_3
+  - first:
+      213: -2128039712992987922
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_4
+  - first:
+      213: -583174910488013674
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_5
+  - first:
+      213: -8625324519016007799
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_6
+  - first:
+      213: 3605764763530015625
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_7
+  - first:
+      213: 6416076710506462127
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_8
+  - first:
+      213: -8556399573153414524
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_9
+  - first:
+      213: 2454787852696024779
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_10
+  - first:
+      213: -6385590852388453587
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_11
+  - first:
+      213: -6020964696907684800
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_12
+  - first:
+      213: 2656822636876666076
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_13
+  - first:
+      213: 7695553444606606133
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_14
+  - first:
+      213: -3172671600201152000
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_15
+  - first:
+      213: -8088778575510751164
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_16
+  - first:
+      213: -3807769993380693466
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_17
+  - first:
+      213: 5302723954184554844
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_18
+  - first:
+      213: 1361165970776506568
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_19
+  - first:
+      213: -8460487428182826651
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_20
+  - first:
+      213: 7656174554310822826
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_21
+  - first:
+      213: 7270962806457697159
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_22
+  - first:
+      213: 4999571404542856745
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_23
+  - first:
+      213: 6025359582410352888
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_24
+  - first:
+      213: -4066815336059575565
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_25
+  - first:
+      213: -5263042398297030838
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_26
+  - first:
+      213: -7028423320728672871
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_27
+  - first:
+      213: 54787039683667169
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_28
+  - first:
+      213: -7547584831016564826
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_29
+  - first:
+      213: -6719827121488484793
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_30
+  - first:
+      213: 8556934260526452555
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_31
+  - first:
+      213: 561962618736819346
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_32
+  - first:
+      213: -3904158133614036631
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_33
+  - first:
+      213: -2031483434159953141
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_34
+  - first:
+      213: -7577874950520633618
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_35
+  - first:
+      213: -5502001920736611489
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_36
+  - first:
+      213: 3742682378063969395
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_37
+  - first:
+      213: -5558427894287819896
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_38
+  - first:
+      213: 4839814671090856618
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_39
+  - first:
+      213: -8806360261358508114
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_40
+  - first:
+      213: -4598084949424791419
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_41
+  - first:
+      213: -7353978200906067050
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_42
+  - first:
+      213: 8342367617356385220
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_43
+  - first:
+      213: -2180203682635160843
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_44
+  - first:
+      213: -4797859983861158406
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_45
+  - first:
+      213: -3707665450023047586
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_46
+  - first:
+      213: -8940087210015212430
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_47
+  - first:
+      213: -9138352981800399118
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_48
+  - first:
+      213: 470273754622322155
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_49
+  - first:
+      213: -8810557071822467579
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_50
+  - first:
+      213: 2628463064110170330
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_51
+  - first:
+      213: -5152777850552066023
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_52
+  - first:
+      213: -4089032871753258636
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_53
+  - first:
+      213: -7202713534797187525
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_54
+  - first:
+      213: 2628839102763465632
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_55
+  - first:
+      213: 4982072928547745379
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_56
+  - first:
+      213: -8161963605360321796
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_57
+  - first:
+      213: -7982726085184504055
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_58
+  - first:
+      213: -4121513686372730303
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_59
+  - first:
+      213: 8634167547231398593
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_60
+  - first:
+      213: 2682507136875464592
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_61
+  - first:
+      213: 762934444483328227
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_62
+  - first:
+      213: -7331192645745427080
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_63
+  - first:
+      213: -2693064864006213596
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_64
+  - first:
+      213: -1682946247549235335
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_65
+  - first:
+      213: -7438079151912049250
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_66
+  - first:
+      213: 7502735017717015510
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_67
+  - first:
+      213: 8704666681647617573
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_68
+  - first:
+      213: 7919443889987891508
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_69
+  - first:
+      213: -2874710168712257832
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_70
+  - first:
+      213: -8465978709801822949
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_71
+  - first:
+      213: 7293396995374979238
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_72
+  - first:
+      213: 5187737561489016616
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_73
+  - first:
+      213: 1648062773918350399
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_74
+  - first:
+      213: 5194922965658214149
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_75
+  - first:
+      213: 4725975520974136093
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_76
+  - first:
+      213: 1489984112790081115
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_77
+  - first:
+      213: -3140232292239669017
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_78
+  - first:
+      213: 2287113207055066112
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_79
+  - first:
+      213: 5993637112717277081
+    second: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_80
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09eb9a2876936cee0800000000000000
+      internalID: -1241241530557415792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 13
+        width: 96
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9438324ee634ea590800000000000000
+      internalID: -7661111772557638839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 12
+        width: 96
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e42a9a80f7571e50800000000000000
+      internalID: 6779984454658696422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35007de99c01e51a0800000000000000
+      internalID: -6818994327652990893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4f027e72fa772e0800000000000000
+      internalID: -2128039712992987922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694117a328528e7f0800000000000000
+      internalID: -583174910488013674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_6
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98775938c01bc4880800000000000000
+      internalID: -8625324519016007799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f2b8ee7352f8fa14aa4058e628f90a84
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_0: -1241241530557415792
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_1: -7661111772557638839
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_2: 6779984454658696422
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_3: -6818994327652990893
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_4: -2128039712992987922
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_5: -583174910488013674
+      cardspritesheetfix9overlay6fixfixbutforthedeckbuilder_6: -8625324519016007799
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

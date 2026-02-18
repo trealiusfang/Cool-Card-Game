@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 5dabd21bf23711d4dbdb325d87a3b18f
+  - enabled: 1
+    path: Assets/Scenes/Local 1v1.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 0
+    path: Assets/Scenes/Card Library.unity
+    guid: a6882359ea8195543ba870f5503d6ef7
+  - enabled: 0
+    path: Assets/Scenes/Deck Builder.unity
+    guid: 3c54ea1f57debb64797a27fcc3510805
+  - enabled: 1
+    path: Assets/Scenes/RogueLike Mode.unity
+    guid: dae30aaf1f1806f4fb5db7a220e3a9cc
+  - enabled: 1
+    path: Assets/Scenes/Customs.unity
+    guid: 243b808e490f3a74783bc74f2411e239
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 129696c48349c4f4b8ed9670cd1d923e, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 402c0730680b49a47973b003ad4ddc77, type: 2}
+  m_UseUCBPForAssetBundles: 0

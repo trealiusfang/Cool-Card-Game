@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6b3ec0995d8ab4286b5409dd500b07, type: 3}
+  m_Name: Execution
+  m_EditorClassIdentifier: 
+  PassiveName: Execution
+  PassiveDescription: On attack, if the targets health is Value or lower insta-kill
+    the target
+  PassiveValue: 2
+  PassiveTiming: 8
+  PassiveSprite: {fileID: 21300000, guid: 0fa366efe076aea46b5927aedcc9d0c3, type: 3}
+  PassiveAudio: {fileID: 8300000, guid: 19f0242366f736240a9a9de7b1bd474a, type: 3}
+  passiveColor: {r: 195, g: 255, b: 0, a: 0}

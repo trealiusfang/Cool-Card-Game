@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89dcf45f44a7b2e4fbe23933020ec4b8, type: 3}
+  m_Name: Homie Guard
+  m_EditorClassIdentifier: 
+  effectName: Homie Guard
+  StatusEffectDescription: Lowers incoming damage by 1
+  StatusCheck: 16
+  StatusEffectSprite: {fileID: 21300000, guid: 4f97047c1cba3964282bfa6202b0f514, type: 3}
+  statusType: 0
+  StatusValue: 0

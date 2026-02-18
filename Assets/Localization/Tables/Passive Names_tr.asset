@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Passive Names_tr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: tr
+  m_SharedData: {fileID: 11400000, guid: 69e71cf1fbfcd1e43962090ab7760b1e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3449563983872
+    m_Localized: "A+ SEV\u0130YE TEHD\u0130T"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3597903933440
+    m_Localized: "Y\xFCkseli\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4039576727552
+    m_Localized: "\u015Eef'in Lokumu"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4142978904064
+    m_Localized: "Taklit\xE7i"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4261488963584
+    m_Localized: "Kan Davas\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4713706237952
+    m_Localized: "H\xFCnerli"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5206968971264
+    m_Localized: "\u0130nfaz"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5306520776704
+    m_Localized: Maarifetli Eller
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5714085490688
+    m_Localized: "Ekip \u0130\xE7in!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5865789272064
+    m_Localized: Gel Buraya!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6827719340032
+    m_Localized: Mutlu Son
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7375944232960
+    m_Localized: Savunmaya!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7737686175744
+    m_Localized: Lo Siento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9133382774784
+    m_Localized: "B\xFCy\xFCk Tehdit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9520877744128
+    m_Localized: Strateji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9654910922752
+    m_Localized: "Bir \u015Eans Daha"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9743461068800
+    m_Localized: "Ceyran B\xFCy\xFCs\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10597299728384
+    m_Localized: Dikenli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10670611968000
+    m_Localized: Koruyucu Ruh
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11088654053376
+    m_Localized: "Ta\u015F Kalpli"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11296980938752
+    m_Localized: "Alayc\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11362978312192
+    m_Localized: Tik-Tak
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11485678481408
+    m_Localized: "Zaman E\u011Freltisi"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11622907719680
+    m_Localized: "Sertle\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11866261237760
+    m_Localized: "\xDC\xE7leme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12571676061696
+    m_Localized: "Sonsuz G\xFC\xE7"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12688390959104
+    m_Localized: "Zay\u0131flat\u0131c\u0131"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12797593858048
+    m_Localized: "Kara B\xFCy\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13299727544320
+    m_Localized: "Tatl\u0131 G\xF6r\xFCn\xFC\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14446899048448
+    m_Localized: "Kana Susam\u0131\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14594135896064
+    m_Localized: Cazibeli
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15039944273920
+    m_Localized: "Sad\u0131k Hizmetk\xE2rlar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15139324112896
+    m_Localized: Sevimli Tehdit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15213915615232
+    m_Localized: "Sarho\u015F B\xFCy\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15358572965888
+    m_Localized: "Dikkatli d\xF6v\xFC\u015F\xE7\xFC"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16126000574464
+    m_Localized: Sakar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16242476396544
+    m_Localized: "Yorucu \u0130\u015F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18810182393856
+    m_Localized: Sonlayici
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

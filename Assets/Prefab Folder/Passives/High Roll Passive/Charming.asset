@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6b3ec0995d8ab4286b5409dd500b07, type: 3}
+  m_Name: Charming
+  m_EditorClassIdentifier: 
+  PassiveName: Charming
+  PassiveDescription: At the start of round charms the front card of the enemy for
+    Value rounds
+  PassiveValue: 1
+  PassiveTiming: 256
+  PassiveSprite: {fileID: 0}
+  PassiveAudio: {fileID: 8300000, guid: 00a4b4087d280f84fa651160dc059724, type: 3}
+  passiveColor: {r: 0, g: 0.7076019, b: 0.7490196, a: 1}

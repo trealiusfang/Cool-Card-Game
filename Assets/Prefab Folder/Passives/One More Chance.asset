@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d6b3ec0995d8ab4286b5409dd500b07, type: 3}
+  m_Name: One More Chance
+  m_EditorClassIdentifier: 
+  PassiveName: One More Chance...
+  PassiveDescription: When Resistance drops to 0 or less, restore it back up by %50.
+    Preventing death
+  PassiveValue: 1
+  PassiveTiming: 128
+  PassiveSprite: {fileID: 21300000, guid: cf20c8ae9ce36d94bb0dc83b2f31a7df, type: 3}
+  PassiveAudio: {fileID: 0}
+  passiveColor: {r: 195, g: 255, b: 0, a: 0}
