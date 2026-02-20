@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class CardPositionManager : MonoBehaviour
+public class CardPositionManager : MonoSingleton<CardPositionManager>
 {
-    public static CardPositionManager instance;
     private RoundManager roundManager;
     [Header("Experimental")]
     public float cardSpotDistance = .5f;
@@ -28,10 +28,7 @@ public class CardPositionManager : MonoBehaviour
     public int spotAmount;
     public bool nonMovablity;
     public bool swability; //If the card has been played, return false
-    private void Awake()
-    {
-        if (instance == null) instance = this; else Destroy(gameObject);
-    }
+
 
     private void Start()
     {

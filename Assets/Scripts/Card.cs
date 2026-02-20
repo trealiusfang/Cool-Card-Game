@@ -57,8 +57,8 @@ public class Card : MonoBehaviour
         ResistanceValue = CardValues.getResistanceValue();
         ActionValue = CardValues.getActionValue();
 
-        roundManager = GameObject.FindFirstObjectByType<RoundManager>();
-        passiveManager = GameObject.FindFirstObjectByType<PassiveManager>();
+        roundManager = RoundManager.instance;
+        passiveManager = PassiveManager.instance;
         animator = GetComponentInChildren<Animator>();
         cardOverlay = GetComponent<CardOverlay>();
         cardRenderer = GetComponent<CardRenderer>();

@@ -216,8 +216,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=#D7FF00FF>Loyal Servants</color>\n \nEach start of round you inherit
-    loyal ants, when health is below %50 calls fire ants and action increases"
+  m_text: "<color=#D7FF00FF>Loyal Servants</color>\n \nA B C \xC7 D E F G \u011E
+    H "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 849e957d1439b894cb3fec584c249423, type: 2}
   m_sharedMaterial: {fileID: 7635102959042064918, guid: 849e957d1439b894cb3fec584c249423, type: 2}
@@ -244,8 +244,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 1.7
-  m_fontSizeBase: 1.7
+  m_fontSize: 1.67
+  m_fontSizeBase: 1.67
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 3

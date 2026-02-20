@@ -16,7 +16,7 @@ MonoBehaviour:
   actionType: 0
   ActionValue: 1
   resistanceType: 0
-  ResistanceValue: 8
+  ResistanceValue: 6
   preferredTargetSpots:
     spot1: 1
     spot2: 0

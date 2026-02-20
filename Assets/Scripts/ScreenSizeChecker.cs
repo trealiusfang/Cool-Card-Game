@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class ScreenSizeChecker : MonoBehaviour
 {
-    public static ScreenSizeChecker Instance;
+    public static ScreenSizeChecker instance;
 
     private float _previousWidth;
     private float _previousHeight;
@@ -13,14 +13,14 @@ public class ScreenSizeChecker : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
             DontDestroyOnLoad(gameObject);
             Init();
             return;
         }
-        Instance.onScreenSizeChanged = null;
+        instance.onScreenSizeChanged = null;
         Destroy(gameObject);
     }
 

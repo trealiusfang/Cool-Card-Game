@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class StatusEffectsManager : MonoBehaviour
+public class StatusEffectsManager : MonoSingleton<StatusEffectsManager>
 {
-    public static StatusEffectsManager instance;
     public StatusEffect[] allStatuses;
     RoundManager roundManager;
-    public void Awake()
-    {
-        if (instance == null) instance = this; else Destroy(gameObject);    
-    }
+
     private void Start()
     {
         roundManager = RoundManager.instance;

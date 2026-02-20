@@ -7,7 +7,7 @@ using UnityEngine;
 public class Encounter : ScriptableObject
 {
     public List<CardValues> cards;
-    public EncounterType encounterType;//
+    public EncounterType encounterType;
 }
 
 public enum EncounterType

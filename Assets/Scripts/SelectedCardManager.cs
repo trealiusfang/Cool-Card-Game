@@ -1,18 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class SelectedCardManager : MonoBehaviour
+public class SelectedCardManager : MonoSingleton<SelectedCardManager>
 {
-    public static SelectedCardManager instance;
-    public static Event EgehanPooping;
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
-    }
-
     public Card SelectedCard;
     [HideInInspector] public GameObject passiveGameObject;
     public bool onPassive;

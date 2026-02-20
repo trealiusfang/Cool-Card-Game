@@ -4,7 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-public class DeckChooser : MonoBehaviour
+using UnityCommunity.UnitySingleton;
+public class DeckChooser : MonoSingleton<DeckChooser>
 {
     public List<Card> player1Deck = new List<Card>();
     public List<Card> player2Deck = new List<Card>();
@@ -12,12 +13,7 @@ public class DeckChooser : MonoBehaviour
     public bool firstPlayer = true;
     public int maxCardAmount = 6;
     public int maxCardAllowed = 24;
-    public static DeckChooser instance;
     bool allowSelection = false;
-    private void Awake()
-    {
-        if (instance == null) instance = this; else Destroy(gameObject);
-    }
 
     public void ResetAll()
     {

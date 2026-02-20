@@ -15,7 +15,7 @@ MonoBehaviour:
   PassiveName: Tick-Tock
   PassiveDescription: If alive after 3 turns, Explode and deal Value damage to all
     enemies
-  PassiveValue: 3
+  PassiveValue: 4
   PassiveTiming: 4
   PassiveSprite: {fileID: -5572636784033950003, guid: 3656e9c1392285d4da6c904f07bb7b51, type: 3}
   PassiveAudio: {fileID: 0}

@@ -1,24 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class BattleTextManager : MonoBehaviour
+public class BattleTextManager : MonoSingleton<BattleTextManager>
 {
     public GameObject textPrefab;
-
-    public static BattleTextManager instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        } else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     public void CallBattleText(string Text, TextSize textSize, Vector2 textPosition ,Color color, float animationSpeed, string soundEffect = "")
     {

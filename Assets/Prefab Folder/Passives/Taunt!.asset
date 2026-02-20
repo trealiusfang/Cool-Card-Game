@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PassiveName: Taunt!
   PassiveDescription: On Attack taunts the target enemy, making them Lock on this
-    card only for 1 turn
+    card only for 1 turn. At the end of turn changes targets
   PassiveValue: 0
-  PassiveTiming: 8
+  PassiveTiming: 12
   PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
   PassiveAudio: {fileID: 0}
   passiveColor: {r: 195, g: 255, b: 0, a: 0}

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class RoundManager : MonoBehaviour
+public class RoundManager : MonoSingleton<RoundManager>
 {
     //Turn info
     public bool isPlayersTurn = true;
@@ -11,7 +12,6 @@ public class RoundManager : MonoBehaviour
 
     //The card changes this boolean to tell us if we can continue with the next card
     bool cardIsReady;
-    float cardsOnPlay;
 
     //Round information
     [SerializeField] private List<Card> playOrder = new List<Card>();
@@ -30,7 +30,6 @@ public class RoundManager : MonoBehaviour
     public static event OnRoundStartOrEnd RoundStartLateEvent;
     public static event OnRoundStartOrEnd BattleEndEvent;
     public static event OnRoundStartOrEnd BattleStartEvent;
-    public static RoundManager instance;
 
     [Header("Stock")]
     public bool stockEnabled = false;
@@ -42,16 +41,7 @@ public class RoundManager : MonoBehaviour
     public bool exchangedRoundOrder;
     public bool RandomStart = true;
     public float actionTimer;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        } else
-        {
-            Destroy(gameObject);
-        }
-    }
+
 
     public void Start()
     {

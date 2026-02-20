@@ -65,11 +65,9 @@ public class DeckHandler : MonoBehaviour
         onRound = !onRound;
 
         //Right now it is a pretty simple version. Randomly draws a card and plays once.
-        //Easily expandable, i.e. calling multiple times to put 3 cards every end of turn
-        Debug.Log("we are on round good sir.");
+        //Easily expandable, i.e. calling multiple times to put 3 cards every end of turn 
         if (controlledByAI  && onRound && DrawPile.Length != 0)
         {
-            Debug.Log("well isn't this amazing good sir we are in.");
             CardValues cardValues = DrawPile[0];
             if (!roundManager.canAddToPlay(CardTeam.Enemies, true) || cardValues == null) { return; }
 

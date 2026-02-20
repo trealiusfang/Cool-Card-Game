@@ -164,7 +164,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11433308401664
-    m_Localized: Every end of turn the card infront of it plays for a second time
+    m_Localized: End of every Value turn(s) the card infront of it plays for a second
+      time
     m_Metadata:
       m_Items: []
   - m_Id: 11594503892992

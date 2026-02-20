@@ -2,24 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class GeneralGameManager : MonoBehaviour
+public class GeneralGameManager : MonoSingleton<GeneralGameManager>
 {
-    public static GeneralGameManager instance;
-    private void Awake()
-    {
-        if (instance == null) 
-        {
-            instance = this;
-        } else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
         LoadOptions();

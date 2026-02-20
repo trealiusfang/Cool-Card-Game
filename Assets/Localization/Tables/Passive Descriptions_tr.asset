@@ -189,8 +189,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11433308401664
-    m_Localized: "Her bu kart\u0131n turu oynand\u0131\u011F\u0131nda \xF6n\xFCndeki
-      kart ikince kez oynar (Evet, \xE7ok dengeli de\u011Fil)"
+    m_Localized: "Her iki turda bir turunun sonunda \xF6n\xFCndeki kart ikince kez
+      oynar "
     m_Metadata:
       m_Items: []
   - m_Id: 11594503892992

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
-
-public class PassiveManager : MonoBehaviour
+using UnityCommunity.UnitySingleton;
+public class PassiveManager : MonoSingleton<PassiveManager> 
 {
     RoundManager roundManager;
     CardPositionManager spotManager;
@@ -320,7 +320,7 @@ public class PassiveManager : MonoBehaviour
                 continue;
             }
 
-            if (currentPassive.PassiveName == "Prickly Wreckage")
+            if (currentPassive.PassiveName == "Electrical Magic")
             {
                 if (passiveTiming == CardTimings.StartOfRound)
                 {
@@ -434,8 +434,7 @@ public class PassiveManager : MonoBehaviour
 
             if (currentPassive.PassiveName == "Homie Protector")
             {
-                //This ability is WAY too powerfull, should only be used once or twice
-                if (card.ActiveRounds > passiveValue) {Debug.Log("Status Debug: " + card.ActiveRounds +  ", " + passiveValue); continue; }
+                if (card.ActiveRounds > passiveValue) { continue; }
                 
                 Card[] cards = roundManager.getCardGroup(card.getCardTeam());
 
@@ -510,18 +509,29 @@ public class PassiveManager : MonoBehaviour
 
             if (currentPassive.PassiveName == "Time Warp")
             {
-                if (passiveTiming == CardTimings.StartOfRound)
-                {
-                    card.passiveValue[i] = 0;
-                }
                 if (passiveTiming == CardTimings.EndOfTurn)
                 {
-                    if (passiveValue < 0) continue;
-                    if ((roundManager.getCardGroupOrder(card) - 1) < 0) continue;
-                    Card frontCard = roundManager.getCardGroup(card.getCardTeam())[roundManager.getCardGroupOrder(card) - 1];
+                    if (passiveValue > 0)
+                    {
+                        card.passiveValue[i]--;
+                    }
 
-                    roundManager.AddCurrentPlayingCard(frontCard);
-                    card.passiveValue[i]--;
+                    if (card.passiveValue[i] == 0)
+                    {
+                        //If no one is in front of you, don't run the code
+                        if ((roundManager.getCardGroupOrder(card) - 1) < 0) continue;
+
+                        Card frontCard = roundManager.getCardGroup(card.getCardTeam())[roundManager.getCardGroupOrder(card) - 1];
+                        roundManager.AddCurrentPlayingCard(frontCard);
+                        card.passiveValue[i]--;
+                    }
+                    else
+                    {
+                        // if time warp is ran, then reset the value to the orignal value
+                        card.passiveValue[i] = currentPassive.PassiveValue;
+                    }
+
+                    card.UpdateVisualStats();
                 }
                 continue;
             }
@@ -740,6 +750,23 @@ public class PassiveManager : MonoBehaviour
                 {
                     if (targetCard.CardValues.actionType != ActionType.Heal)
                         targetCard.InfluenceCardTargets(list);
+                }
+
+                if (passiveTiming == CardTimings.EndOfTurn)
+                {
+                    List<bool> bools = Enumerable.Repeat(false, 4).ToList();
+
+                    for (int c = 0; c < 5; c++)
+                    {
+                        if (card.targetSpots[c % 4])
+                        {
+                            //0, 1; 1, 2; 2, 3; 3, 4; 4, 5;
+                            bools[c % 4] = true;
+                        }
+                    }
+
+                    card.targetSpots = bools;
+                    card.UpdateVisualStats();
                 }
                 continue;
             }

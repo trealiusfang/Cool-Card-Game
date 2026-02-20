@@ -1,23 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : PersistentMonoSingleton<AudioManager>
 {
     public AudioAndName[] SFX, Music;
     public AudioSource SFXSource, MusicSource;
 
-    public static AudioManager instance;
-
-    private void Awake()
+    private void Start()
     {
-        if (instance == null) instance = this; else
-        {
-            Destroy(gameObject);
-            return;
-        }
         DontDestroyOnLoad(gameObject);
     }
 

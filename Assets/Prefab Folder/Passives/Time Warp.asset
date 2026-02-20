@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Time Warp
   m_EditorClassIdentifier: 
   PassiveName: Time Warp
-  PassiveDescription: Every end of turn the card infront of it plays for a second
-    time
-  PassiveValue: 0
-  PassiveTiming: 260
+  PassiveDescription: End of every Value turn(s) the card infront of it plays for
+    a second time
+  PassiveValue: 2
+  PassiveTiming: 4
   PassiveSprite: {fileID: 21300000, guid: 6d67131fee444274aa9eb4a20f7e2993, type: 3}
   PassiveAudio: {fileID: 0}
   passiveColor: {r: 0.67293257, g: 0.19241722, b: 0.8679245, a: 1}

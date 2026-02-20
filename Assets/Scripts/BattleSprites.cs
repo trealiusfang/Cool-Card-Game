@@ -2,22 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 
-public class BattleSprites : MonoBehaviour
+public class BattleSprites : MonoSingleton<BattleSprites>
 {
-    public static BattleSprites instance { get; private set; }
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        } else
-        {
-            instance = this;
-        }
-    }
-
     public ResSprite[] ResistanceSprites;
     public ActionSprite[] ActionSprites;
     public ActionAndFont[] ActionAndFont;

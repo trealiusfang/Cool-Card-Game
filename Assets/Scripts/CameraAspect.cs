@@ -55,13 +55,13 @@ public class CameraAspect : MonoBehaviour
 
     private void OnEnable()
     {
-        if (ScreenSizeChecker.Instance != null)
-            ScreenSizeChecker.Instance.onScreenSizeChanged += Resize;
+        if (ScreenSizeChecker.instance != null)
+            ScreenSizeChecker.instance.onScreenSizeChanged += Resize;
     }
 
     private void OnDisable()
     {
-        if (ScreenSizeChecker.Instance != null)
-            ScreenSizeChecker.Instance.onScreenSizeChanged -= Resize;
+        if (ScreenSizeChecker.instance != null)
+            ScreenSizeChecker.instance.onScreenSizeChanged -= Resize;
     }
 }

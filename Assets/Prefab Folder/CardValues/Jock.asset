@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardName: Jock
   actionType: 0
-  ActionValue: 2
+  ActionValue: 1
   resistanceType: 0
   ResistanceValue: 7
   preferredTargetSpots:

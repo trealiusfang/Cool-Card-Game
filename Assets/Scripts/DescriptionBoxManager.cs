@@ -1,14 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
-public class DescriptionBoxManager : MonoBehaviour
+public class DescriptionBoxManager : MonoSingleton<DescriptionBoxManager>
 {
-    public static DescriptionBoxManager instance;
     public GameObject DescriptionBoxPrefab;
     public Vector2 DescriptionBoxOffset;
     [Header("Testing")]
@@ -28,11 +26,6 @@ public class DescriptionBoxManager : MonoBehaviour
     DescriptionAndKey[] descriptionAndKeys;
 
     SelectedCardManager selectedManager;
-    private void Awake()
-    {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
-    }
 
     private void Start()
     {
