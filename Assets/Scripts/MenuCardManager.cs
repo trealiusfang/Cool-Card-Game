@@ -105,7 +105,6 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
         {
             //random canvas
         }
-        Debug.Log(currentCustomGame.gameMode.ToString());
     }
 
     public void CallCustomCardSelection()
@@ -125,7 +124,6 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     //Ready and switch conditions
     public void Ready()
     {
-        Debug.Log("Called ready for some reason???");
         if (targetScene ==  GeneralGameManager.instance.CustomGameSceneName)
         {
             if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
