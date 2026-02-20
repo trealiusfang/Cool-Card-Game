@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
-  m_Name: THE ZAFEN
+  m_Name: silly zafen
   m_EditorClassIdentifier: 
   CardName: silly zafen
   actionType: 0

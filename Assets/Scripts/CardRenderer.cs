@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization;
 
 public class CardRenderer : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class CardRenderer : MonoBehaviour
     Card card;
     private void Awake()
     {
-        card = GetComponent<Card>();
+        card = GetComponent<Card>(); 
     }
 
     public void SetVisuals()
@@ -38,13 +39,18 @@ public class CardRenderer : MonoBehaviour
         CardValues cardValues = card.CardValues;
 
         string localizedText = LocalizationSettings.StringDatabase.GetLocalizedString("Card Names", cardValues.getCardName() + "_Key");
+        //Not an elegant solution
+        if (localizedText.Contains(cardValues.getCardName()))
+        {
+            localizedText = cardValues.getCardName();
+        }
         CharacterName.text = localizedText;
 
         CharacterSprite.sprite = cardValues.charSprite;
         if (cardValues.charAnimator != null) CharacterAnimator.runtimeAnimatorController = cardValues.charAnimator;
         if (cardValues.charClip != null) { videoPlayer.clip = cardValues.charClip; videoPlayer.Play();}
 
-            BattleSprites.instance.SetMainSprites(cardValues, ResistanceSprite, ActionSprite);
+        BattleSprites.instance.SetMainSprites(cardValues, ResistanceSprite, ActionSprite);
         BattleSprites.instance.SetFonts(cardValues, CharacterName, ActionValue, ResistanceValue);
 
         //Change this later, this swaps the sprite aswell making it look weird

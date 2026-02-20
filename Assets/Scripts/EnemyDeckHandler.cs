@@ -43,14 +43,32 @@ public class EnemyDeckHandler : MonoBehaviour
 
     public void PlayRandom()
     {
+        for (int i = 0; i < AmountPlayed; i++)
         StartCoroutine(playRandom());
+    }
+    public void Play()
+    {
+        for (int i = 0; i < AmountPlayed; i++)
+            StartCoroutine(play());
     }
 
     IEnumerator playRandom()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < AmountPlayed; i++)
         {
             PlayCard(RandomFromPile());
+            yield return new WaitForSeconds(timeBetweenDraws);
+        }
+    }
+    IEnumerator play()
+    {
+        for (int i = 0; i < AmountPlayed; i++)
+        {
+            if (EnemyCardPile.Count > 0)
+            {
+                CardValues newCard = EnemyCardPile[0];
+                PlayCard(newCard);
+            }
             yield return new WaitForSeconds(timeBetweenDraws);
         }
     }

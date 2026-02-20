@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuCardManager : MonoBehaviour
+public class MenuCardManager : MonoSingleton<MenuCardManager>
 {
     [Header("Needed Scripts")]
     [SerializeField] CardArranger cardArranger;
     [SerializeField] DeckChooser deckChooser;
+    [SerializeField] CustomGamesInfoHolder customGamesInfoHolder;
     [Header("Ýmportant UI Changes")]
     [SerializeField] GameObject CardSelectionCanvas;
     [SerializeField] GameObject Lister;
@@ -17,6 +19,8 @@ public class MenuCardManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI maxCardText;
     [SerializeField] GameObject ReadyButton;
     [SerializeField] TextMeshProUGUI playerText;
+    [Header("Custom gaymes les go")]
+    [SerializeField] GameObject CustomGamesCanvas;
     string targetScene;
 
     private void Start()
@@ -52,26 +56,14 @@ public class MenuCardManager : MonoBehaviour
         targetScene = GeneralGameManager.instance.Local1v1SceneName;
     }
 
-    public void CallCustom()
-    {
-        CardSelectionCanvas.SetActive(true);
-
-        Lister.SetActive(true);
-        CurrentPlayer.SetActive(false);
-        ReadyButton.SetActive(true);
-        MaxCards.SetActive(true);
-
-        cardArranger.SpawnCards();
-        deckChooser.doAllowSelection(true);
-
-        targetScene = GeneralGameManager.instance.CustomGameSceneName;
-    }
 
     public void GoBack()
     {
         deckChooser.ResetAll();
         CardSelectionCanvas.SetActive(false);
         cardArranger.DespawnCards();
+
+        CustomGamesCanvas.SetActive(false);
     }
 
     // Normal Buttons Area 
@@ -79,7 +71,7 @@ public class MenuCardManager : MonoBehaviour
     public void PlayerButton()
     {
         deckChooser.SwitchPlayers();
-
+        
         if (playerText.text == "Player 1") playerText.text = "Player 2";
         else if (playerText.text == "Player 2") playerText.text = "Player 1";
     }    
@@ -90,15 +82,63 @@ public class MenuCardManager : MonoBehaviour
 
         maxCardText.text = deckChooser.maxCardAmount.ToString();
     }
+    #region custom games managing
+    CustomGame currentCustomGame = null;
+    public void CallCustomGame()
+    {
+        CustomGamesCanvas.SetActive(true);
+
+        targetScene = GeneralGameManager.instance.CustomGameSceneName;
+    }
+
+    public void SendCustomGamesInfo(CustomGame _customGame)
+    {
+        currentCustomGame = _customGame;
+
+        CustomGamesCanvas.SetActive(false);
+
+        if (currentCustomGame.gameMode == CustomGameMode.Normal)
+        {
+            CallCustomCardSelection();
+        }
+        if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
+        {
+            //random canvas
+        }
+        Debug.Log(currentCustomGame.gameMode.ToString());
+    }
+
+    public void CallCustomCardSelection()
+    {
+        CardSelectionCanvas.SetActive(true);
+
+        Lister.SetActive(true);
+        CurrentPlayer.SetActive(false);
+        ReadyButton.SetActive(true);
+        MaxCards.SetActive(true);
+
+        cardArranger.SpawnCards();
+        deckChooser.doAllowSelection(true);
+    }
+
+    #endregion
     //Ready and switch conditions
     public void Ready()
     {
+        Debug.Log("Called ready for some reason???");
         if (targetScene ==  GeneralGameManager.instance.CustomGameSceneName)
         {
+            if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
+            {
+                SceneManager.LoadScene(targetScene);
+                AudioManager.instance.PlayMusic(currentCustomGame.EncounterMusic);
+                return;
+            }
+
             if (deckChooser.player1Deck.Count > 0)
             {
                 SceneManager.LoadScene(targetScene);
-                AudioManager.instance.PlayMusic("The Killer Queen");
+                AudioManager.instance.PlayMusic(currentCustomGame.EncounterMusic);
             }
             else
             {
@@ -140,7 +180,7 @@ public class MenuCardManager : MonoBehaviour
                     }
                 }
                 LocalVersusManager versusManager = FindAnyObjectByType<LocalVersusManager>();
-                versusManager.SetPlayerDecks(p1.ToArray(), p2.ToArray());
+                versusManager.SetPlayerDecks(p1, p2);
                 RoundManager.instance.StartBattle();
 
                 Destroy(gameObject);
@@ -157,7 +197,15 @@ public class MenuCardManager : MonoBehaviour
                     playerCards.Add(deckChooser.player1Deck[i].CardValues);
                 }
                 VersusAIManager versusManager = FindAnyObjectByType<VersusAIManager>();
-                versusManager.SetPlayer(playerCards.ToArray());
+
+                if (currentCustomGame.gameMode == CustomGameMode.Normal)
+                {
+                    versusManager.SetVersus(playerCards, currentCustomGame.encounter);
+                } else if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
+                {
+                    versusManager.SetVersus(true, 12);
+                }
+
                 RoundManager.instance.StartBattle();
 
                 Destroy(gameObject);

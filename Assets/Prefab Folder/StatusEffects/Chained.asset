@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chained
   m_EditorClassIdentifier: 
   effectName: Chained
-  StatusEffectDescription: Can't attack
+  StatusEffectDescription: Can't take action
   StatusCheck: 40
   StatusEffectSprite: {fileID: 0}
   statusCountType: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   effectName: Stunned
   StatusEffectDescription: Card can't play its turn
   StatusCheck: 2
-  StatusEffectSprite: {fileID: 21300000, guid: 179a225092f5de84295b01fc42d4e674, type: 3}
+  StatusEffectSprite: {fileID: 21300000, guid: 40441e86161369d488259589611cf435, type: 3}
   statusCountType: 1
   StatusValue: 1
   statusType: 1

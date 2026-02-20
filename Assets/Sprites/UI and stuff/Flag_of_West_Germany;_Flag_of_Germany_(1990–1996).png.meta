@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Flag_of_West_Germany;_Flag_of_Germany_(1990\u20131996)_0": -3068622537728203796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

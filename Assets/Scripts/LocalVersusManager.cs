@@ -46,7 +46,7 @@ public class LocalVersusManager : MonoBehaviour
         }
     }
 
-    public void SetPlayerDecks(CardValues[] firstPlayer, CardValues[] secondPlayer)
+    public void SetPlayerDecks(List<CardValues> firstPlayer, List<CardValues> secondPlayer)
     {
         player1.playerAvailableCards = firstPlayer;
         player2.playerAvailableCards = secondPlayer;
@@ -129,12 +129,12 @@ public class LocalVersusManager : MonoBehaviour
     }
     public void CheckLoseCondition()
     {
-        if (player2.DrawPile.Length == 0 && player2.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Enemies).Length == 0)
+        if (player2.DrawPile.Count == 0 && player2.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Enemies).Length == 0)
         {
             DeactivateBoth();
             GameOver("1");
         }
-        if (player1.DrawPile.Length == 0 && player1.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
+        if (player1.DrawPile.Count == 0 && player1.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
         {
             DeactivateBoth();
             GameOver("2");

@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flag_of_Spain_0: -3265603932494903334
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Happy Ending
   m_EditorClassIdentifier: 
   PassiveName: Happy Ending
-  PassiveDescription: Upon death Heals an ally with the lowest HP by Value
+  PassiveDescription: Upon death Heals targeted ally with by Value
   PassiveValue: 3
   PassiveTiming: 128
   PassiveSprite: {fileID: 21300000, guid: d6adc100dfac704449ea199cc2766b52, type: 3}

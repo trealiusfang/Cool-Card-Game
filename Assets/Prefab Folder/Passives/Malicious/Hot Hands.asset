@@ -16,5 +16,6 @@ MonoBehaviour:
   PassiveDescription: On attack, has a %50 chance to deal 1 damage to self
   PassiveValue: 0
   PassiveTiming: 8
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 1bf04d7c26e5eb94c856c9aac46cc447, type: 3}
   PassiveAudio: {fileID: 8300000, guid: 9987fb4b8d53a094283476f9e3d6f506, type: 3}
+  passiveColor: {r: 195, g: 255, b: 0, a: 0}

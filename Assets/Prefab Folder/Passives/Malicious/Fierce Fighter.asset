@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Fierce Fighter
   m_EditorClassIdentifier: 
   PassiveName: Fierce Fighter
-  PassiveDescription: Action value is equal to half of targets Resistance, heals
+  PassiveDescription: Action value is equal to half of targets Resistance, Heals
     lowest HP ally by 1 after attack
   PassiveValue: 1
   PassiveTiming: 264
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 919ce382d58d1b44a8c6b59875981326, type: 3}
   PassiveAudio: {fileID: 0}
-  passiveColor: {r: 195, g: 255, b: 0, a: 0}
+  passiveColor: {r: 1, g: 0.10431396, b: 0.051886797, a: 0.9843137}

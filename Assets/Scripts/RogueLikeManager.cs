@@ -40,15 +40,12 @@ public class RogueLikeManager : MonoBehaviour
 
     public void SetPlayerDeck(List<CardValues> values)
     {
-        playerDeck.playerAvailableCards = values.ToArray();
+        playerDeck.playerAvailableCards = values;
     }
 
     public void AddNewCardToDeck(CardValues card)
     {
-        List<CardValues> values = playerDeck.playerAvailableCards.ToList();
-        values.Add(card);
-
-        playerDeck.playerAvailableCards = values.ToArray();
+        playerDeck.playerAvailableCards.Add(card);
     }
     
     public void StarterDeck()

@@ -29,50 +29,6 @@ public class DeckChooser : MonoSingleton<DeckChooser>
         allowSelection = allow;
     }
 
-    private void OnLevelWasLoaded(int level)
-    {
-        if (level == 1)
-        {
-            if (RoundManager.instance != null)
-            {
-                List<CardValues> p1 = new List<CardValues>(), p2 = new List<CardValues>();
-                for (int i = 0; i < Mathf.Max(player1Deck.Count, player2Deck.Count); i++)
-                {
-                    if (i < player1Deck.Count)
-                    {
-                        p1.Add(player1Deck[i].CardValues);
-                    }
-                    if (i < player2Deck.Count)
-                    {
-                        p2.Add(player2Deck[i].CardValues);
-                    }
-                }
-                LocalVersusManager versusManager = FindAnyObjectByType<LocalVersusManager>();
-                versusManager.SetPlayerDecks(p1.ToArray(), p2.ToArray());
-                RoundManager.instance.StartBattle();
-
-                Destroy(gameObject);
-            }
-        }
-
-        if (level == 4)
-        {
-            if (RoundManager.instance != null)
-            {
-                List<CardValues> playerCards = new List<CardValues>();
-                for (int i = 0; i < Mathf.Max(player1Deck.Count, player2Deck.Count); i++)
-                {
-                    playerCards.Add(player1Deck[i].CardValues);
-                }
-                VersusAIManager versusManager = FindAnyObjectByType<VersusAIManager>();
-                versusManager.SetPlayer(playerCards.ToArray());
-                RoundManager.instance.StartBattle();
-
-                Destroy(gameObject);
-            }
-        }
-    }
-
     private void Update()
     {
         if (!allowSelection) return;
@@ -143,38 +99,6 @@ public class DeckChooser : MonoSingleton<DeckChooser>
         List<Card> list = firstPlayer ? player1Deck : player2Deck;
         OverlayForThisDeck(list);
     }
-    /*
-
-
-
-    public void ReadyButton()
-    {
-        if (targetScene == "" || targetScene == string.Empty) return;
-        if (targetScene != "Local 1v1")
-        {
-            if (player1Deck.Count > 0)
-            {
-                SceneManager.LoadScene(targetScene);
-                AudioManager.instance.PlayMusic("The Killer Queen");
-            } else
-            {
-                BattleTextManager.instance.CallBattleText("You don't have a deck!", TextSize.Large, transform.position, Color.red, 1, "Deck denial");
-            }
-            return;
-        }
-
-        if (player1Deck.Count > 0 && player2Deck.Count > 0)
-        {
-            SceneManager.LoadScene(targetScene);
-            AudioManager.instance.PlayMusic("Boss");
-        }
-        else
-        {
-            BattleTextManager.instance.CallBattleText("At least one player doesn't have a deck!", TextSize.Large, transform.position, Color.red, 1, "Deck denial");
-        }
-    }
-    */
-
     void OverlayForThisDeck(List<Card> Deck)
     {
         for (int i = 0; i <Deck.Count; i++)

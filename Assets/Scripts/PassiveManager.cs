@@ -160,18 +160,15 @@ public class PassiveManager : MonoSingleton<PassiveManager>
             {
                 List<Card> cards = CardGroup(card, false);
 
-                Card lowestHealth = null;
                 for (int c = 0; c < cards.Count; c++)
                 {
                     Card examinedCard = cards[c];
-                    if (examinedCard.CardValues.resistanceType == ResistanceType.TimeLimit || examinedCard == card) continue;
-
-                    if (lowestHealth == null || examinedCard.ResistanceValue < lowestHealth.ResistanceValue) lowestHealth = examinedCard;
+                    if (examinedCard.CardValues.resistanceType != ResistanceType.TimeLimit && !examinedCard.isCardDead() && examinedCard != card)
+                    {
+                        examinedCard.Curation(passiveValue);
+                        break;
+                    }
                 }
-
-                if (lowestHealth != null)
-                lowestHealth.Curation(currentPassive.PassiveValue);
-
                 continue;
             }
 
@@ -344,6 +341,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     {
                         if (possibleCards[c].CardValues.resistanceType == ResistanceType.TimeLimit)
                         {
+                            Debug.Log("c");
                             removals.Add(c);
                         }
                     }
@@ -758,6 +756,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
                     for (int c = 0; c < 5; c++)
                     {
+                        Debug.Log(c % 4);
                         if (card.targetSpots[c % 4])
                         {
                             //0, 1; 1, 2; 2, 3; 3, 4; 4, 5;

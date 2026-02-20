@@ -22,7 +22,7 @@ public class VersusAIManager : MonoBehaviour
         roundManager = RoundManager.instance;
         if (!forceStart) yield break;
         yield return new WaitUntil(() => roundManager.OnBattle);
-        enemyDeck.OnRound();
+        aiDeck.Play();
     }
 
     void FirstDraw()
@@ -31,9 +31,33 @@ public class VersusAIManager : MonoBehaviour
         EnableButtons();
     }
 
-    public void SetPlayer(CardValues[] cards)
+    public void SetVersus(List<CardValues> playerCards, List<CardValues> enemyCards)
     {
-        playerDeck.playerAvailableCards = cards;
+        playerDeck.playerAvailableCards = playerCards;
+
+        if (aiDeck == null)
+        {
+            aiDeck = FindFirstObjectByType<EnemyDeckHandler>();
+            if (aiDeck != null)
+            {
+                aiDeck.EnemyCardPile = enemyCards;
+                Debug.Log("Cool, it works");
+            }
+        }
+    }
+    public void SetVersus(bool allRandom, int CardAmount)
+    {
+        if (allRandom)
+        {
+            for (int i = 0; i < CardAmount; i++)
+            {
+                playerDeck.playerAvailableCards.Add(CardGameObjectPool.instance.GetRandomCardValue());
+            }
+            for (int i = 0; i < CardAmount; i++)
+            {
+                aiDeck.EnemyCardPile.Add(CardGameObjectPool.instance.GetRandomCardValue());
+            }
+        }
     }
 
     private void OnEnable()
@@ -76,7 +100,7 @@ public class VersusAIManager : MonoBehaviour
     {
         if (enemyDeck == null)
         {
-            if (playerDeck.DrawPile.Length == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
+            if (playerDeck.DrawPile.Count == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
             {
                 DeactivateBoth();
                 RogueGameOver();
@@ -87,12 +111,12 @@ public class VersusAIManager : MonoBehaviour
             }
             return;
         }
-        if (playerDeck.DrawPile.Length == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
+        if (playerDeck.DrawPile.Count == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
         {
             DeactivateBoth();
             GameOver();
         }
-        if (roundManager.getCardGroup(CardTeam.Enemies).Length == 0 && enemyDeck.DrawPile.Length == 0)
+        if (roundManager.getCardGroup(CardTeam.Enemies).Length == 0 && enemyDeck.DrawPile.Count == 0)
         {
             YouWin();
         }

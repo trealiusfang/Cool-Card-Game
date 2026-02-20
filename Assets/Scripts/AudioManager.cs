@@ -87,6 +87,14 @@ public class AudioManager : PersistentMonoSingleton<AudioManager>
 
         Debug.LogWarning("Music '" + AudioName + "' couldn't be found!");
     }
+    public void PlayMusic(AudioClip audioClip)
+    {
+        if (audioClip == null) return;
+
+        MusicSource.clip = audioClip;
+        MusicSource.Play();
+    }
+
 
     public void SetSFXVolumeBySlider(Slider slider)
     {

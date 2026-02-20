@@ -38,6 +38,7 @@ public class CardArranger : MonoBehaviour
 
     public void DespawnCards()
     {
+        if (activeCards.Count > 0)
         for (int i = 0; i < allCards.Count; i++)
         {
             GameObject card = transform.GetChild(i).gameObject;

@@ -11,10 +11,10 @@ public class DeckHandler : MonoBehaviour
     public Vector3 spawnPosition;
     //Which cards the player has access to 
     [Header("Technical and important values")]
-    public CardValues[] playerAvailableCards;
+    public List<CardValues> playerAvailableCards;
     //Active deck that is being used in battle
-    public CardValues[] DrawPile;
-    public CardValues[] DiscardPile;
+    public List<CardValues> DrawPile;
+    public List<CardValues> DiscardPile;
     RoundManager roundManager;
     CardPositionManager spotManager;
     [Header("Config")]
@@ -54,7 +54,7 @@ public class DeckHandler : MonoBehaviour
 
         for (int i = 0; i < FirstDrawAmount; i++)
         {
-            if (DrawPile.Length > 0)
+            if (DrawPile.Count > 0)
             DrawACard(DrawPile[0]);
             yield return new WaitForSeconds(drawDelay);
         }
@@ -66,7 +66,7 @@ public class DeckHandler : MonoBehaviour
 
         //Right now it is a pretty simple version. Randomly draws a card and plays once.
         //Easily expandable, i.e. calling multiple times to put 3 cards every end of turn 
-        if (controlledByAI  && onRound && DrawPile.Length != 0)
+        if (controlledByAI  && onRound && DrawPile.Count != 0)
         {
             CardValues cardValues = DrawPile[0];
             if (!roundManager.canAddToPlay(CardTeam.Enemies, true) || cardValues == null) { return; }
@@ -79,9 +79,7 @@ public class DeckHandler : MonoBehaviour
             cardGameObject.GetComponent<Card>().SetCard(CardTeam.Enemies);
             spotManager.PutCard(cardGameObject.GetComponent<Card>());
 
-            List<CardValues> cards = DrawPile.ToList();
-            cards.Remove(cardValues);
-            DrawPile = cards.ToArray();
+            DrawPile.Remove(cardValues);
 
             return;
         }
@@ -100,7 +98,7 @@ public class DeckHandler : MonoBehaviour
             return;
         }
 
-        if (!onRound && currentDrawAmount > 0 && DrawPile.Length > 0)
+        if (!onRound && currentDrawAmount > 0 && DrawPile.  Count > 0)
         {
             DrawACard(RandomFromDrawPile());
             currentDrawAmount--;
@@ -111,9 +109,9 @@ public class DeckHandler : MonoBehaviour
 
     CardValues RandomFromDrawPile()
     {
-        if (DrawPile.Length == 0) return null;
-        int r = Mathf.FloorToInt(Random.Range(0f, DrawPile.Length));
-        if (r == DrawPile.Length) r -= 1;
+        if (DrawPile.Count == 0) return null;
+        int r = Mathf.FloorToInt(Random.Range(0f, DrawPile.Count));
+        if (r == DrawPile.Count) r -= 1;
 
         return DrawPile[r];
     }
@@ -128,17 +126,12 @@ public class DeckHandler : MonoBehaviour
         cardGameObject.GetComponent<Card>().myDeck = this;
         myHand.AddToHand(cardGameObject.GetComponent<Card>());
 
-        List<CardValues> cards = DrawPile.ToList();
-        cards.Remove(cardValues);
-        DrawPile = cards.ToArray();
+        DrawPile.Remove(cardValues);
     }
 
     public void AddToDiscardPile(CardValues cardValue)
     {
-        List<CardValues> cardValues = DiscardPile.ToList();
-        cardValues.Add(cardValue);
-
-        DiscardPile = cardValues.ToArray();
+        DiscardPile.Add(cardValue); 
     }
 
     public bool canDrawMore()
@@ -160,7 +153,7 @@ public class DeckHandler : MonoBehaviour
 
     void UpdateUIVisual()
     {
-        if (drawAmountLeftText != null) drawAmountLeftText.text = (DrawPile.Length < currentDrawAmount) ? DrawPile.Length.ToString() : currentDrawAmount.ToString();
+        if (drawAmountLeftText != null) drawAmountLeftText.text = (DrawPile.Count < currentDrawAmount) ? DrawPile.Count.ToString() : currentDrawAmount.ToString();
     }
 
     private void OnDrawGizmos()
@@ -172,7 +165,7 @@ public class DeckHandler : MonoBehaviour
 
     void GameEnd()
     {
-        DrawPile = new CardValues[0];
+        DrawPile = new List<CardValues>();
     }
     private void OnEnable()
     {

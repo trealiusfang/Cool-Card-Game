@@ -23,18 +23,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bfb6de7e5411e304bb76c0b9d8d25453
-    m_Address: Description Keys_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a4c1f2cab0e820b4ab4980e92f944a8f
-    m_Address: Extra Descriptions_es
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31f34a2473fbbba4fbd1b3238ca556e4
     m_Address: Gameplay Stuff_es
     m_ReadOnly: 1

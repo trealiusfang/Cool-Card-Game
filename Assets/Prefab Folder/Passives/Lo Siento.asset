@@ -16,6 +16,6 @@ MonoBehaviour:
   PassiveDescription: Has a %Value chance to stun the card for 1 turn
   PassiveValue: 50
   PassiveTiming: 8
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 40441e86161369d488259589611cf435, type: 3}
   PassiveAudio: {fileID: 0}
   passiveColor: {r: 0.2688679, g: 1, b: 0.73067963, a: 1}

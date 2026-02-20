@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Flag_of_Turkey (1)_0: -6483752476530045359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

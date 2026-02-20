@@ -120,65 +120,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &103814198
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 103814200}
-  - component: {fileID: 103814201}
-  m_Layer: 0
-  m_Name: EnemyDeckHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &103814200
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103814198}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &103814201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 103814198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6f3f66deb2e4c544a3458a4de1b87d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 1385911733151840410, guid: f6e709c6ea06fb647bff921364d50422, type: 3}
-  spawnPosition: {x: 8, y: -3, z: 0}
-  playerAvailableCards:
-  - {fileID: 11400000, guid: 6f3131f876d58a248973d8e1ee637e3f, type: 2}
-  - {fileID: 11400000, guid: f12c3a7456bc3ea448b42a20a460e4ee, type: 2}
-  DrawPile: []
-  DiscardPile: []
-  limitHandAmount: 0
-  maxHandAmount: 4
-  FirstDrawAmount: 4
-  drawAmountEachRound: 3
-  drawAmountLeftText: {fileID: 0}
-  controlledByAI: 1
-  drawDelay: 0.2
-  myHand: {fileID: 0}
 --- !u!1 &175363919
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeck: {fileID: 890759980}
-  enemyDeck: {fileID: 103814201}
+  enemyDeck: {fileID: 0}
   playerReadyButton: {fileID: 1217314019}
   playerDrawButton: {fileID: 346264490}
   LoseScreen: {fileID: 1875094689}
@@ -1789,6 +1730,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5273347435725489078, guid: 9a000e30133d4784c958cefa14340dec, type: 3}
   m_PrefabInstance: {fileID: 5354166139064567474}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2134045997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2134045998}
+  - component: {fileID: 2134045999}
+  m_Layer: 0
+  m_Name: EnemyDeckHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2134045998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134045997}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5001157, y: 0.99103624, z: 0.015999528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2134045999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134045997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e734b7418f85b8a4885551246de99d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardPrefab: {fileID: 1385911733151840410, guid: f6e709c6ea06fb647bff921364d50422, type: 3}
+  spawnPosition: {x: 10.96, y: 0}
+  EnemyCardPile: []
+  AmountPlayed: 2
+  timeBetweenDraws: 0
 --- !u!4 &2140180722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6156339034425941140, guid: 506759422863ffb42a341926d12b5157, type: 3}
@@ -2546,5 +2536,5 @@ SceneRoots:
   - {fileID: 1675605705}
   - {fileID: 590652878}
   - {fileID: 890759982}
-  - {fileID: 103814200}
   - {fileID: 482507699}
+  - {fileID: 2134045998}

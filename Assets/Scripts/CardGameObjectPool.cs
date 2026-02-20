@@ -40,6 +40,12 @@ public class CardGameObjectPool : MonoBehaviour
         newCard.SetActive(true);
         return newCard;
     }
+    public CardValues GetRandomCardValue()
+    {
+        int r = Random.Range(0, AllCards.Length);
+
+        return AllCards[r];
+    }
 
     public Card GetSetCard(string cardName)
     {

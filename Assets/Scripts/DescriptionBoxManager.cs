@@ -135,10 +135,7 @@ public class DescriptionBoxManager : MonoSingleton<DescriptionBoxManager>
             string localizedKey = LocalizationSettings.StringDatabase.GetLocalizedString("Description Keys", key + "Name_Key");    
 
             string localizedExtraDescription = LocalizationSettings.StringDatabase.GetLocalizedString("Extra Descriptions", key + "Desc_Key");
-            if (!Description.Contains(localizedKey))
-            {
-                Debug.LogWarning(localizedKey);
-            }
+
             if (localizedExtraDescription == "xd") localizedExtraDescription = "";
             if (Description.Contains(localizedKey) && localizedKey != Title)
             {
