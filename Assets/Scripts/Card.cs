@@ -500,7 +500,7 @@ public class Card : MonoBehaviour
             return;
         }
 
-        if (canITarget(preferedTarget, targetCards, targetTimeRes))
+        if (canITarget(preferedTarget, targetCards, targetTimeRes, showTarget))
         {
             cardTargets.Add(targetCards[preferedTarget]);
             if (showTarget) setOverlay(targetCards[preferedTarget], intent);
@@ -512,7 +512,7 @@ public class Card : MonoBehaviour
         for (int i = 4; i > 0; i--)
         {
             int nextT = nextTry(newtriedValues);
-            if (canITarget(nextT - 1, targetCards, targetTimeRes))
+            if (canITarget(nextT - 1, targetCards, targetTimeRes, showTarget))
             {
                 cardTargets.Add(targetCards[nextT - 1]);
                 if (showTarget) setOverlay(targetCards[nextT - 1], intent);
@@ -546,7 +546,7 @@ public class Card : MonoBehaviour
     /// <param name="targetCards"></param>
     /// <param name="wantEveryone"></param>
     /// <returns></returns>
-    bool canITarget(int i, Card[] targetCards, bool wantEveryone = false)
+    bool canITarget(int i, Card[] targetCards, bool wantEveryone = false, bool showing = true)
     {
         if (i < targetCards.Count())
         {
@@ -559,7 +559,7 @@ public class Card : MonoBehaviour
                         return false;
                     } else
                     {
-                        targetCards[i].CheckPassives(CardTimings.WhenTargeted, ActionValue, this);
+                        if (showing) targetCards[i].CheckPassives(CardTimings.WhenTargeted, ActionValue, this);
                         return targetCards[i].statusEffectsHolder.CheckStatusTargetInfluence(CardTimings.WhenTargeted, 1, targetCards[i], this) != null;
                     }
                 } 
@@ -604,6 +604,28 @@ public class Card : MonoBehaviour
     }
     #endregion
 
+    private void OnMatchUpdate() 
+    {
+        if (CardValues.actionType == ActionType.MirrorAct)
+        {
+            SetTargets(false);
+            if (cardTargets.Count > 0)
+            {
+                ActionValue = cardTargets[0].ActionValue;
+            }
+        }
+        if (CardValues.actionType == ActionType.MirrorRes)
+        {
+            SetTargets(false);
+            if (cardTargets.Count > 0)
+            {
+                ResistanceValue = cardTargets[0].ResistanceValue;
+            }
+        }
+
+        UpdateVisualStats();
+    }
+
     /// <summary>
     /// Visually updates the displayed infromation on the card like current damage or health and preferred targets
     /// </summary>
@@ -618,13 +640,14 @@ public class Card : MonoBehaviour
     /// <param name="value"></param>
     public void BuffOrNerfCard(string typeOfValue , int value)
     {
+        if (value == 0) return;
         if (typeOfValue == "Action")
         {
             ActionValue += value;
 
             string battleText = value > 0 ? "+" + value : value.ToString();
             Color battleColor = value > 0 ? new Color(217, 255, 63)  : new Color(102, 4, 25);
-            BattleTextManager.instance.CallBattleText(battleText, TextSize.Small, cardRenderer.ActionSprite.transform.position, new Color(250, 120, 0), 1);
+            BattleTextManager.instance.CallBattleText(battleText, TextSize.Small, cardRenderer.ActionSprite.transform.position, battleColor, 1);
         }
         if (typeOfValue == "Resistance")
         {
@@ -632,7 +655,7 @@ public class Card : MonoBehaviour
 
             string battleText = value > 0 ? "+" + value : value.ToString();
             Color battleColor = value > 0 ? new Color(217, 255, 63) : new Color(102, 4, 25);
-            BattleTextManager.instance.CallBattleText(battleText, TextSize.Small, cardRenderer.ResistanceSprite.transform.position, new Color(250, 120, 0), 1);
+            BattleTextManager.instance.CallBattleText(battleText, TextSize.Small, cardRenderer.ResistanceSprite.transform.position, battleColor, 1);
         }
 
         UpdateVisualStats();
@@ -727,11 +750,13 @@ public class Card : MonoBehaviour
     private void OnEnable()
     {
         RoundManager.RoundEvent += RoundTimings;
+        RoundManager.MatchUpdateEvent += OnMatchUpdate;
     }
 
     private void OnDisable()
     {
         RoundManager.RoundEvent -= RoundTimings;
+        RoundManager.MatchUpdateEvent -= OnMatchUpdate;
     }
 }
 

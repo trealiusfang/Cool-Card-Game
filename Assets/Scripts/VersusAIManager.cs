@@ -62,6 +62,8 @@ public class VersusAIManager : MonoBehaviour
         {
             aiDeck = FindFirstObjectByType<EnemyDeckHandler>();
         }
+        aiDeck.EnemyCardPile.Clear();
+        playerDeck.playerAvailableCards.Clear();
         if (allRandom)
         {
             List<CardValues> cards = CardGameObjectPool.instance.AllCards.ToList();

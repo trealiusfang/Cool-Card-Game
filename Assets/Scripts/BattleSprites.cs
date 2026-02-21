@@ -20,14 +20,14 @@ public class BattleSprites : MonoSingleton<BattleSprites>
     /// <param name="actionSprite"></param>
     public void SetMainSprites(CardValues cardV, SpriteRenderer resistanceSprite, SpriteRenderer actionSprite)
     {
-        for (int i = 0; i < Mathf.Max(ResistanceSprites.Count(), ActionSprites.Count()); i++)
+        for (int i = 0; i < Mathf.Max(ResistanceSprites.Length, ActionSprites.Length); i++)
         {
-            if (ResistanceSprites.Count() > i && ResistanceSprites[i].ResistanceType == cardV.resistanceType)
+            if (ResistanceSprites.Length > i && ResistanceSprites[i].ResistanceType == cardV.resistanceType)
             {
                 resistanceSprite.sprite = ResistanceSprites[i].Sprite;
             }
 
-            if (ActionSprites.Count() > i && ActionSprites[i].ActionType == cardV.actionType)
+            if (ActionSprites.Length > i && ActionSprites[i].ActionType == cardV.actionType)
             {
                 actionSprite.sprite = ActionSprites[i].Sprite;
             }
@@ -36,9 +36,9 @@ public class BattleSprites : MonoSingleton<BattleSprites>
 
     public void SetFonts(CardValues cardV, TextMeshPro charNameTxt,TextMeshPro actionTxt, TextMeshPro resistanceTxt)
     {
-        for (int i = 0; i < Mathf.Max(ActionAndFont.Count(), ResistanceAndFont.Count()); i++)
+        for (int i = 0; i < Mathf.Max(ActionAndFont.Length, ResistanceAndFont.Length); i++)
         {
-            if (i < ActionAndFont.Count())
+            if (i < ActionAndFont.Length)
                 if (cardV.actionType == ActionAndFont[i].actionType){
                     actionTxt.font = ActionAndFont[i].fontAsset;
                     if (ActionAndFont[i].affectName)
@@ -47,7 +47,7 @@ public class BattleSprites : MonoSingleton<BattleSprites>
                         charNameTxt.font = ActionAndFont[0].fontAsset;
                 }
 
-            if (i < ResistanceAndFont.Count())
+            if (i < ResistanceAndFont.Length)
                 if (cardV.resistanceType == ResistanceAndFont[i].resistanceType)
                 {
                     resistanceTxt.font = ResistanceAndFont[i].fontAsset;

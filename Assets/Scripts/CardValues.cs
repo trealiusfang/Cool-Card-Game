@@ -100,6 +100,8 @@ public enum ActionType
     Damage,
     Heal,
     Darkness,
+    MirrorRes,
+    MirrorAct,
 }
 
 public enum ResistanceType

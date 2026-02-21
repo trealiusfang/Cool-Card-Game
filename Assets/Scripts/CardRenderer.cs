@@ -54,7 +54,7 @@ public class CardRenderer : MonoBehaviour
         BattleSprites.instance.SetFonts(cardValues, CharacterName, ActionValue, ResistanceValue);
 
         //Change this later, this swaps the sprite aswell making it look weird
-        if (card.getCardTeam() == CardTeam.Players)
+        if (card.getCardTeam() == CardTeam.Players && prefTargets.transform.localScale.x > 0)
         {
             prefTargets.transform.localScale = new Vector3
                 (-prefTargets.transform.localScale.x, prefTargets.transform.localScale.y);

@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      deepwoundstateffect2_0: -8564372062411300917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

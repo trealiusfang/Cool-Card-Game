@@ -21775,7 +21775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fps: {fileID: 1208357233}
   resolution: {fileID: 1142867826}
-  language: {fileID: 901440960}
+  language: {fileID: 0}
   runInBackGround: {fileID: 1271260350}
   FullScreen: {fileID: 1891501480}
 --- !u!1 &1756830557

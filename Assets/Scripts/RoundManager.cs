@@ -30,6 +30,8 @@ public class RoundManager : MonoSingleton<RoundManager>
     public static event OnRoundStartOrEnd RoundStartLateEvent;
     public static event OnRoundStartOrEnd BattleEndEvent;
     public static event OnRoundStartOrEnd BattleStartEvent;
+    public delegate void MatchUpdate();
+    public static event MatchUpdate MatchUpdateEvent;
 
     [Header("Stock")]
     public bool stockEnabled = false;
@@ -296,6 +298,11 @@ public class RoundManager : MonoSingleton<RoundManager>
 
             enemyCards = enemys.ToArray();
         }
+
+        if (MatchUpdateEvent != null)
+        {
+            MatchUpdateEvent();
+        }
     }
 
     public void AddToPlay(Card card, int wantedPosition = 4, bool duringRound = false, bool notOnPlay = false)
@@ -328,6 +335,11 @@ public class RoundManager : MonoSingleton<RoundManager>
         }
         if (!notOnPlay)
         card.OnPlay();
+
+        if (MatchUpdateEvent != null)
+        {
+            MatchUpdateEvent();
+        }
     }
 
     public void TransferCard(Card card)
@@ -340,6 +352,11 @@ public class RoundManager : MonoSingleton<RoundManager>
         AddToPlay(card,0, true, true);
         CardPositionManager.instance.SetPositions(CardTeam.Players);
         CardPositionManager.instance.SetPositions(CardTeam.Enemies);
+
+        if (MatchUpdateEvent != null)
+        {
+            MatchUpdateEvent();
+        }
     }
     public bool canAddToPlay(CardTeam cardTeam, bool duringRound = false)
     {
@@ -369,6 +386,11 @@ public class RoundManager : MonoSingleton<RoundManager>
             enemyCards = cards;
         }
         CardPositionManager.instance.SetPositions(cardTeam);
+
+        if (MatchUpdateEvent != null)
+        {
+            MatchUpdateEvent();
+        }
     }
 
     public Card[] getCardGroup(CardTeam cardTeam)
@@ -388,6 +410,10 @@ public class RoundManager : MonoSingleton<RoundManager>
         return null;
     } 
 
+    public void CallMatchUpdate()
+    {
+        MatchUpdateEvent?.Invoke();
+    }
     public Card GetCardCurrentlyPlaying()
     {
         return cardCurrentlyPlaying;

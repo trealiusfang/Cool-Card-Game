@@ -296,7 +296,7 @@ MonoBehaviour:
   OnBattle: 0
   stockEnabled: 0
   gameOver: 0
-  autoStart: 0
+  autoStart: 1
   exchangedRoundOrder: 1
   RandomStart: 1
   actionTimer: 0.35
@@ -989,13 +989,7 @@ MonoBehaviour:
   cardPrefab: {fileID: 1385911733151840410, guid: f6e709c6ea06fb647bff921364d50422, type: 3}
   spawnPosition: {x: -8, y: -3, z: 0}
   playerAvailableCards:
-  - {fileID: 11400000, guid: e59745d3b1b3f5d43b100799af6a09dc, type: 2}
-  - {fileID: 11400000, guid: d5f5b29a5c3d1fa48a14d8c96d7d4c2d, type: 2}
-  - {fileID: 11400000, guid: 8f5d22149036c6148bbb8f079a6c7e83, type: 2}
-  - {fileID: 11400000, guid: 45831eccf34da3e4da8eb50ccbdb4a83, type: 2}
-  - {fileID: 11400000, guid: 496689448f682e04983146232835338b, type: 2}
-  - {fileID: 11400000, guid: cbabc89fafcc5b64c9ce1bb5011fa2b4, type: 2}
-  - {fileID: 11400000, guid: 0109535a2f21ef644bacfda2d49b9da6, type: 2}
+  - {fileID: 11400000, guid: f7d48e15dd844ce409b92c0a143ebc9c, type: 2}
   DrawPile: []
   DiscardPile: []
   limitHandAmount: 1
@@ -2841,6 +2835,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1789558762}
     m_Modifications:
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionSprites.Array.data[3].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88e523b225e7011468e4ced6ff0d71b1, type: 3}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionSprites.Array.data[4].Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ca1425e8df094c04a9c2a25fb2afb1e9, type: 3}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.data[3].fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.data[4].fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.data[3].actionType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.data[3].affectName
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionAndFont.Array.data[4].actionType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionSprites.Array.data[3].ActionType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
+      propertyPath: ActionSprites.Array.data[4].ActionType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5670032913513485516, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
       propertyPath: m_Name
       value: BattleSprites
