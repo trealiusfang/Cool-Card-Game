@@ -94,12 +94,10 @@ public class CardGameObjectPool : MonoBehaviour
 
     IEnumerator cardRecycleFunction(GameObject card, float time, bool helpCleanUp)
     {
-        if (helpCleanUp)
-        {
-            card.GetComponent<CardRenderer>().FixVisuals();
-            card.GetComponent<CardOverlay>().EndOverlay();
-            card.GetComponent<StatusEffectsHolder>().ResetStatusEffects();
-        }
+        card.GetComponent<CardRenderer>().FixVisuals();
+        card.GetComponent<CardOverlay>().EndOverlay();
+        card.GetComponent<StatusEffectsHolder>().ResetStatusEffects();
+
         card.GetComponent<SortingGroup>().sortingLayerName = "Background";
         card.GetComponent<SortingGroup>().sortingOrder = -999;
         yield return new WaitForSeconds(time);

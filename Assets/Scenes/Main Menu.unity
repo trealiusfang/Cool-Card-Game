@@ -20322,7 +20322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Demo 4.0!!?
+  m_text: Demo 4.1!?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 775f88ea4bade8f468d3087e00d762af, type: 2}
   m_sharedMaterial: {fileID: 7635102959042064918, guid: 775f88ea4bade8f468d3087e00d762af, type: 2}
@@ -30166,6 +30166,10 @@ PrefabInstance:
     - target: {fileID: 3707925769713720123, guid: 891a68a4c4b76584c9ebed2d7742da3d, type: 3}
       propertyPath: DebugOptions
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3707925769713720123, guid: 891a68a4c4b76584c9ebed2d7742da3d, type: 3}
+      propertyPath: patchNotesURL
+      value: https://trealius.itch.io/cool-card-game/devlog/1400119/v041-hotfix
       objectReference: {fileID: 0}
     - target: {fileID: 6129703409349275792, guid: 891a68a4c4b76584c9ebed2d7742da3d, type: 3}
       propertyPath: m_RootOrder

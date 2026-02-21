@@ -91,7 +91,7 @@ public class CardRenderer : MonoBehaviour
     {
         CharacterSprite.color = Color.white;
 
-        if (card.getCardTeam() == CardTeam.Players)
+        if (card.getCardTeam() == CardTeam.Players && prefTargets.transform.localScale.x < 0)
         {
             prefTargets.transform.localScale = new Vector3
                 (-prefTargets.transform.localScale.x, prefTargets.transform.localScale.y);

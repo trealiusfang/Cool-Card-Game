@@ -64,7 +64,7 @@ public class Card : MonoBehaviour
         cardRenderer = GetComponent<CardRenderer>();
         statusEffectsHolder = GetComponent<StatusEffectsHolder>();
         //Reset necessary variables
-        cardActive = true;
+        cardActive = false;
         ActiveRounds = 0;
         ActiveTurns = 0;
         actionConfirmed = false;
@@ -88,6 +88,11 @@ public class Card : MonoBehaviour
     /// <param name="_cardTeam"></param>
     public void OnPlay()
     {
+        cardActive = true;
+        ActiveRounds = 0;
+        ActiveTurns = 0;
+        actionConfirmed = false;
+        round = false;
         CheckPassives(CardTimings.OnPlay);
         statusEffectsHolder.CheckStatusEvent(CardTimings.OnPlay);
         CardSoundsTransferer(CardSounds.putOnPlay);

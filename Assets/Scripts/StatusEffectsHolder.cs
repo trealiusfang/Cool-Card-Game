@@ -201,6 +201,7 @@ public class StatusEffectsHolder : MonoBehaviour
                     statusInfos[i].statusValue += effect.StatusValue;
                 }
 
+                if (!statusInfos[i].hidden)
                 statusInfos[i].statusGameObject.GetComponent<StatusObjectHandler>().UpdateStatus(statusInfos[i].statusValue);
                 return;
             }

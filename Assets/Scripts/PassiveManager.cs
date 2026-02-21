@@ -93,7 +93,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                         Debug.Log("Couldn't find anyone");
                         continue;
                     }
-                    int r = Random.Range(0, CardList.Count - 1);
+                    int r = Random.Range(0, CardList.Count);
                     CardList[r].TakeDamage(passiveValue, card);
                     BattleTextManager.instance.CallBattleText("-"+ card.name +" DAMAGE", TextSize.Small, CardPositionManager.instance.getCardSpotPosition(CardList[r]), Color.green, .8f);
                 }
