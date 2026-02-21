@@ -236,7 +236,7 @@ public class StatusEffectsHolder : MonoBehaviour
             if (statusInfos[i].statusEffect.effectName == effect.effectName)
             {
                 if (!statusInfos[i].hidden)
-                    Destroy(statusInfos[i].statusGameObject);
+                    DestroyImmediate(statusInfos[i].statusGameObject);
 
                 List<StatusInfoHolder> newInfos = statusInfos.ToList();
                 newInfos.RemoveAt(i);

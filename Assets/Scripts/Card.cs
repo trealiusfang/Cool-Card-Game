@@ -63,6 +63,12 @@ public class Card : MonoBehaviour
         cardOverlay = GetComponent<CardOverlay>();
         cardRenderer = GetComponent<CardRenderer>();
         statusEffectsHolder = GetComponent<StatusEffectsHolder>();
+        //Reset necessary variables
+        cardActive = true;
+        ActiveRounds = 0;
+        ActiveTurns = 0;
+        actionConfirmed = false;
+        round = false;
 
         Passives = CardValues.Passives.ToArray();
         passiveValue = new int[CardValues.Passives.Count()];
@@ -82,8 +88,6 @@ public class Card : MonoBehaviour
     /// <param name="_cardTeam"></param>
     public void OnPlay()
     {
-        cardActive = true;
-        ActiveRounds = 0;
         CheckPassives(CardTimings.OnPlay);
         statusEffectsHolder.CheckStatusEvent(CardTimings.OnPlay);
         CardSoundsTransferer(CardSounds.putOnPlay);
@@ -377,6 +381,7 @@ public class Card : MonoBehaviour
         animator.SetTrigger("Death");
         cardActive = false;
         roundManager.RemoveCardFromPlay(this);
+        statusEffectsHolder.ResetStatusEffects();
         yield return new WaitUntil(() => readyToGiveBack);
         //If the card dies during its turn makes sure to do the right functions before removing itself
         if (roundManager.GetCardCurrentlyPlaying() == this)

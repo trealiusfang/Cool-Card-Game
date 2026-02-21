@@ -198,6 +198,10 @@ MonoBehaviour:
       :]'
     m_Metadata:
       m_Items: []
+  - m_Id: 1158620633210880
+    m_Localized: Apply taken damage -Value Darkness to the attacking foe
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

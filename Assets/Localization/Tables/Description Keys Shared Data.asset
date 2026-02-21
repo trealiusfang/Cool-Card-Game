@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: LockName_Key
     m_Metadata:
       m_Items: []
+  - m_Id: 1183071651340288
+    m_Key: DarknessName_Key
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

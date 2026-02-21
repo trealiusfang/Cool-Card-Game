@@ -19,11 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 3449563983872
-    m_Localized: '!!!'
+    m_Localized: AMENAZO NIVEL A+
     m_Metadata:
       m_Items: []
   - m_Id: 3597903933440
-    m_Localized: '!!!'
+    m_Localized: "Ascenci\xF2n"
     m_Metadata:
       m_Items: []
   - m_Id: 4039576727552
@@ -35,31 +35,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4261488963584
-    m_Localized: '!!!'
+    m_Localized: Fin Deterministico
     m_Metadata:
       m_Items: []
   - m_Id: 4713706237952
-    m_Localized: '!!!'
+    m_Localized: Evacon
     m_Metadata:
       m_Items: []
   - m_Id: 5206968971264
-    m_Localized: '!!!'
+    m_Localized: "Executi\xF2n"
     m_Metadata:
       m_Items: []
   - m_Id: 5306520776704
-    m_Localized: '!!!'
+    m_Localized: Manos Rapidas
     m_Metadata:
       m_Items: []
   - m_Id: 5714085490688
-    m_Localized: '!!!'
+    m_Localized: "\xA1Para el Equipo!"
     m_Metadata:
       m_Items: []
   - m_Id: 5865789272064
-    m_Localized: '!!!'
+    m_Localized: "\xA1Ven Aqui!"
     m_Metadata:
       m_Items: []
   - m_Id: 6827719340032
-    m_Localized: '!!!'
+    m_Localized: El Fin Satisfecho
     m_Metadata:
       m_Items: []
   - m_Id: 7375944232960
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9133382774784
-    m_Localized: '!!!'
+    m_Localized: Amenaza Mega
     m_Metadata:
       m_Items: []
   - m_Id: 9520877744128
@@ -79,23 +79,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 9654910922752
-    m_Localized: '!!!'
+    m_Localized: "Uno m\xE0s opurtunidad..."
     m_Metadata:
       m_Items: []
   - m_Id: 9743461068800
-    m_Localized: '!!!'
+    m_Localized: Magia Electrical
     m_Metadata:
       m_Items: []
   - m_Id: 10597299728384
-    m_Localized: '!!!'
+    m_Localized: Espinosa
     m_Metadata:
       m_Items: []
   - m_Id: 10670611968000
-    m_Localized: '!!!'
+    m_Localized: Aura Protectivo
     m_Metadata:
       m_Items: []
   - m_Id: 11088654053376
-    m_Localized: '!!!'
+    m_Localized: Dura de Roca
     m_Metadata:
       m_Items: []
   - m_Id: 11296980938752
@@ -135,23 +135,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14446899048448
-    m_Localized: '!!!'
+    m_Localized: Sabueso
     m_Metadata:
       m_Items: []
   - m_Id: 14594135896064
-    m_Localized: '!!!'
+    m_Localized: Encantador
     m_Metadata:
       m_Items: []
   - m_Id: 15039944273920
-    m_Localized: '!!!'
+    m_Localized: Servantes Loyales
     m_Metadata:
       m_Items: []
   - m_Id: 15139324112896
-    m_Localized: '!!!'
+    m_Localized: Amenaza pocito
     m_Metadata:
       m_Items: []
   - m_Id: 15213915615232
-    m_Localized: '!!!'
+    m_Localized: Borracho Magia
     m_Metadata:
       m_Items: []
   - m_Id: 15358572965888
@@ -159,11 +159,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16126000574464
-    m_Localized: '!!!'
+    m_Localized: Manos ardientes
     m_Metadata:
       m_Items: []
   - m_Id: 16242476396544
     m_Localized: '!!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1166653161578496
+    m_Localized: "Dominac\xECon Digital"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1173091615350784
+    m_Localized: Espejo Oscuro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18810182393856
+    m_Localized: "Absoluc\xECon"
     m_Metadata:
       m_Items: []
   references:

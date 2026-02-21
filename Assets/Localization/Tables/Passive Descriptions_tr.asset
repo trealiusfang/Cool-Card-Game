@@ -228,6 +228,10 @@ MonoBehaviour:
       :]'
     m_Metadata:
       m_Items: []
+  - m_Id: 1158620633210880
+    m_Localized: "Al\u0131nan hasar\u0131n -Value kadar Karanl\u0131k ekle"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

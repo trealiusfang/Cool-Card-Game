@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Localized: xd
     m_Metadata:
       m_Items: []
+  - m_Id: 1190425293856768
+    m_Localized: Damages at the end of every round, dealing True Damage
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

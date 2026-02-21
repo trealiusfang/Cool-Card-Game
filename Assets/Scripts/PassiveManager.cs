@@ -341,13 +341,13 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     {
                         if (possibleCards[c].CardValues.resistanceType == ResistanceType.TimeLimit)
                         {
-                            Debug.Log("c");
                             removals.Add(c);
                         }
                     }
 
                     for (int c = 0; c < removals.Count; c++)
                     {
+                        if (possibleCards.Count > removals[c])
                         possibleCards.RemoveAt(removals[c]);
                     }
 
@@ -637,14 +637,14 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     {
                         if (passiveValue < 0) continue;
                         card.passiveValue[i] -= 1;
-                        for (int c = 0; c < 2; c++)
+                        //Set down to 1 for now
+                        for (int c = 0; c < 1; c++)
                         {
                             if (!roundManager.canAddToPlay(card.getCardTeam(), true)) continue;
                             Card newCard = CardGameObjectPool.instance.GetSetCard("Fire Ant");
                             newCard.SetCard(card.getCardTeam());
                             spotManager.PutCard(newCard, 0);
                         }
-                        card.BuffOrNerfCard("Action", 1);
                     }
                 }
                 continue;
@@ -696,6 +696,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
             if (currentPassive.PassiveName == "Fast Hands")
             {
                 roundManager.RevampPlayOrder(card, 0);
+                continue;
             }
 
             if (currentPassive.PassiveName == "cute threat")
@@ -797,14 +798,25 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 
                 if (influenced)
                 {
-                    AudioManager.instance.PlaySFX(currentPassive.PassiveAudio);
+                    //maybe audio for later... couldnt find any good ones
                 }
                 continue;
             }
 
             if (currentPassive.PassiveName == "Wise Choice")
             {
+                if (responsibleCard.getCardTeam() != card.getCardTeam())
                 StatusEffectsManager.instance.AddStatusEffect(responsibleCard, "Deep Wound", 1);
+                continue;
+            }
+
+            if (currentPassive.PassiveName == "Dark Mirror")
+            {
+                if (responsibleCard != null)
+                {
+                    StatusEffectsManager.instance.AddStatusEffect(responsibleCard, "Darkness", Mathf.FloorToInt(value) - passiveValue);
+                    AudioManager.instance.PlaySFX(currentPassive.PassiveAudio);
+                }
                 continue;
             }
 

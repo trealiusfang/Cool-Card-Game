@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,9 +23,9 @@ public class GeneralGameManager : MonoSingleton<GeneralGameManager>
     public string MainMenuSceneName;
     public string DeckBuilderSceneName;
     public string CardLibrarySceneName;
-
     public string patchNotesURL;
-   public void OpenPatchNotes()
+
+    public void OpenPatchNotes()
     {
         Application.OpenURL(patchNotesURL);
     }
@@ -133,14 +134,25 @@ public class GeneralGameManager : MonoSingleton<GeneralGameManager>
 
     public int localToIndex()
     {
-        for (int i = 0; i < LocalizationSettings.AvailableLocales.Locales.Count; i++)
+        Locale currentSelectedLocale = LocalizationSettings.SelectedLocale;
+        ILocalesProvider availableLocales = LocalizationSettings.AvailableLocales;
+        if (currentSelectedLocale == availableLocales.GetLocale("en"))
         {
-            if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[i])
-            {
-                return i;
-            }
+            return 0;
         }
-        Debug.Log("Couldnt find "  + LocalizationSettings.AvailableLocales.Locales.Count);
+        if (currentSelectedLocale == availableLocales.GetLocale("de"))
+        {
+            return 1;
+        }
+        if (currentSelectedLocale == availableLocales.GetLocale("es"))
+        {
+            return 2;
+        }
+        if (currentSelectedLocale == availableLocales.GetLocale("tr"))
+        {
+            return 3;
+        }
+        Debug.Log("Couldnt find lol" );
         return 0;
     }
     public void ToggleFullScreen(Image image)
@@ -178,7 +190,7 @@ public class GeneralGameManager : MonoSingleton<GeneralGameManager>
         Application.runInBackground = data.RunInBackground;
         Screen.SetResolution(data.Resolution[0], data.Resolution[1], data.FullScreen);
 
-        //setLocalIndex(data.localizerIndex);
+        setLocalIndex(data.localizerIndex);
     }
 
     public void LoadPrefs()

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,12 +18,23 @@ public class VersusAIManager : MonoBehaviour
     public bool forceStart = true;
     [Header("Experimental")]
     [SerializeField] EnemyDeckHandler aiDeck;
+    [SerializeField] VersusMode versusMode;
     private IEnumerator Start()
     {
         roundManager = RoundManager.instance;
         if (!forceStart) yield break;
         yield return new WaitUntil(() => roundManager.OnBattle);
-        aiDeck.Play();
+        if (aiDeck == null)
+        {
+            aiDeck = FindFirstObjectByType<EnemyDeckHandler>();
+            if (aiDeck != null)
+            {
+                aiDeck.Play();
+            }
+        } else
+        {
+            aiDeck.Play();
+        }
     }
 
     void FirstDraw()
@@ -41,21 +53,30 @@ public class VersusAIManager : MonoBehaviour
             if (aiDeck != null)
             {
                 aiDeck.EnemyCardPile = enemyCards;
-                Debug.Log("Cool, it works");
             }
         }
     }
     public void SetVersus(bool allRandom, int CardAmount)
     {
+        if (aiDeck == null)
+        {
+            aiDeck = FindFirstObjectByType<EnemyDeckHandler>();
+        }
         if (allRandom)
         {
+            List<CardValues> cards = CardGameObjectPool.instance.AllCards.ToList();
             for (int i = 0; i < CardAmount; i++)
             {
-                playerDeck.playerAvailableCards.Add(CardGameObjectPool.instance.GetRandomCardValue());
+                int r = Random.Range(0, cards.Count);
+                playerDeck.playerAvailableCards.Add(cards[r]);
+                cards.RemoveAt(r);
             }
+            cards = CardGameObjectPool.instance.AllCards.ToList();
             for (int i = 0; i < CardAmount; i++)
             {
-                aiDeck.EnemyCardPile.Add(CardGameObjectPool.instance.GetRandomCardValue());
+                int r = Random.Range(0, cards.Count);
+                aiDeck.EnemyCardPile.Add(cards[r]);
+                cards.RemoveAt(r);
             }
         }
     }
@@ -98,7 +119,7 @@ public class VersusAIManager : MonoBehaviour
     }
     public void CheckLoseCondition()
     {
-        if (enemyDeck == null)
+        if (versusMode == VersusMode.Roguemode)
         {
             if (playerDeck.DrawPile.Count == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
             {
@@ -111,6 +132,21 @@ public class VersusAIManager : MonoBehaviour
             }
             return;
         }
+
+        if (versusMode == VersusMode.Custom)
+        {
+            if (playerDeck.DrawPile.Count == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
+            {
+                DeactivateBoth();
+                GameOver();
+            }
+            if (roundManager.getCardGroup(CardTeam.Enemies).Length == 0 && aiDeck.EnemyCardPile.Count == 0)
+            {
+                YouWin();
+            }
+            return;
+        }
+
         if (playerDeck.DrawPile.Count == 0 && playerDeck.myHand.cardsInHand.Length == 0 && roundManager.getCardGroup(CardTeam.Players).Length == 0)
         {
             DeactivateBoth();
@@ -126,7 +162,7 @@ public class VersusAIManager : MonoBehaviour
     {
         gameOver = true;
         LoseScreen.SetActive(true);
-        loseTextMesh.text = "GOOD JOB OR SMTH, YOU WIN!!!!!!!!";
+        loseTextMesh.text = "Yo you WINNN!!!!!'!!!!!";
         AudioManager.instance.PlayMusic("Main");
     }
 
@@ -134,7 +170,7 @@ public class VersusAIManager : MonoBehaviour
     {
         gameOver = true;
         LoseScreen.SetActive(true);
-        loseTextMesh.text = "You lose!";
+        loseTextMesh.text = "Well, maybe next time... \n You lose! HA HA";
         AudioManager.instance.PlayMusic("Main");
     }
 
@@ -144,5 +180,10 @@ public class VersusAIManager : MonoBehaviour
         LoseScreen.SetActive(true);
         loseTextMesh.text = "Damn good try bud";
         AudioManager.instance.PlayMusic("Main");
+    }
+    public enum VersusMode
+    {
+        Custom,
+        Roguemode
     }
 }

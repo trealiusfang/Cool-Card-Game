@@ -2,20 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class OptionsHandler : MonoBehaviour
 {
-    public TMP_Dropdown fps, resolution;
+    public TMP_Dropdown fps, resolution, language;
     public Button runInBackGround, FullScreen;
 
     public void OnEnable()
     {
         fps.value = framerateToDropDownValue();
         resolution.value = resolutionToDropDownValue();
+        language.value = languageToDropdownValue();
 
         runInBackGround.transform.GetChild(0).GetComponent<Image>().enabled = Application.runInBackground;
         FullScreen.transform.GetChild(0).GetComponent<Image>().enabled = Screen.fullScreen;
+    }
+
+    int languageToDropdownValue()
+    {
+        Locale currentSelectedLocale = LocalizationSettings.SelectedLocale;
+        ILocalesProvider availableLocales = LocalizationSettings.AvailableLocales;
+        if (currentSelectedLocale == availableLocales.GetLocale("en"))
+        {
+            return 0;
+        }
+        if (currentSelectedLocale == availableLocales.GetLocale("de"))
+        {
+            return 1;
+        }
+        if (currentSelectedLocale == availableLocales.GetLocale("es"))
+        {
+            return 2;
+        }
+        if (currentSelectedLocale == availableLocales.GetLocale("tr"))
+        {
+            return 3;
+        }
+
+        return 0;
     }
 
     int resolutionToDropDownValue()

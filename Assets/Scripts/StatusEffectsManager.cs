@@ -117,7 +117,7 @@ public class StatusEffectsManager : MonoSingleton<StatusEffectsManager>
 
     public void AddStatusEffect(Card card, string StatusEffectName, int strength = 1, bool hidden = false)
     {
-        if (card == null) return;
+        if (card == null || strength < 1) return;
 
         StatusEffectsHolder holder = card.GetComponent<StatusEffectsHolder>();
 

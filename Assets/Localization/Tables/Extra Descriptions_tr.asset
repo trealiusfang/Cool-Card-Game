@@ -46,9 +46,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4491135496192
-    m_Localized: "T\xFCm hasar de\u011Ferini de\u011Fi\u015Ftirebilecek etkenlerden
-      etkelenmeyen bir hasar tipi, bu hasar al\u0131nd\u0131\u011F\u0131nda pasifleri
-      tetiklemez"
+    m_Localized: "T\xFCm dayan\u0131kl\u0131klar\u0131 es ge\xE7en bir hasar tipi,
+      hasar al\u0131nd\u0131\u011F\u0131nda \xE7al\u0131\u015Fan pasifleri tetiklemez"
     m_Metadata:
       m_Items: []
   - m_Id: 5426398179328
@@ -73,6 +72,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 46477417996288
     m_Localized: xd
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1190425293856768
+    m_Localized: "Her turun sonunda hasar vurur,\nGer\xE7ek Hasar ile."
     m_Metadata:
       m_Items: []
   references:

@@ -33,7 +33,8 @@ public class PlayerData
             RunInBackground = Application.runInBackground;
             FullScreen = Screen.fullScreen;
 
-            //localizerIndex = GeneralGameManager.instance.localToIndex();
+            localizerIndex = GeneralGameManager.instance.localToIndex();
+            Debug.Log(localizerIndex);
         }
 
         if (dataType == DataType.Gameplay)

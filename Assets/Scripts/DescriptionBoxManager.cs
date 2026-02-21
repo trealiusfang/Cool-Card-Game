@@ -56,6 +56,7 @@ public class DescriptionBoxManager : MonoSingleton<DescriptionBoxManager>
     {
         if (onPassive) return;
         Passive passive = SelectedCardManager.instance.SelectedCard.Passives[0];
+        if (passive == null) return;
         Color passiveColor = passive.passiveColor == new Color(195, 255, 0, 0) ? basePassiveColor : passive.passiveColor;
 
         AddDesc(passive.PassiveName, passive.PassiveDescription, passiveColor, passive.PassiveValue, SelectedCardManager.instance.SelectedCard);

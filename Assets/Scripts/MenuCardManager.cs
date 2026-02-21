@@ -21,6 +21,8 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     [SerializeField] TextMeshProUGUI playerText;
     [Header("Custom gaymes les go")]
     [SerializeField] GameObject CustomGamesCanvas;
+    [SerializeField] GameObject RandomModeCanvas;
+    [SerializeField] TextMeshProUGUI cardAmountMesh;
     string targetScene;
 
     private void Start()
@@ -84,6 +86,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     }
     #region custom games managing
     CustomGame currentCustomGame = null;
+    int cardAmount = 6;
     public void CallCustomGame()
     {
         CustomGamesCanvas.SetActive(true);
@@ -103,7 +106,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
         }
         if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
         {
-            //random canvas
+            RandomModeCanvas.SetActive(true);
         }
     }
 
@@ -118,6 +121,13 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
 
         cardArranger.SpawnCards();
         deckChooser.doAllowSelection(true);
+    }
+
+    public void increaseRandomCards()
+    {
+        if (cardAmount < 36) cardAmount += 2; else cardAmount = 6;
+
+        cardAmountMesh.text = cardAmount.ToString();
     }
 
     #endregion
@@ -201,7 +211,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
                     versusManager.SetVersus(playerCards, currentCustomGame.encounter);
                 } else if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
                 {
-                    versusManager.SetVersus(true, 12);
+                    versusManager.SetVersus(true, cardAmount);
                 }
 
                 RoundManager.instance.StartBattle();

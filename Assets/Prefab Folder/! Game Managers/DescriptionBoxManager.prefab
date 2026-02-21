@@ -95,3 +95,6 @@ MonoBehaviour:
   - Key: Lock
     KeyColor: {r: 0.003921579, g: 0.62901103, b: 0.7058824, a: 1}
     Description: 
+  - Key: Darkness
+    KeyColor: {r: 0.2509804, g: 0.039215688, b: 0.33333334, a: 1}
+    Description: Damages at the end of every round, dealing true damage

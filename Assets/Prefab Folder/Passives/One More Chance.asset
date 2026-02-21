@@ -17,6 +17,6 @@ MonoBehaviour:
     Preventing death
   PassiveValue: 1
   PassiveTiming: 128
-  PassiveSprite: {fileID: 21300000, guid: cf20c8ae9ce36d94bb0dc83b2f31a7df, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 3b4a79e064af90e42a0d6fb55952b797, type: 3}
   PassiveAudio: {fileID: 0}
-  passiveColor: {r: 195, g: 255, b: 0, a: 0}
+  passiveColor: {r: 1, g: 0.9584977, b: 0.15566039, a: 1}

@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: LockDesc_Key
     m_Metadata:
       m_Items: []
+  - m_Id: 1190425293856768
+    m_Key: DarknessDesc_Key
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
