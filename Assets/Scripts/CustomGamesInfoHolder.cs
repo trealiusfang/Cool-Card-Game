@@ -1,12 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityCommunity.UnitySingleton;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomGamesInfoHolder : MonoSingleton<CustomGamesInfoHolder>
 {
+    [Header("Visual Table")]
+
     public List<CustomGame> CustomGames;
+
+    private void Start()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).Find("Game Name"))
+            {
+                transform.GetChild(i).Find("Game Name").GetComponent<TextMeshProUGUI>().text = CustomGames[i].GameName;
+            }
+        }
+    }
 
     public void PlayCustomMode(Transform customGameHolder)
     {

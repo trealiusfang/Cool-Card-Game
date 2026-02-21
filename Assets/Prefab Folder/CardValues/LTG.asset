@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
-  m_Name: Vampire
+  m_Name: LTG
   m_EditorClassIdentifier: 
-  CardName: Vampire
-  actionType: 4
-  ActionValue: 0
-  resistanceType: 1
-  ResistanceValue: 2
+  CardName: Low Tier God
+  actionType: 0
+  ActionValue: 999
+  resistanceType: 0
+  ResistanceValue: 1
   preferredTargetSpots:
-    spot1: 0
+    spot1: 1
     spot2: 0
-    spot3: 1
+    spot3: 0
     spot4: 0
   Passives:
-  - {fileID: 11400000, guid: 69508f4820c23834791f3e963c3253c8, type: 2}
-  charSprite: {fileID: -5687666349546342197, guid: d9e35d314defd1240b1d9b73a7419f60, type: 3}
+  - {fileID: 11400000, guid: 528471fe6f869e44d91e474759db48af, type: 2}
+  charSprite: {fileID: -2030151647539113300, guid: 62d97201bc92fd04790e02f22442c1c6, type: 3}
   charAnimator: {fileID: 0}
   charClip: {fileID: 0}
   putOnPlaySound: {fileID: 0}
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 5c04415565312ec4c960eaaf8bef1bdf, type: 3}
   healSound: {fileID: 0}
   hurtSound: {fileID: 0}
   deathSound: {fileID: 0}

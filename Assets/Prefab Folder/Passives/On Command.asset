@@ -17,6 +17,6 @@ MonoBehaviour:
     target as this card
   PassiveValue: 0
   PassiveTiming: 256
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 105e4236566cb1e4ab4ad3d1c975ca67, type: 3}
   PassiveAudio: {fileID: 8300000, guid: 00a4b4087d280f84fa651160dc059724, type: 3}
   passiveColor: {r: 0, g: 0.5401311, b: 1, a: 1}

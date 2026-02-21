@@ -23,6 +23,8 @@ public class Card : MonoBehaviour
     public int ActionValue;
     public int ActiveRounds = 0;
     public int ActiveTurns = 0;
+    public ActionType actionType;
+    public ResistanceType resistanceType;
 
     //demonstrates if the card is on your hand or the playing field
     public bool cardActive = false;
@@ -56,6 +58,8 @@ public class Card : MonoBehaviour
         transform.name = CardValues.getCardName();
         ResistanceValue = CardValues.getResistanceValue();
         ActionValue = CardValues.getActionValue();
+        actionType = CardValues.actionType;
+        resistanceType = CardValues.resistanceType;
 
         roundManager = RoundManager.instance;
         passiveManager = PassiveManager.instance;
@@ -117,7 +121,7 @@ public class Card : MonoBehaviour
         {
             yield return new WaitForSeconds(roundManager.actionTimer);
 
-            if (CardValues.resistanceType == ResistanceType.TimeLimit)
+            if (resistanceType == ResistanceType.TimeLimit)
             {
                 TakeGhostlyDamage(1);
                 yield return new WaitForSeconds(roundManager.actionTimer);
@@ -138,7 +142,7 @@ public class Card : MonoBehaviour
 
         yield return new WaitForSeconds(roundManager.actionTimer);
 
-        if (CardValues.resistanceType == ResistanceType.TimeLimit)
+        if (resistanceType == ResistanceType.TimeLimit)
         {
             TakeGhostlyDamage(1);
             yield return new WaitForSeconds(roundManager.actionTimer);
@@ -188,17 +192,17 @@ public class Card : MonoBehaviour
     /// </summary>
     private void TakeAction()
     {
-        if (CardValues.actionType == ActionType.Damage)
+        if (actionType == ActionType.Damage || actionType == ActionType.MirrorAct || actionType == ActionType.MirrorRes)
         {
             Attack();
         }
 
-        if (CardValues.actionType == ActionType.Heal)
+        if (actionType == ActionType.Heal)
         {
             Heal();
         }
 
-        if (CardValues.actionType == ActionType.Darkness)
+        if (actionType == ActionType.Darkness)
         {
             Darkness();
         }
@@ -432,7 +436,7 @@ public class Card : MonoBehaviour
                     throwCards.Add(card);
                     continue;
                 }
-                if (showTarget) setOverlay(card, CardValues.actionType);
+                if (showTarget) setOverlay(card, actionType);
             }
 
             foreach (Card card in throwCards)
@@ -461,21 +465,21 @@ public class Card : MonoBehaviour
         cardTargets.Clear();
         for (int i = 0; i < actualTargetSpots.Count; i++)
         {
-            if (CardValues.actionType == ActionType.Damage)
+            if (actionType == ActionType.Damage || actionType == ActionType.MirrorAct || actionType == ActionType.MirrorRes)
             {
                 if (actualTargetSpots[i])
                 {
                     setTarget(enemyCards, ActionType.Damage, i, false, showTarget, true);
                 }
             }
-            if (CardValues.actionType == ActionType.Heal)
+            if (actionType == ActionType.Heal)
             {
                 if (actualTargetSpots[i])
                 {
                     setTarget(friendlyCards, ActionType.Heal, i, false, showTarget);
                 }
             }
-            if (CardValues.actionType == ActionType.Darkness)
+            if (actionType == ActionType.Darkness)
             {
                 if (actualTargetSpots[i])
                 {
@@ -552,7 +556,7 @@ public class Card : MonoBehaviour
         {
             if (targetCards[i].isCardDead() == false)
             {
-                if (wantEveryone || !wantEveryone && targetCards[i].CardValues.resistanceType == ResistanceType.Health)
+                if (wantEveryone || !wantEveryone && targetCards[i].resistanceType == ResistanceType.Health)
                 {
                     if (cardTargets.Contains(targetCards[i]))
                     {
@@ -606,15 +610,16 @@ public class Card : MonoBehaviour
 
     private void OnMatchUpdate() 
     {
-        if (CardValues.actionType == ActionType.MirrorAct)
+        if (actionType == ActionType.MirrorAct)
         {
+            Debug.Log("Here! lol");
             SetTargets(false);
             if (cardTargets.Count > 0)
             {
                 ActionValue = cardTargets[0].ActionValue;
             }
         }
-        if (CardValues.actionType == ActionType.MirrorRes)
+        if (actionType == ActionType.MirrorRes)
         {
             SetTargets(false);
             if (cardTargets.Count > 0)

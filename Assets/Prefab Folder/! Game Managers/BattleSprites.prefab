@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5670032913513485516}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.8286453, y: 0.25665465, z: -0.026301688}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -56,6 +56,10 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: dd6692e048fd02040bd194d0c727af17, type: 3}
   - ActionType: 2
     Sprite: {fileID: 21300000, guid: cdda287b1e8ece74b8cc48e8b7f4ee16, type: 3}
+  - ActionType: 3
+    Sprite: {fileID: 21300000, guid: 88e523b225e7011468e4ced6ff0d71b1, type: 3}
+  - ActionType: 4
+    Sprite: {fileID: 21300000, guid: ca1425e8df094c04a9c2a25fb2afb1e9, type: 3}
   ActionAndFont:
   - actionType: 0
     fontAsset: {fileID: 11400000, guid: 849e957d1439b894cb3fec584c249423, type: 2}
@@ -66,6 +70,12 @@ MonoBehaviour:
   - actionType: 2
     fontAsset: {fileID: 11400000, guid: 775f88ea4bade8f468d3087e00d762af, type: 2}
     affectName: 1
+  - actionType: 3
+    fontAsset: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
+    affectName: 0
+  - actionType: 4
+    fontAsset: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
+    affectName: 0
   ResistanceAndFont:
   - resistanceType: 0
     fontAsset: {fileID: 11400000, guid: 849e957d1439b894cb3fec584c249423, type: 2}

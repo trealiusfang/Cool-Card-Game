@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d53030b8b1778e42959399222781b7e
+guid: c7284e63532c5934b9c3575549813240
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8564372062411300917
-    second: deepwoundstateffect2_0
+      213: 6579207215826952436
+    second: slow(hampcanon)passive(stat)_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -122,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: deepwoundstateffect2_0
+      name: slow(hampcanon)passive(stat)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcfd1b73cfc352980800000000000000
-      internalID: -8564372062411300917
+      spriteID: 4f06d0bca1a0e4b50800000000000000
+      internalID: 6579207215826952436
       vertices: []
       indices: 
       edges: []
@@ -153,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      deepwoundstateffect2_0: -8564372062411300917
+      slow(hampcanon)passive(stat)_0: 6579207215826952436
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

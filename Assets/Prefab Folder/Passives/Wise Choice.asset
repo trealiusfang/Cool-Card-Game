@@ -16,6 +16,6 @@ MonoBehaviour:
   PassiveDescription: Applies Deep Wound when targeted
   PassiveValue: 1
   PassiveTiming: 1024
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: bca3fb09b963df44eb18fc57b3f56655, type: 3}
   PassiveAudio: {fileID: 8300000, guid: 0c2864749eaffbe40a01d519c5f15cff, type: 3}
   passiveColor: {r: 0, g: 0.9171715, b: 1, a: 1}

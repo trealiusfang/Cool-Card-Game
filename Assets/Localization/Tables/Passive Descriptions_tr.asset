@@ -47,10 +47,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4213753589760
-    m_Localized: "Eylem Puan\u0131 bu kart\u0131n hedefledi\u011Fi kart\u0131n Dayan\u0131kl\u0131l\u0131k
-      Puan\u0131n\u0131n yar\u0131s\u0131na e\u015Fittir. En d\xFC\u015F\xFCk canl\u0131
-      tak\u0131m arkada\u015F\u0131n\u0131n\u0131n Dayan\u0131kl\u0131l\u0131k Puan\u0131n\u0131
-      birine vurdu\u011Fu zaman 1 artt\u0131r\u0131r"
+    m_Localized: "Ba\u015Far\u0131l\u0131 sald\u0131r\u0131dan sonra en d\xFC\u015F\xFCk
+      canl\u0131 dost kart\u0131 iyile\u015Ftirir"
     m_Metadata:
       m_Items: []
   - m_Id: 4764880941056

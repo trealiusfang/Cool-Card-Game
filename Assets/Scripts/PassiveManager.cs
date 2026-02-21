@@ -569,43 +569,29 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 continue;
             }
 
-            if (currentPassive.PassiveName == "Fierce Fighter")
+            if (currentPassive.PassiveName == "Tactical Heal")
             {
-                if (passiveTiming == CardTimings.StartOfRound)
+                if (passiveTiming == CardTimings.OnAttack)
                 {
-                    card.SetTargets(false);
-                    List<Card> cards = card.getCardTargets();
-                    Card targetCard = null;
-                    for (int c = 0; c < cards.Count; c++)
-                    {
-                        targetCard = cards[c];
-                        card.ActionValue = Mathf.CeilToInt((float)targetCard.ResistanceValue / 2);
-                        cards[c].UpdateVisualStats();
-                    }
-                    if (targetCard == null) continue;
-                    card.UpdateVisualStats();
-                    continue;
-                }
+                    List<Card> friendlies = CardGroup(card, false);
 
-                List<Card> friendlies = CardGroup(card, false);
-
-                Card lowestHP = null;
-                int lowestValue = 0;
-                for (int c = 0; c < friendlies.Count; c++)
-                {
-                    if (friendlies[c].CardValues.resistanceType != ResistanceType.TimeLimit)
+                    Card lowestHP = null;
+                    int lowestValue = 0;
+                    for (int c = 0; c < friendlies.Count; c++)
                     {
-                        if (lowestHP == null || lowestValue > friendlies[c].ResistanceValue)
+                        if (friendlies[c].CardValues.resistanceType != ResistanceType.TimeLimit)
                         {
-                            lowestHP = friendlies[c];
-                            lowestValue = friendlies[c].ResistanceValue;
+                            if (lowestHP == null || lowestValue > friendlies[c].ResistanceValue)
+                            {
+                                lowestHP = friendlies[c];
+                                lowestValue = friendlies[c].ResistanceValue;
+                            }
                         }
                     }
+
+                    if (lowestHP == null) continue;
+                    lowestHP.Curation(passiveValue);
                 }
-
-                if (lowestHP == null) continue;
-                lowestHP.Curation(passiveValue);
-
                 continue;
             }
 

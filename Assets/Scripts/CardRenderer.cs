@@ -62,7 +62,7 @@ public class CardRenderer : MonoBehaviour
 
         Transform pt = prefTargets.transform.GetChild(0);
 
-        if (card.CardValues.actionType == ActionType.Damage || card.CardValues.actionType == ActionType.Darkness)
+        if (card.CardValues.actionType == ActionType.Damage || card.CardValues.actionType == ActionType.Darkness || card.CardValues.actionType == ActionType.MirrorAct || card.CardValues.actionType == ActionType.MirrorRes)
         {
             pt.GetComponent<SpriteRenderer>().sprite = AttackTargetBG;
         } else

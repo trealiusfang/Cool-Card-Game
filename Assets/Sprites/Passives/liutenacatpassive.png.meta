@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0d53030b8b1778e42959399222781b7e
+guid: 105e4236566cb1e4ab4ad3d1c975ca67
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8564372062411300917
-    second: deepwoundstateffect2_0
+      213: -3272843291094862861
+    second: liutenacatpassive_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,7 +122,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: deepwoundstateffect2_0
+      name: liutenacatpassive_0
       rect:
         serializedVersion: 2
         x: 0
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bcfd1b73cfc352980800000000000000
-      internalID: -8564372062411300917
+      spriteID: 3f335c4fd568492d0800000000000000
+      internalID: -3272843291094862861
       vertices: []
       indices: 
       edges: []
@@ -145,7 +145,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -153,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      deepwoundstateffect2_0: -8564372062411300917
+      liutenacatpassive_0: -3272843291094862861
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

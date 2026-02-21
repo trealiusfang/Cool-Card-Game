@@ -17,6 +17,6 @@ MonoBehaviour:
     last
   PassiveValue: 1
   PassiveTiming: 257
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 21300000, guid: 02465d79b8b83e94e9ea6289a33b5ec3, type: 3}
   PassiveAudio: {fileID: 0}
   passiveColor: {r: 0.6879309, g: 0.6886792, b: 0.6854307, a: 1}

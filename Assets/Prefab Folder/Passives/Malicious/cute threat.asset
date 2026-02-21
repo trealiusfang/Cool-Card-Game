@@ -16,6 +16,6 @@ MonoBehaviour:
   PassiveDescription: Can only attack once every 3 turns
   PassiveValue: 3
   PassiveTiming: 264
-  PassiveSprite: {fileID: 21300000, guid: 41acb93a8497cf9498341878e305f12b, type: 3}
+  PassiveSprite: {fileID: 6579207215826952436, guid: c7284e63532c5934b9c3575549813240, type: 3}
   PassiveAudio: {fileID: 0}
   passiveColor: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}

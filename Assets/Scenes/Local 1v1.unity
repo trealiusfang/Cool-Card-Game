@@ -2835,57 +2835,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1789558762}
     m_Modifications:
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionSprites.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionSprites.Array.data[3].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 88e523b225e7011468e4ced6ff0d71b1, type: 3}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionSprites.Array.data[4].Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ca1425e8df094c04a9c2a25fb2afb1e9, type: 3}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.data[3].fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.data[4].fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: bb89756df26e1c447a482d071ed5d999, type: 2}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.data[3].actionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.data[3].affectName
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionAndFont.Array.data[4].actionType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionSprites.Array.data[3].ActionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2536767252269782999, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: ActionSprites.Array.data[4].ActionType
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 5670032913513485516, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
       propertyPath: m_Name
       value: BattleSprites
-      objectReference: {fileID: 0}
-    - target: {fileID: 6308882663594932493, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6308882663594932493, guid: 9d4e178d0cc417d4386629e479a99d47, type: 3}
       propertyPath: m_LocalPosition.x

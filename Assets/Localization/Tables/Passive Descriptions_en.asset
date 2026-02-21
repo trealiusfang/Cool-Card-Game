@@ -43,8 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4213753589760
-    m_Localized: Action value is equal to half of targets Resistance, heals lowest
-      HP ally by 1 after attack
+    m_Localized: On Attack Heals the lowest HP ally by Value
     m_Metadata:
       m_Items: []
   - m_Id: 4764880941056

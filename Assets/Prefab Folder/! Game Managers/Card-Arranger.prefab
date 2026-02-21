@@ -83,6 +83,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 25056a602075330489855a5d5d7f3f3b, type: 2}
   - {fileID: 11400000, guid: 9b83ebdc629305649b8f19904d193d61, type: 2}
   - {fileID: 11400000, guid: 90014145a51b2fd47ab5717ced216617, type: 2}
+  - {fileID: 11400000, guid: 8b982f84137f8754a8fa795b7898a821, type: 2}
   cardPrefab: {fileID: 1385911733151840410, guid: f6e709c6ea06fb647bff921364d50422, type: 3}
   activeCards: []
   cardSize: {x: 1, y: 1}
