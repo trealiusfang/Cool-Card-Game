@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CustomGamesInfoHolder : MonoSingleton<CustomGamesInfoHolder>
 {
     public List<CustomGame> CustomGames;
+    public Transform Content;
 
     public void PlayCustomMode(Transform customGameHolder)
     {
@@ -20,6 +21,7 @@ public class CustomGamesInfoHolder : MonoSingleton<CustomGamesInfoHolder>
                 gameIndex = i;
                 break;
             }
+
         }
 
         if (gameIndex == -1)
