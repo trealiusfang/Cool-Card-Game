@@ -74,6 +74,10 @@ MonoBehaviour:
     m_Localized: Darkness
     m_Metadata:
       m_Items: []
+  - m_Id: 1546293570768896
+    m_Localized: Weak Point
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

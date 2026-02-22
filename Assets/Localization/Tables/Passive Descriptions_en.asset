@@ -201,6 +201,18 @@ MonoBehaviour:
     m_Localized: Apply taken damage -Value Darkness to the attacking foe
     m_Metadata:
       m_Items: []
+  - m_Id: 1500783958888448
+    m_Localized: On Attack changes target cards positions by pushing them back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501183348903936
+    m_Localized: Switch Action types every end of round whilst switching targets
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501542653956096
+    m_Localized: Afflicts 2 random enemies with Weak Point status effect
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -18,23 +18,23 @@ public class BattleSprites : MonoSingleton<BattleSprites>
     /// <param name="cardV"></param>
     /// <param name="resistanceSprite"></param>
     /// <param name="actionSprite"></param>
-    public void SetMainSprites(CardValues cardV, SpriteRenderer resistanceSprite, SpriteRenderer actionSprite)
+    public void SetMainSprites(Card card, SpriteRenderer resistanceSprite, SpriteRenderer actionSprite)
     {
         for (int i = 0; i < Mathf.Max(ResistanceSprites.Length, ActionSprites.Length); i++)
         {
-            if (ResistanceSprites.Length > i && ResistanceSprites[i].ResistanceType == cardV.resistanceType)
+            if (ResistanceSprites.Length > i && ResistanceSprites[i].ResistanceType == card.resistanceType)
             {
                 resistanceSprite.sprite = ResistanceSprites[i].Sprite;
             }
 
-            if (ActionSprites.Length > i && ActionSprites[i].ActionType == cardV.actionType)
+            if (ActionSprites.Length > i && ActionSprites[i].ActionType == card.actionType)
             {
                 actionSprite.sprite = ActionSprites[i].Sprite;
             }
         }
     }
 
-    public void SetFonts(CardValues cardV, TextMeshPro charNameTxt,TextMeshPro actionTxt, TextMeshPro resistanceTxt)
+    public void SetFonts(Card cardV, TextMeshPro charNameTxt,TextMeshPro actionTxt, TextMeshPro resistanceTxt)
     {
         for (int i = 0; i < Mathf.Max(ActionAndFont.Length, ResistanceAndFont.Length); i++)
         {

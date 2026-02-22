@@ -178,6 +178,18 @@ MonoBehaviour:
     m_Localized: Kara Ayna
     m_Metadata:
       m_Items: []
+  - m_Id: 1519169526894592
+    m_Localized: "Sars\u0131tan\n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1519291723747328
+    m_Localized: "Her i\u015Fin ehli"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1519495889883136
+    m_Localized: "Deneysel Y\xF6ntemler"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

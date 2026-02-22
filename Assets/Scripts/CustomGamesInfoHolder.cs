@@ -8,11 +8,14 @@ using UnityEngine.UI;
 public class CustomGamesInfoHolder : MonoSingleton<CustomGamesInfoHolder>
 {
     [Header("Visual Table")]
-
+    public float ScrollMultiplier = 100;
+    public int minCustomAmount = 3;
+    VerticalLayoutGroup verticalLayout;
     public List<CustomGame> CustomGames;
 
     private void Start()
     {
+        verticalLayout = GetComponent<VerticalLayoutGroup>();
         for (int i = 0; i < transform.childCount; i++)
         {
             if (transform.GetChild(i).Find("Game Name"))
@@ -43,10 +46,12 @@ public class CustomGamesInfoHolder : MonoSingleton<CustomGamesInfoHolder>
         }
 
         MenuCardManager.instance.SendCustomGamesInfo(CustomGames[gameIndex]);
+    }
 
-        // Send info to menu card manager "custom game"
-        // 
-        //
+    public void ScrollOrSomething(float value)
+    {
+        float distancePerValue = Mathf.Clamp((CustomGames.Count - minCustomAmount) * verticalLayout.spacing * ScrollMultiplier, 0, Mathf.Infinity);
+        transform.position = new Vector3(0, value * distancePerValue, 0);
     }
 }
 

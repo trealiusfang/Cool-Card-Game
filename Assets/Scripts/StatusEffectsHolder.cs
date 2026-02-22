@@ -188,6 +188,9 @@ public class StatusEffectsHolder : MonoBehaviour
 
     public void TryToAddStatusEffect(StatusEffect effect, int effectStrength = 1, bool hidden = false)
     {
+        //We don't want to add status effects whilst the card is dead
+        if (myCard.isCardDead()) return;
+
         for (int i = 0; i < statusInfos.Length; i++)
         {
             if (statusInfos[i].statusEffect.effectName == effect.effectName)

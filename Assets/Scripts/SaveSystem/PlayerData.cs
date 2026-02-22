@@ -34,7 +34,6 @@ public class PlayerData
             FullScreen = Screen.fullScreen;
 
             localizerIndex = GeneralGameManager.instance.localToIndex();
-            Debug.Log(localizerIndex);
         }
 
         if (dataType == DataType.Gameplay)
@@ -48,7 +47,6 @@ public class PlayerData
                 {
                     gameSpeed = RoundManager.instance.actionTimer;
                 }
-                Debug.Log(gameSpeed);
             }
         }
     }

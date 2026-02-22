@@ -249,6 +249,8 @@ public class Card : MonoBehaviour
         int effectiveValue = ResistanceValue;
         int effectiveActionValue = statusEffectsHolder.CheckStatusTimings(CardTimings.OnHurt, actionValue, damageDealer);
         if (effectiveActionValue == 0) actuallyZeroDamage = true;
+
+        if (effectiveActionValue > ResistanceValue) effectiveActionValue = ResistanceValue;
         ResistanceValue -= effectiveActionValue; 
         CheckPassives(CardTimings.OnHurt, effectiveActionValue ,damageDealer);
 
@@ -612,7 +614,6 @@ public class Card : MonoBehaviour
     {
         if (actionType == ActionType.MirrorAct)
         {
-            Debug.Log("Here! lol");
             SetTargets(false);
             if (cardTargets.Count > 0)
             {
@@ -637,6 +638,11 @@ public class Card : MonoBehaviour
     public void UpdateVisualStats()
     {
         cardRenderer.UpdateVisualStats();
+    }
+
+    public void UpdateStatTypes()
+    {
+        cardRenderer.UpdateVisualStatTypes();
     }
     /// <summary>
     /// By type "Action" or "Resistance" for type you will influence these variables with a visual updater.

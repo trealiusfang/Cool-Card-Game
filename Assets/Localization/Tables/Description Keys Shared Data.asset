@@ -71,6 +71,12 @@ MonoBehaviour:
     m_Key: DarknessName_Key
     m_Metadata:
       m_Items: []
+  - m_Id: 1546293570768896
+    m_Key: 'Weak PointName_Key
+
+'
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

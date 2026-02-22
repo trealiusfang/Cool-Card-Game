@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: "Her turun sonunda hasar vurur,\nGer\xE7ek Hasar ile."
     m_Metadata:
       m_Items: []
+  - m_Id: 1553693291909120
+    m_Localized: "Al\u0131nan hasar\u0131 %50 artt\u0131r\u0131r"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

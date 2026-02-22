@@ -15,6 +15,7 @@ public class CardValues : ScriptableObject
     [SerializeField] int ResistanceValue = 1;
 
     public TargetSpots preferredTargetSpots;
+    public CardRarity cardRarity;
 
     public Passive[] Passives = new Passive[1];
     [Header("3 different ways to give visuals, charSprite is mandatory.")]
@@ -108,6 +109,13 @@ public enum ResistanceType
 {
     Health,
     TimeLimit,
+}
+
+public enum CardRarity
+{
+    Common,
+    Rare,
+    Golden
 }
 
 

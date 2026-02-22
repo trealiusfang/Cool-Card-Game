@@ -22,6 +22,7 @@ MonoBehaviour:
     spot2: 0
     spot3: 0
     spot4: 0
+  cardRarity: 1
   Passives:
   - {fileID: 11400000, guid: 299c8625f07d2f44d966e4f18d36dfd5, type: 2}
   - {fileID: 11400000, guid: 15a263df0555d2f4a8d44bcde07ed56a, type: 2}

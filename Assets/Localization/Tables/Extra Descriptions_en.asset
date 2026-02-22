@@ -75,6 +75,10 @@ MonoBehaviour:
     m_Localized: Damages at the end of every round, dealing True Damage
     m_Metadata:
       m_Items: []
+  - m_Id: 1553693291909120
+    m_Localized: Increases taken damage by %50
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

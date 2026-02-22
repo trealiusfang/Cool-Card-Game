@@ -59,6 +59,11 @@ public class StatusEffectsManager : MonoSingleton<StatusEffectsManager>
             originalValue = Mathf.FloorToInt(originalValue / 2);
         }
 
+        if (statusEffect.effectName == "Weak Point")
+        {
+            originalValue += Mathf.FloorToInt((float)originalValue / 2);
+        }
+
         return originalValue;
     }
 

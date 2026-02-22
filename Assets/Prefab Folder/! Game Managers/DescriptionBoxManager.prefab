@@ -49,7 +49,7 @@ MonoBehaviour:
   followMouse: 0
   minLineAmount: 3
   baseBoxSize: {x: 2.5, y: 1}
-  sizeByLine: 0.1
+  sizeByLine: 0.18
   basePassiveColor: {r: 0.64339745, g: 0.8490566, b: 0.020024916, a: 1}
   passiveValueColor: {r: 0.2783019, g: 0.9011373, b: 1, a: 1}
   dimensionalDistancesPorEachBox: {x: 2.7, y: 0.3}
@@ -98,3 +98,6 @@ MonoBehaviour:
   - Key: Darkness
     KeyColor: {r: 0.2509804, g: 0.039215688, b: 0.33333334, a: 1}
     Description: Damages at the end of every round, dealing true damage
+  - Key: Weak Point
+    KeyColor: {r: 1, g: 0.12332038, b: 0.042452812, a: 1}
+    Description: Increases damage taken by %50

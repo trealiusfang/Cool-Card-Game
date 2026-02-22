@@ -74,6 +74,10 @@ MonoBehaviour:
     m_Localized: "Karanl\u0131k"
     m_Metadata:
       m_Items: []
+  - m_Id: 1546293570768896
+    m_Localized: Kritik Nokta
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

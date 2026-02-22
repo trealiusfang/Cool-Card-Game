@@ -230,6 +230,20 @@ MonoBehaviour:
     m_Localized: "Al\u0131nan hasar\u0131n -Value kadar Karanl\u0131k ekle"
     m_Metadata:
       m_Items: []
+  - m_Id: 1500783958888448
+    m_Localized: "Sald\u0131r\u0131da hedeflerin yerlerini geriye iterek de\u011Fi\u015Ftirir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501183348903936
+    m_Localized: "Her kendi turu sonunda Aksiyon t\xFCr\xFC ve hedef b\xF6lgeleri
+      de\u011Fi\u015Fir"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1501542653956096
+    m_Localized: "Rasgele 2 d\xFC\u015Fmana K\u0131r\u0131lgan Nokta stat\xFC efektini
+      verir"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

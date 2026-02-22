@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardName: E-QUEEN
   actionType: 0
-  ActionValue: 2
+  ActionValue: 1
   resistanceType: 0
-  ResistanceValue: 10
+  ResistanceValue: 8
   preferredTargetSpots:
     spot1: 1
     spot2: 1
     spot3: 1
     spot4: 1
+  cardRarity: 1
   Passives:
   - {fileID: 11400000, guid: cf32ac1ce553dbf49a2900c70429f91f, type: 2}
-  - {fileID: 11400000, guid: cd531481d20dc474ea8fff073c6c2367, type: 2}
-  - {fileID: 11400000, guid: 093ba5d019e911e4383888aef2b5eb6f, type: 2}
+  - {fileID: 11400000, guid: 5d0d24acad94e0042890a47058acbb84, type: 2}
   - {fileID: 11400000, guid: dc2d0ac9533fe0b4d8d9097ed31c5cf2, type: 2}
-  - {fileID: 11400000, guid: 0245f121a45dcdf468b7e89cc08876fa, type: 2}
   - {fileID: 11400000, guid: 0d2b7f019f31e1743a0d991299fef1bf, type: 2}
+  - {fileID: 11400000, guid: 2c680fa9b435a3547b3f80c128166fb2, type: 2}
   charSprite: {fileID: 21300000, guid: a38fe927d07a473439c4c087afbfcafa, type: 3}
   charAnimator: {fileID: 0}
   charClip: {fileID: 32900000, guid: a10f2d47b6abc9042a945373019a951b, type: 3}

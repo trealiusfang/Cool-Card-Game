@@ -12,6 +12,7 @@ public class CardRenderer : MonoBehaviour
     public TextMeshPro CharacterName;
     //All 3 can be edited, but it will be my choice for the future
     public SpriteRenderer CharacterSprite;
+    public SpriteRenderer CardSprite;
     public Animator CharacterAnimator;
     public VideoPlayer videoPlayer;
     //Definitely needs to be adjusted
@@ -23,6 +24,8 @@ public class CardRenderer : MonoBehaviour
     public TextMeshPro ActionValue;
     public SpriteRenderer ResistanceSprite;
     public TextMeshPro ResistanceValue;
+    [Header("Rarity")]
+    public RarityAndSprite[] RarityAndSprites;
     [Header("Targeting System")]
     public Sprite AttackTargetBG;
     public Sprite AttackTargetActive;
@@ -50,8 +53,15 @@ public class CardRenderer : MonoBehaviour
         if (cardValues.charAnimator != null) CharacterAnimator.runtimeAnimatorController = cardValues.charAnimator;
         if (cardValues.charClip != null) { videoPlayer.clip = cardValues.charClip; videoPlayer.Play();}
 
-        BattleSprites.instance.SetMainSprites(cardValues, ResistanceSprite, ActionSprite);
-        BattleSprites.instance.SetFonts(cardValues, CharacterName, ActionValue, ResistanceValue);
+        for (int i = 0; i < RarityAndSprites.Length; i++)
+        {
+            if (cardValues.cardRarity == RarityAndSprites[i].cardRarity)
+            {
+                CardSprite.sprite = RarityAndSprites[i].sprite;
+            }
+        }
+
+        UpdateVisualStatTypes();
 
         //Change this later, this swaps the sprite aswell making it look weird
         if (card.getCardTeam() == CardTeam.Players && prefTargets.transform.localScale.x > 0)
@@ -60,29 +70,6 @@ public class CardRenderer : MonoBehaviour
                 (-prefTargets.transform.localScale.x, prefTargets.transform.localScale.y);
         }
 
-        Transform pt = prefTargets.transform.GetChild(0);
-
-        if (card.CardValues.actionType == ActionType.Damage || card.CardValues.actionType == ActionType.Darkness || card.CardValues.actionType == ActionType.MirrorAct || card.CardValues.actionType == ActionType.MirrorRes)
-        {
-            pt.GetComponent<SpriteRenderer>().sprite = AttackTargetBG;
-        } else
-        {
-            pt.GetComponent<SpriteRenderer>().sprite = HealingTargetBG;
-        }
-
-        for (int i = 0; i < 4; i++)
-        {
-            SpriteRenderer spriteRend = pt.GetChild(i).GetComponent<SpriteRenderer>();
-            spriteRend.enabled = card.targetSpots[i];
-
-            if (card.CardValues.actionType == ActionType.Damage ||card.CardValues.actionType == ActionType.Darkness)
-            {
-                spriteRend.sprite = AttackTargetActive;
-            } else
-            {
-                spriteRend.sprite = HealingTargetActive;
-            }
-        }
 
         UpdateVisualStats();
     }
@@ -125,4 +112,43 @@ public class CardRenderer : MonoBehaviour
             pt.GetChild(i).GetComponent<SpriteRenderer>().enabled = card.targetSpots[i];
         }
     }
+
+    public void UpdateVisualStatTypes()
+    {
+        BattleSprites.instance.SetMainSprites(card, ResistanceSprite, ActionSprite);
+        BattleSprites.instance.SetFonts(card, CharacterName, ActionValue, ResistanceValue);
+
+        Transform pt = prefTargets.transform.GetChild(0);
+
+        if (card.CardValues.actionType == ActionType.Damage || card.CardValues.actionType == ActionType.Darkness || card.CardValues.actionType == ActionType.MirrorAct || card.CardValues.actionType == ActionType.MirrorRes)
+        {
+            pt.GetComponent<SpriteRenderer>().sprite = AttackTargetBG;
+        }
+        else
+        {
+            pt.GetComponent<SpriteRenderer>().sprite = HealingTargetBG;
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            SpriteRenderer spriteRend = pt.GetChild(i).GetComponent<SpriteRenderer>();
+            spriteRend.enabled = card.targetSpots[i];
+
+            if (card.CardValues.actionType == ActionType.Damage || card.CardValues.actionType == ActionType.Darkness)
+            {
+                spriteRend.sprite = AttackTargetActive;
+            }
+            else
+            {
+                spriteRend.sprite = HealingTargetActive;
+            }
+        }
+    }
+}
+
+[System.Serializable]
+public class RarityAndSprite
+{
+    public Sprite sprite;
+    public CardRarity cardRarity;
 }

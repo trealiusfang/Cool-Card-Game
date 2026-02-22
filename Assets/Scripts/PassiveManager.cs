@@ -83,7 +83,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
                     for (int j = 0; j < CardList.Count; j++)
                     {
-                        if (CardList[j].CardValues.resistanceType == ResistanceType.TimeLimit)
+                        if (CardList[j].resistanceType == ResistanceType.TimeLimit)
                         {
                             CardList.RemoveAt(j);
                             j--;
@@ -133,7 +133,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 float r = Random.value;
                 for (int c = 0; c < cards.Count; c++)
                 {
-                    if (cards[c].CardValues.resistanceType != ResistanceType.TimeLimit && r <= (float)passiveValue / 100)
+                    if (cards[c].resistanceType != ResistanceType.TimeLimit && r <= (float)passiveValue / 100)
                     {
                         BattleTextManager.instance.CallBattleText("-2", TextSize.Small, cards[c].GetComponent<CardRenderer>().ResistanceSprite.transform.position, Color.magenta, 1.2f);
                         cards[c].TakeDamage(2);
@@ -163,7 +163,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 for (int c = 0; c < cards.Count; c++)
                 {
                     Card examinedCard = cards[c];
-                    if (examinedCard.CardValues.resistanceType != ResistanceType.TimeLimit && !examinedCard.isCardDead() && examinedCard != card)
+                    if (examinedCard.resistanceType != ResistanceType.TimeLimit && !examinedCard.isCardDead() && examinedCard != card)
                     {
                         examinedCard.Curation(passiveValue);
                         break;
@@ -200,7 +200,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
                     for (int c = 0; c < cards.Count(); c++)
                     {
-                        if (cards[c].CardValues.resistanceType != ResistanceType.TimeLimit)
+                        if (cards[c].resistanceType != ResistanceType.TimeLimit)
                         {
                             cards[c].TakeDamage(passiveValue, card);
 
@@ -280,7 +280,11 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 card.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().sprite = copiedCard.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().sprite;
                 card.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().color = Color.gray;
 
+                card.resistanceType = copiedCard.resistanceType;
+                card.actionType = copiedCard.actionType;
+
                 card.UpdateVisualStats();
+                card.UpdateStatTypes();
                 continue;
             }
 
@@ -298,7 +302,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
                 for (int c = 0; c < cards.Count; c++)
                 {
-                    if (cards[c].CardValues.resistanceType != ResistanceType.TimeLimit && cards[c] != card)
+                    if (cards[c].resistanceType != ResistanceType.TimeLimit && cards[c] != card)
                     cards[c].Curation(passiveValue);
                 }
                 continue;
@@ -309,7 +313,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 if (responsibleCard == null || responsibleCard == card) continue;
                 int pricklyDamage = Mathf.FloorToInt(value - 1);
 
-                if (pricklyDamage > 0 && responsibleCard.CardValues.resistanceType != ResistanceType.TimeLimit) 
+                if (pricklyDamage > 0 && responsibleCard.resistanceType != ResistanceType.TimeLimit) 
                 {
                     BattleTextManager.instance.CallBattleText("-" + pricklyDamage, TextSize.Small, responsibleCard.GetComponent<CardRenderer>().ResistanceSprite.transform.position, new Color(0, .1f, 0), 1);
                     responsibleCard.TakeDamage(pricklyDamage, card);
@@ -339,7 +343,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     List<int> removals = new List<int> { 0 };
                     for (int c = 0; c < possibleCards.Count; c++)
                     {
-                        if (possibleCards[c].CardValues.resistanceType == ResistanceType.TimeLimit)
+                        if (possibleCards[c].resistanceType == ResistanceType.TimeLimit)
                         {
                             removals.Add(c);
                         }
@@ -579,7 +583,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     int lowestValue = 0;
                     for (int c = 0; c < friendlies.Count; c++)
                     {
-                        if (friendlies[c].CardValues.resistanceType != ResistanceType.TimeLimit)
+                        if (friendlies[c].resistanceType != ResistanceType.TimeLimit)
                         {
                             if (lowestHP == null || lowestValue > friendlies[c].ResistanceValue)
                             {
@@ -631,6 +635,38 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                             newCard.SetCard(card.getCardTeam());
                             spotManager.PutCard(newCard, 0);
                         }
+                    }
+                }
+                continue;
+            }
+            //Only for E-Queen
+            if (currentPassive.PassiveName == "Cyber Slaves")
+            {
+                if (passiveTiming == CardTimings.StartOfRound)
+                {
+                    //Creating new ant!!!
+                    if (roundManager.canAddToPlay(card.getCardTeam(), true))
+                    {
+                        Card newCard = CardGameObjectPool.instance.GetSetCard("Cyber Ant");
+                        newCard.SetCard(card.getCardTeam());
+                        spotManager.PutCard(newCard, 0);
+                    }
+                    continue;
+                }
+                if (passiveTiming == CardTimings.OnHurt)
+                {
+                    if (card.ResistanceValue <= (float)card.CardValues.getResistanceValue() / 2)
+                    {
+                        if (passiveValue < 0) continue;
+                        card.passiveValue[i] -= 1;
+                        for (int c = 0; c < 2; c++)
+                        {
+                            if (!roundManager.canAddToPlay(card.getCardTeam(), true)) continue;
+                            Card newCard = CardGameObjectPool.instance.GetSetCard("Admin Ant");
+                            newCard.SetCard(card.getCardTeam());
+                            spotManager.PutCard(newCard, 0);
+                        }
+                        card.BuffOrNerfCard("Action", 1);
                     }
                 }
                 continue;
@@ -731,9 +767,10 @@ public class PassiveManager : MonoSingleton<PassiveManager>
             {
                 List<Card> list = new List<Card>();
                 list.Add(card);
+                if (passiveTiming == CardTimings.OnAttack)
                 foreach (Card targetCard in card.getCardTargets())
                 {
-                    if (targetCard.CardValues.actionType != ActionType.Heal)
+                    if (targetCard.actionType != ActionType.Heal)
                         targetCard.InfluenceCardTargets(list);
                 }
 
@@ -741,17 +778,15 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 {
                     List<bool> bools = Enumerable.Repeat(false, 4).ToList();
 
-                    for (int c = 0; c < 5; c++)
+                    for (int c = 0; c < 4; c++)
                     {
-                        Debug.Log(c % 4);
                         if (card.targetSpots[c % 4])
                         {
-                            //0, 1; 1, 2; 2, 3; 3, 4; 4, 5;
-                            bools[c % 4] = true;
+                            bools[(c + 1) % 4] = true;
                         }
                     }
 
-                    card.targetSpots = bools;
+                    //card.targetSpots = bools;
                     card.UpdateVisualStats();
                 }
                 continue;
@@ -803,6 +838,79 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     StatusEffectsManager.instance.AddStatusEffect(responsibleCard, "Darkness", Mathf.FloorToInt(value) - passiveValue);
                     AudioManager.instance.PlaySFX(currentPassive.PassiveAudio);
                 }
+                continue;
+            }
+
+
+            if (currentPassive.PassiveName == "Master Of All")
+            {
+                if (card.actionType == ActionType.Damage)
+                {
+                    card.actionType = ActionType.Heal;
+                }
+                else if (card.actionType == ActionType.Heal)
+                {
+                    card.actionType = ActionType.Darkness;
+                }
+                else if (card.actionType == ActionType.Darkness)
+                {
+                    card.actionType = ActionType.Damage;
+                }
+
+                if (card.targetSpots[0])
+                {
+                    card.targetSpots[0] = false;
+                    card.targetSpots[1] = false;
+                    card.targetSpots[2] = true;
+                    card.targetSpots[3] = true;
+                } else 
+                {
+                    card.targetSpots[0] = true;
+                    card.targetSpots[1] = true;
+                    card.targetSpots[2] = false;
+                    card.targetSpots[3] = false;
+                }
+
+                card.UpdateStatTypes();
+                card.UpdateVisualStats();
+                continue;
+            }
+            if (currentPassive.PassiveName == "Field Quaker")
+            {
+                List<Card> targets = card.getCardTargets();
+                List<Card> oldOrder = CardGroup(card, true);
+
+                for (int c = targets.Count; c > 0; c--)
+                {
+                    Card currentCard = targets[c - 1];
+                    if (currentCard.isCardDead() || currentCard == null) continue;
+
+                    if (oldOrder.Contains(currentCard))
+                    {
+                        int index = oldOrder.IndexOf(currentCard);
+                        if (index == 3) continue;
+                        oldOrder.RemoveAt(index);
+                        int newIndex = Mathf.Clamp(index + 1, 0, CardGroup(card, true).Count- 1);
+                        Debug.Log(newIndex);
+                        oldOrder.Insert(newIndex, currentCard);
+                    }
+                }
+                CardTeam enemyTeam = card.getCardTeam() == CardTeam.Players ? CardTeam.Enemies : CardTeam.Players;
+                roundManager.SetCardGroup(oldOrder.ToArray(), enemyTeam);
+                continue;
+            }
+            if (currentPassive.PassiveName == "Experimental Methods")
+            {
+                if (card.passiveValue[i] < 0) return;
+                List<Card> enemies = CardGroup(card, true);
+                for (int c = 0; c < 2; c++)
+                {
+                    int r = Random.Range(0, enemies.Count);
+                    StatusEffectsManager.instance.AddStatusEffect(enemies[r] ,"Weak Point", 3);
+                }
+
+                if (enemies.Count > 0)
+                    card.passiveValue[i]--;
                 continue;
             }
 

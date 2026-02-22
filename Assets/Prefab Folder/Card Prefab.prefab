@@ -349,6 +349,8 @@ MonoBehaviour:
   ActionValue: 0
   ActiveRounds: 0
   ActiveTurns: 0
+  actionType: 0
+  resistanceType: 0
   cardActive: 0
   Passives: []
   passiveValue: 
@@ -480,6 +482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharacterName: {fileID: 7152436809176357430}
   CharacterSprite: {fileID: 6299773111556065129}
+  CardSprite: {fileID: 5596981802034744796}
   CharacterAnimator: {fileID: 3690611346910621926}
   videoPlayer: {fileID: 3336621886913600560}
   prefTargets: {fileID: 3992376171087091316}
@@ -489,6 +492,13 @@ MonoBehaviour:
   ActionValue: {fileID: 1960268974020991516}
   ResistanceSprite: {fileID: 2659065592656351984}
   ResistanceValue: {fileID: 7385357884941719451}
+  RarityAndSprites:
+  - sprite: {fileID: 7927339427670980722, guid: 51c88e96760000c4bb290bf9303a38cb, type: 3}
+    cardRarity: 0
+  - sprite: {fileID: 21300000, guid: 4bf539da6f2e5264584f551238305b6b, type: 3}
+    cardRarity: 1
+  - sprite: {fileID: 21300000, guid: 694f94350467b7f49b26799897adab98, type: 3}
+    cardRarity: 2
   AttackTargetBG: {fileID: -8326185457443805939, guid: c688a565e1ce4494d9dfab7ced3c55b9, type: 3}
   AttackTargetActive: {fileID: 7243822893518536653, guid: 2f05318b4126cea45a9299ee51ce27c5, type: 3}
   HealingTargetBG: {fileID: -5174865930538991310, guid: a5f16df7f9b0f36458974e727bc47266, type: 3}
