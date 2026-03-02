@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f30bcd9cd618ec42a895af5fa5adb57, type: 3}
   m_Name: Salium
   m_EditorClassIdentifier: 
-  CardName: Salium
+  CardName: Merlin
   actionType: 0
   ActionValue: 5
   resistanceType: 0

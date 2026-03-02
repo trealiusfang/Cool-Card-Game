@@ -199,6 +199,9 @@ public class GeneralGameManager : MonoSingleton<GeneralGameManager>
 
         if (RoundManager.instance != null)
         RoundManager.instance.actionTimer = data.gameSpeed;
+
+        if (LocalSettingsHandler.instance != null)
+            LocalSettingsHandler.instance.LoadPrefs(data);
     }
 
     private void OnApplicationQuit()

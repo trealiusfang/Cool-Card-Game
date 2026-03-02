@@ -19,9 +19,9 @@ public class DeckHandler : MonoBehaviour
     CardPositionManager spotManager;
     [Header("Config")]
     [SerializeField] bool limitHandAmount;
-    [SerializeField] int maxHandAmount = 4;
-    [SerializeField] int FirstDrawAmount = 3;
-    [SerializeField] int drawAmountEachRound = 3;
+    public int maxHandAmount = 4;
+    public int FirstDrawAmount = 3;
+    public int drawAmountEachRound = 3;
     [SerializeField] TextMeshProUGUI drawAmountLeftText;
     [SerializeField] bool controlledByAI;
     int currentDrawAmount = 0;

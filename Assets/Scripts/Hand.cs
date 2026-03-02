@@ -39,6 +39,17 @@ public class Hand : MonoBehaviour
         if (selectedCard != null && active)
         {
             CardSelected();
+            if (CardPositionManager.instance != null)
+            {
+                CardPositionManager.instance.SetCardPickable(false);
+            }
+        }
+        if (selectedCard == null && active)
+        {
+            if (CardPositionManager.instance != null)
+            {
+                CardPositionManager.instance.SetCardPickable(true);
+            }
         }
 
         MoveNonSelectedCards();
@@ -46,6 +57,8 @@ public class Hand : MonoBehaviour
 
     void MoveNonSelectedCards()
     {
+        if (!active) selectedCard = null;
+
         if (selectedCard != null)
         {
             List<Card> newCards = cardsInHand.ToList();

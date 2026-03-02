@@ -170,6 +170,10 @@ MonoBehaviour:
     m_Localized: Fire Ant
     m_Metadata:
       m_Items: []
+  - m_Id: 2828297123082240
+    m_Localized: Merlin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

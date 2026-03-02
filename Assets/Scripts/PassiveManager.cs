@@ -217,7 +217,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
             {
                 if (passiveValue < 1)
                 {
-                    if (passiveTiming == CardTimings.OnPlay) continue;
+                    if (passiveTiming == CardTimings.OnPlay || passiveTiming == CardTimings.OnMatchUpdate) continue;
                     if (card.ActionValue > 1)
                         card.BuffOrNerfCard("Action", -1);
                     if (card.ResistanceValue > 1)
@@ -254,20 +254,20 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 //If the copied card is itself, it goes on a forever loop lol
                 if (copiedCard == null || copiedCard == card) continue;
 
-                if (currentPassive.PassiveName == copiedCard.Passives[0].PassiveName)
+                if (currentPassive.PassiveName == copiedCard.Passives[0].PassiveName || copiedCard.name == "Low Tier God")
                 {
-                    Debug.Log("The same");
-                    card.UpdateVisualStats();
+                    card.CardValues = CardGameObjectPool.instance.GetCardValue("Low Tier God");
+                    BattleTextManager.instance.CallBattleText("-FUSION", TextSize.Large, CardPositionManager.instance.getCardSpotPosition(card), Color.yellow, 1.5f);
+                    card.SetCard(card.getCardTeam());
+                    card.OnPlay();
                     continue;
                 }
 
                 BattleTextManager.instance.CallBattleText("-COPIED", TextSize.Medium, CardPositionManager.instance.getCardSpotPosition(card), Color.grey, 1.5f);
 
-                card.ActionValue = copiedCard.ActionValue + passiveValue;
-                card.ResistanceValue = copiedCard.ResistanceValue + passiveValue;
+                card.ActionValue = copiedCard.ActionValue;
+                card.ResistanceValue = copiedCard.ResistanceValue;
 
-                
-                //VERY EXPERIMENTAL BEWARE
                 card.targetSpots = copiedCard.targetSpots;
 
                 Passive original = card.Passives[i];
@@ -277,8 +277,8 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     card.AddPassive(copiedCard.Passives[copiedCard.Passives.Length - (c + 1)], 0);
                 }
 
-                card.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().sprite = copiedCard.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().sprite;
-                card.transform.GetChild(0).Find("CharSprite").GetComponent<SpriteRenderer>().color = Color.gray;
+                card.GetComponent<CardRenderer>().CharacterSprite.sprite = copiedCard.GetComponent<CardRenderer>().CharacterSprite.sprite;
+                card.GetComponent<CardRenderer>().CharacterSprite.color = Color.gray;
 
                 card.resistanceType = copiedCard.resistanceType;
                 card.actionType = copiedCard.actionType;
@@ -417,7 +417,6 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 if (value > passiveValue)
                 {
                     int healAmount = (int)value - passiveValue;
-                    Debug.Log("Heal amount: " + healAmount);
                     card.ResistanceValue += healAmount;
                 }
                 continue;
@@ -425,12 +424,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
             if (currentPassive.PassiveName == "Triple Action")
             {
-                List<Card> cards = card.getCardTargets();
-                for (int c = 0; c < cards.Count; c++)
-                {
-                    cards[c].TakeDamage(card.ActionValue, card, true);
-                    cards[c].UpdateVisualStats();
-                }
+                card.TakeAction();
                 continue;
             }
 
@@ -618,8 +612,8 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                         Card newCard = CardGameObjectPool.instance.GetSetCard("Normal Ant");
                         newCard.SetCard(card.getCardTeam());
                         spotManager.PutCard(newCard, 0);
-                    }
-                    continue;
+                    } 
+                        continue;
                 } 
                 if (passiveTiming == CardTimings.OnHurt)
                 {
@@ -630,10 +624,26 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                         //Set down to 1 for now
                         for (int c = 0; c < 1; c++)
                         {
-                            if (!roundManager.canAddToPlay(card.getCardTeam(), true)) continue;
-                            Card newCard = CardGameObjectPool.instance.GetSetCard("Fire Ant");
-                            newCard.SetCard(card.getCardTeam());
-                            spotManager.PutCard(newCard, 0);
+                            if (!roundManager.canAddToPlay(card.getCardTeam(), true))
+                            {
+                                List<Card> friends = CardGroup(card, false);
+                                for (int d = 0; d < 4; d++)
+                                {
+                                    if (friends[d].CardValues.name == "Normal Ant")
+                                    {
+                                        friends[d].animator.SetTrigger("Transform");
+                                        friends[d].CardValues = CardGameObjectPool.instance.GetCardValue("Fire Ant");
+                                        friends[d].ActionValue = friends[d].ActionValue < friends[d].CardValues.getActionValue() ? friends[d].CardValues.getActionValue() : friends[d].ActionValue;
+                                        friends[d].ResistanceValue = friends[d].ResistanceValue < friends[d].CardValues.getResistanceValue() ? friends[d].CardValues.getResistanceValue() : friends[d].ResistanceValue;
+                                        break;
+                                    }
+                                }
+                            } else
+                            {
+                                Card newCard = CardGameObjectPool.instance.GetSetCard("Fire Ant");
+                                newCard.SetCard(card.getCardTeam());
+                                spotManager.PutCard(newCard, 0);
+                            }
                         }
                     }
                 }
@@ -661,10 +671,26 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                         card.passiveValue[i] -= 1;
                         for (int c = 0; c < 2; c++)
                         {
-                            if (!roundManager.canAddToPlay(card.getCardTeam(), true)) continue;
-                            Card newCard = CardGameObjectPool.instance.GetSetCard("Admin Ant");
-                            newCard.SetCard(card.getCardTeam());
-                            spotManager.PutCard(newCard, 0);
+                            if (!roundManager.canAddToPlay(card.getCardTeam(), true))
+                            {
+                                List<Card> friends = CardGroup(card, false);
+                                for (int d = 0; d < 4; d++)
+                                {
+                                    if (friends[d].CardValues.name == "Cyber Ant")
+                                    {
+                                        friends[d].animator.SetTrigger("Transform");
+                                        friends[d].CardValues = CardGameObjectPool.instance.GetCardValue("Admin Ant");
+                                        friends[d].ActionValue = friends[d].ActionValue < friends[d].CardValues.getActionValue() ? friends[d].CardValues.getActionValue() : friends[d].ActionValue;
+                                        friends[d].ResistanceValue = friends[d].ResistanceValue < friends[d].CardValues.getResistanceValue() ? friends[d].CardValues.getResistanceValue() : friends[d].ResistanceValue;
+                                        break;
+                                    }
+                                }
+                            } else
+                            {
+                                Card newCard = CardGameObjectPool.instance.GetSetCard("Admin Ant");
+                                newCard.SetCard(card.getCardTeam());
+                                spotManager.PutCard(newCard, 0);
+                            }
                         }
                         card.BuffOrNerfCard("Action", 1);
                     }
@@ -770,7 +796,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                 if (passiveTiming == CardTimings.OnAttack)
                 foreach (Card targetCard in card.getCardTargets())
                 {
-                    if (targetCard.actionType != ActionType.Heal)
+                    if (targetCard.actionType != ActionType.Heal && targetCard.getCardTeam() != card.getCardTeam())
                         targetCard.InfluenceCardTargets(list);
                 }
 
@@ -833,7 +859,7 @@ public class PassiveManager : MonoSingleton<PassiveManager>
 
             if (currentPassive.PassiveName == "Dark Mirror")
             {
-                if (responsibleCard != null)
+                if (responsibleCard != null && card != responsibleCard)
                 {
                     StatusEffectsManager.instance.AddStatusEffect(responsibleCard, "Darkness", Mathf.FloorToInt(value) - passiveValue);
                     AudioManager.instance.PlaySFX(currentPassive.PassiveAudio);
@@ -857,13 +883,22 @@ public class PassiveManager : MonoSingleton<PassiveManager>
                     card.actionType = ActionType.Damage;
                 }
 
+                if (card.resistanceType == ResistanceType.Health)
+                {
+                    card.resistanceType = ResistanceType.TimeLimit;
+                } else if (card.resistanceType == ResistanceType.TimeLimit)
+                {
+                    card.resistanceType = ResistanceType.Health;
+                }
+
                 if (card.targetSpots[0])
                 {
                     card.targetSpots[0] = false;
                     card.targetSpots[1] = false;
                     card.targetSpots[2] = true;
                     card.targetSpots[3] = true;
-                } else 
+                }
+                else
                 {
                     card.targetSpots[0] = true;
                     card.targetSpots[1] = true;
@@ -901,8 +936,9 @@ public class PassiveManager : MonoSingleton<PassiveManager>
             }
             if (currentPassive.PassiveName == "Experimental Methods")
             {
-                if (card.passiveValue[i] < 0) return;
+                if (card.passiveValue[i] < 0) continue;
                 List<Card> enemies = CardGroup(card, true);
+                if (enemies.Count == 0) continue;
                 for (int c = 0; c < 2; c++)
                 {
                     int r = Random.Range(0, enemies.Count);

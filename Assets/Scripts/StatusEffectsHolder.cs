@@ -12,6 +12,7 @@ public class StatusEffectsHolder : MonoBehaviour
     StatusInfoHolder[] statusInfos = new StatusInfoHolder[0];
     [Header("Visual")]
     [SerializeField] GameObject StatusEffectPrefab;
+    [SerializeField] Transform StatusEffectHolder;
     [SerializeField] Vector2 statusEffectSize ,statusEffectStartPos;
     [SerializeField] float statusEffectDistance;
     [Header("Debug")]
@@ -183,6 +184,11 @@ public class StatusEffectsHolder : MonoBehaviour
             RemoveStatusEffect(statusInfos[i].statusEffect);
         }
 
+        for (int i = 0; i < StatusEffectHolder.childCount; i++)
+        {
+            Destroy(StatusEffectHolder.GetChild(i).gameObject);
+        }
+
         statusInfos = new StatusInfoHolder[0];
     }
 
@@ -215,7 +221,7 @@ public class StatusEffectsHolder : MonoBehaviour
         GameObject newStatusObject = null;
         if (!hidden)
         {
-            newStatusObject = Instantiate(StatusEffectPrefab, transform.GetChild(0));
+            newStatusObject = Instantiate(StatusEffectPrefab, StatusEffectHolder);
             newStatusObject.GetComponent<StatusObjectHandler>().SetUpStatus(this, effect.StatusEffectSprite, effect.statusCountType == StatusCountType.stackingValue 
                 ? effect.StatusValue : effectStrength, effect.effectName + " (Status Effect)");
         }
@@ -235,20 +241,19 @@ public class StatusEffectsHolder : MonoBehaviour
 
     public void RemoveStatusEffect(StatusEffect effect)
     {
+        List<StatusInfoHolder> newInfos = statusInfos.ToList();
         for (int i = 0; i< statusInfos.Length; i++)
         {
             if (statusInfos[i].statusEffect.effectName == effect.effectName)
             {
-                if (!statusInfos[i].hidden)
+                if (!statusInfos[i].hidden && statusInfos[i].statusGameObject != null)
                     DestroyImmediate(statusInfos[i].statusGameObject);
 
-                List<StatusInfoHolder> newInfos = statusInfos.ToList();
                 newInfos.RemoveAt(i);
-
-                statusInfos = newInfos.ToArray();
-                return;
+                break;
             }
         }
+        statusInfos = newInfos.ToArray();
     }
 
     public bool hasStatusEffect(StatusEffect effect)

@@ -10,8 +10,17 @@ public class AudioManager : PersistentMonoSingleton<AudioManager>
     public AudioAndName[] SFX, Music;
     public AudioSource SFXSource, MusicSource;
 
-    private void Start()
+    public void Initialize()
     {
+        SFXSource = new AudioSource();
+        SFXSource.playOnAwake = false;
+
+        MusicSource = new AudioSource();
+        MusicSource.playOnAwake = false;
+
+        SFXSource = Instantiate(SFXSource, transform);
+        MusicSource = Instantiate(MusicSource, transform);
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -95,14 +104,14 @@ public class AudioManager : PersistentMonoSingleton<AudioManager>
         MusicSource.Play();
     }
 
+    public void SetMusicVolumeBySlider(Slider slider)
+    {
+        MusicSource.volume = slider.value / 10;
+    }
 
     public void SetSFXVolumeBySlider(Slider slider)
     {
         SFXSource.volume = slider.value / 10;
-    }
-    public void SetMusicVolumeBySlider(Slider slider)
-    {
-        MusicSource.volume = slider.value / 10;
     }
 }
 

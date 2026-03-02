@@ -73,6 +73,8 @@ public class Card : MonoBehaviour
         ActiveTurns = 0;
         actionConfirmed = false;
         round = false;
+        influencedTargetSpots.Clear();
+        cardTargets.Clear();
 
         Passives = CardValues.Passives.ToArray();
         passiveValue = new int[CardValues.Passives.Count()];
@@ -83,6 +85,7 @@ public class Card : MonoBehaviour
         cardRenderer.SetVisuals();
         //After death sometimes overlay animations will keep going on, so this is a measure to prevent it.
         cardOverlay.EndOverlay();
+        statusEffectsHolder.ResetStatusEffects();
     }
 
     #region card actions
@@ -190,7 +193,7 @@ public class Card : MonoBehaviour
     /// <summary>
     /// Performs cards "action" behaviour
     /// </summary>
-    private void TakeAction()
+    public void TakeAction()
     {
         if (actionType == ActionType.Damage || actionType == ActionType.MirrorAct || actionType == ActionType.MirrorRes)
         {
@@ -274,6 +277,7 @@ public class Card : MonoBehaviour
             BattleTextManager.instance.CallBattleText("-" + effectiveValue, TextSize.Small, cardRenderer.ResistanceSprite.transform.position, Color.grey, 1.5f);
         }
 
+        if (effectiveValue > 0)
         confirmHit(damageDealer, effectiveValue);
 
         if (ResistanceValue <= 0)
@@ -629,7 +633,12 @@ public class Card : MonoBehaviour
             }
         }
 
-        UpdateVisualStats();
+        if (cardActive)
+        {
+            CheckPassives(CardTimings.OnMatchUpdate);
+
+            UpdateVisualStats();
+        }
     }
 
     /// <summary>
@@ -727,7 +736,6 @@ public class Card : MonoBehaviour
     /// <param name="targets"></param>
     public void InfluenceCardTargets(List<Card> targets)
     {
-        Debug.Log("I got influenced: " + targets);
         cardTargets = targets;
         lockedTarget = true;
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardName: Borgern King
   actionType: 0
-  ActionValue: 1
+  ActionValue: 2
   resistanceType: 0
   ResistanceValue: 5
   preferredTargetSpots:
@@ -22,6 +22,7 @@ MonoBehaviour:
     spot2: 1
     spot3: 1
     spot4: 1
+  cardRarity: 1
   Passives:
   - {fileID: 11400000, guid: 8c8d1d841fa8cfe48b7bed480cb0d69b, type: 2}
   - {fileID: 11400000, guid: dc2d0ac9533fe0b4d8d9097ed31c5cf2, type: 2}

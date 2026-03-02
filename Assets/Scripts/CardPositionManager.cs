@@ -28,14 +28,20 @@ public class CardPositionManager : MonoSingleton<CardPositionManager>
     public int spotAmount;
     public bool nonMovablity;
     public bool swability; //If the card has been played, return false
-
+    bool active = true;
 
     private void Start()
     {
         roundManager = RoundManager.instance;
     }
 
-    private void Update()
+    //ForAndroid
+    public void SetCardPickable(bool def)
+    {
+        active = def;
+    }
+
+    private void LateUpdate()
     {
         float actualSmoothness = smoothness + (1 / roundManager.actionTimer);
         if (!playerSet)
@@ -81,12 +87,14 @@ public class CardPositionManager : MonoSingleton<CardPositionManager>
             }
         }
 
-        if (swability)
+        if (swability && active)
         LookForSelectables();
 
         if (currentCard != null)
         {
+            if (active)
             CardSelected();
+            else currentCard = null;
         }
     }
     #region SwapThing

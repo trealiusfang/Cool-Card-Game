@@ -86,9 +86,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6965552558080
-    m_Localized: "\xD6n\xFCndeki kart\u0131n \u0130statistiklerini ve pasiflerini
-      kopyalar ve Value kadar artt\u0131r\u0131r, ama her tur istatistikleri 1 de\u011Ferinde
-      azal\u0131r"
+    m_Localized: "\xD6n\xFCndeki kart\u0131 kopyalar ama her turun sonunda 1 Aksiyon
+      ve 1 Dayan\u0131kl\u0131l\u0131k de\u011Feri kaybeder"
     m_Metadata:
       m_Items: []
   - m_Id: 7245874671616

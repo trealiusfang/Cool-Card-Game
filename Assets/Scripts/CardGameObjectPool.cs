@@ -9,6 +9,8 @@ public class CardGameObjectPool : MonoBehaviour
     public GameObject CardPrefab;
     public Transform ActiveCards;
     public CardValues [] AllCards;
+    public CardValues [] AvailableCards;
+    public CardValues [] HiddenCards;
     private void Awake()
     {
         if (instance == null) instance = this; else Destroy(gameObject);
@@ -40,21 +42,22 @@ public class CardGameObjectPool : MonoBehaviour
         newCard.SetActive(true);
         return newCard;
     }
-    public CardValues GetRandomCardValue()
-    {
-        int r = Random.Range(0, AllCards.Length);
-
-        return AllCards[r];
-    }
 
     public Card GetSetCard(string cardName)
     {
         CardValues cardValues = null;
-        for (int i  =0; i < AllCards.Length;i++)
+        for (int i = 0; i < AllCards.Length; i++)
         {
             if (cardName == AllCards[i].getCardName())
             {
                 cardValues = AllCards[i];
+            }
+        }
+        for (int i = 0; i < HiddenCards.Length; i++)
+        {
+            if (cardName == HiddenCards[i].getCardName())
+            {
+                cardValues = HiddenCards[i];
             }
         }
 
@@ -68,6 +71,26 @@ public class CardGameObjectPool : MonoBehaviour
         Card card = cardGameObject.GetComponent<Card>();
         card.CardValues = cardValues;
         return card;
+    }
+    public CardValues GetCardValue(string cardName)
+    {
+        CardValues cardValues = null;
+        for (int i = 0; i < AllCards.Length; i++)
+        {
+            if (cardName == AllCards[i].getCardName())
+            {
+                cardValues = AllCards[i];
+            }
+        }
+        for (int i = 0; i < HiddenCards.Length; i++)
+        {
+            if (cardName == HiddenCards[i].getCardName())
+            {
+                cardValues = HiddenCards[i];
+            }
+        }
+
+        return cardValues;
     }
     public Card GetSetCard(bool random)
     {

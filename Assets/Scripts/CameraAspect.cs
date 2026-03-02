@@ -52,16 +52,4 @@ public class CameraAspect : MonoBehaviour
                 camera.rect = rect;
             }
     }
-
-    private void OnEnable()
-    {
-        if (ScreenSizeChecker.instance != null)
-            ScreenSizeChecker.instance.onScreenSizeChanged += Resize;
-    }
-
-    private void OnDisable()
-    {
-        if (ScreenSizeChecker.instance != null)
-            ScreenSizeChecker.instance.onScreenSizeChanged -= Resize;
-    }
 }

@@ -56,6 +56,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2c680fa9b435a3547b3f80c128166fb2, type: 2}
   - {fileID: 11400000, guid: 88b780f5a0a4df84ba1c60c6b73ff304, type: 2}
   - {fileID: 11400000, guid: e4cb64371f71271449e021d14be2c8c1, type: 2}
+  - {fileID: 11400000, guid: 1978c82762224fb4a86ac739180ed27c, type: 2}
+  - {fileID: 11400000, guid: 3d6bc1b1918870544917b16713532ebc, type: 2}
+  - {fileID: 11400000, guid: a43e61b75613f0246aff0b393c4e505c, type: 2}
+  - {fileID: 11400000, guid: 69508f4820c23834791f3e963c3253c8, type: 2}
   charSprite: {fileID: 21300000, guid: a2d6ee1ad40693747bbb0552f5ca928e, type: 3}
   charAnimator: {fileID: 0}
   charClip: {fileID: 0}

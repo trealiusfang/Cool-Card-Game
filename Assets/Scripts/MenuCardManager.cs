@@ -11,7 +11,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     [SerializeField] CardArranger cardArranger;
     [SerializeField] DeckChooser deckChooser;
     [SerializeField] CustomGamesInfoHolder customGamesInfoHolder;
-    [Header("Ýmportant UI Changes")]
+    [Header("Card Selections")]
     [SerializeField] GameObject CardSelectionCanvas;
     [SerializeField] GameObject Lister;
     [SerializeField] GameObject CurrentPlayer;
@@ -23,6 +23,8 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     [SerializeField] GameObject CustomGamesCanvas;
     [SerializeField] GameObject RandomModeCanvas;
     [SerializeField] TextMeshProUGUI cardAmountMesh;
+    [Header("Local Settings")]
+    [SerializeField] GameObject LocalSettings;
     string targetScene;
 
     private void Start()
@@ -45,6 +47,22 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
 
     public void CallLocal()
     {
+        LocalSettings.SetActive(true);
+        targetScene = GeneralGameManager.instance.Local1v1SceneName;
+    }
+
+    int localCardAmount = 4;
+    public void CallEmbarkLocal(int cardAmounter)
+    {
+        PlayerData data = SaveSystem.LoadPrefs();
+
+        if (data.localeRandomMode)
+        {
+            localCardAmount = cardAmounter;
+            Ready(true);
+            return;
+        }
+
         CardSelectionCanvas.SetActive(true);
 
         Lister.SetActive(true);
@@ -52,20 +70,19 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
         ReadyButton.SetActive(true);
         MaxCards.SetActive(true);
 
-        cardArranger.SpawnCards();
+        cardArranger.SpawnCards(data.localeEnableAllCards);
         deckChooser.doAllowSelection(true);
-
-        targetScene = GeneralGameManager.instance.Local1v1SceneName;
     }
 
 
     public void GoBack()
     {
         deckChooser.ResetAll();
-        CardSelectionCanvas.SetActive(false);
         cardArranger.DespawnCards();
 
         CustomGamesCanvas.SetActive(false);
+        LocalSettings.SetActive(false);
+        CardSelectionCanvas.SetActive(false);
     }
 
     // Normal Buttons Area 
@@ -86,7 +103,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
     }
     #region custom games managing
     CustomGame currentCustomGame = null;
-    int cardAmount = 6;
+    int customCardAmount = 6;
     public void CallCustomGame()
     {
         CustomGamesCanvas.SetActive(true);
@@ -125,15 +142,16 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
 
     public void increaseRandomCards()
     {
-        if (cardAmount < 36) cardAmount += 2; else cardAmount = 6;
+        if (customCardAmount < 36) customCardAmount += 2; else customCardAmount = 6;
 
-        cardAmountMesh.text = cardAmount.ToString();
+        cardAmountMesh.text = customCardAmount.ToString();
     }
 
     #endregion
     //Ready and switch conditions
-    public void Ready()
+    public void Ready(bool force = false)
     {
+        Debug.Log(targetScene);
         if (targetScene ==  GeneralGameManager.instance.CustomGameSceneName)
         {
             if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
@@ -152,11 +170,13 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
             {
                 BattleTextManager.instance.CallBattleText("You don't have a deck!", TextSize.Large, transform.position, Color.red, 1, "Deck denial");
             }
+            Debug.Log("dc " + deckChooser.player1Deck.Count);
             return;
         }
 
         if (targetScene == GeneralGameManager.instance.Local1v1SceneName)
         {
+            if (!force)
             if (deckChooser.player1Deck.Count > 0 && deckChooser.player2Deck.Count > 0)
             {
                 SceneManager.LoadScene(targetScene);
@@ -165,6 +185,11 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
             else
             {
                 BattleTextManager.instance.CallBattleText("At least one player doesn't have a deck!", TextSize.Large, transform.position, Color.red, 1, "Deck denial");
+            }
+            if (force)
+            {
+                SceneManager.LoadScene(targetScene);
+                AudioManager.instance.PlayMusic("Boss");
             }
             return;
         }
@@ -176,21 +201,39 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
             if (RoundManager.instance != null)
             {
                 List<CardValues> p1 = new List<CardValues>(), p2 = new List<CardValues>();
-                for (int i = 0; i < Mathf.Max(deckChooser.player1Deck.Count, deckChooser.player2Deck.Count); i++)
+                LocalVersusManager versusManager = FindAnyObjectByType<LocalVersusManager>();
+
+                PlayerData data = SaveSystem.LoadPrefs();
+
+                if (data.localeRandomMode)
                 {
-                    if (i < deckChooser.player1Deck.Count)
+                    versusManager.SetPlayerDecks(data.localeEnableAllCards, localCardAmount);
+                } else
+                {
+                    for (int i = 0; i < Mathf.Max(deckChooser.player1Deck.Count, deckChooser.player2Deck.Count); i++)
                     {
-                        p1.Add(deckChooser.player1Deck[i].CardValues);
-                    }
-                    if (i < deckChooser.player2Deck.Count)
-                    {
-                        p2.Add(deckChooser.player2Deck[i].CardValues);
+                        if (i < deckChooser.player1Deck.Count)
+                        {
+                            p1.Add(deckChooser.player1Deck[i].CardValues);
+                        }
+                        if (i < deckChooser.player2Deck.Count)
+                        {
+                            p2.Add(deckChooser.player2Deck[i].CardValues);
+                        }
+
+                        versusManager.SetPlayerDecks(p1, p2);
                     }
                 }
-                LocalVersusManager versusManager = FindAnyObjectByType<LocalVersusManager>();
-                versusManager.SetPlayerDecks(p1, p2);
-                RoundManager.instance.StartBattle();
 
+                versusManager.player1.FirstDrawAmount = data.localeFirstDrawAmount;
+                versusManager.player1.drawAmountEachRound = data.localeDrawAmountPerRound;
+                versusManager.player1.maxHandAmount = data.localeHandLimit;
+
+                versusManager.player2.FirstDrawAmount = data.localeFirstDrawAmount;
+                versusManager.player2.drawAmountEachRound = data.localeDrawAmountPerRound;
+                versusManager.player2.maxHandAmount = data.localeHandLimit;
+
+                RoundManager.instance.StartBattle();
                 Destroy(gameObject);
             }
         }
@@ -211,7 +254,7 @@ public class MenuCardManager : MonoSingleton<MenuCardManager>
                     versusManager.SetVersus(playerCards, currentCustomGame.encounter);
                 } else if (currentCustomGame.gameMode == CustomGameMode.AllRandom)
                 {
-                    versusManager.SetVersus(true, cardAmount);
+                    versusManager.SetVersus(true, customCardAmount);
                 }
 
                 RoundManager.instance.StartBattle();

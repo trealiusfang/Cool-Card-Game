@@ -29,12 +29,17 @@ public class DeckChooser : MonoSingleton<DeckChooser>
         allowSelection = allow;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         if (!allowSelection) return;
 
         List<Card> list = firstPlayer ? player1Deck : player2Deck;
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (Input.touches.Length > 0)
+        {
+            mousePos = Camera.main.ScreenToWorldPoint(Input.touches[0].position);
+        }
         bool mouseInsideBounds = mousePos.x <= clickableArea.x / 2 + clickableAreaOffset.x && mousePos.y <= clickableArea.y / 2 + clickableAreaOffset.y;
 
         if (Input.GetKeyDown(KeyCode.Mouse0) && mouseInsideBounds)

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
@@ -9,7 +10,6 @@ using UnityEngine.UI;
 public class CardArranger : MonoBehaviour
 {
     [Header("Necesities or important info")]
-    [SerializeField] List<CardValues> allCards;
     [SerializeField] GameObject cardPrefab;
     [SerializeField] List<GameObject> activeCards;
     [Header("Arranger Config")]
@@ -19,14 +19,16 @@ public class CardArranger : MonoBehaviour
     [SerializeField] int cardAmountPerRow = 5;
     [Header("Gizmos")]
     [SerializeField] int amount;
-    public void SpawnCards()
+
+    public void SpawnCards(bool enableAllCards = false)
     {
-        for (int i = 0; i < allCards.Count; i++)
+        List<CardValues> usedCards = enableAllCards ? CardGameObjectPool.instance.AllCards.ToList() : CardGameObjectPool.instance.AvailableCards.ToList();
+        for (int i = 0; i < usedCards.Count; i++)
         {
             GameObject newCard = CardGameObjectPool.instance.GetANewCard();
             newCard.transform.parent = transform;
 
-            newCard.GetComponent<Card>().CardValues = allCards[i];
+            newCard.GetComponent<Card>().CardValues = usedCards[i];
             newCard.transform.localScale = cardSize;
             newCard.GetComponent<Card>().SetCard(CardTeam.All);
 
@@ -38,8 +40,9 @@ public class CardArranger : MonoBehaviour
 
     public void DespawnCards()
     {
-        if (activeCards.Count > 0)
-        for (int i = 0; i < allCards.Count; i++)
+        int cardAmount = activeCards.Count;
+
+        for (int i = 0; i < cardAmount; i++)
         {
             GameObject card = transform.GetChild(i).gameObject;
 

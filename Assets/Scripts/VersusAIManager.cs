@@ -66,7 +66,7 @@ public class VersusAIManager : MonoBehaviour
         playerDeck.playerAvailableCards.Clear();
         if (allRandom)
         {
-            List<CardValues> cards = CardGameObjectPool.instance.AllCards.ToList();
+            List<CardValues> cards = CardGameObjectPool.instance.AvailableCards.ToList();
             for (int i = 0; i < CardAmount; i++)
             {
                 int r = Random.Range(0, cards.Count);

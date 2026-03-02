@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,14 +19,16 @@ public class LocalVersusManager : MonoBehaviour
     RoundManager roundManager;
     bool firstReadyCall;
     bool gameOver;
+    CardTeam cardTurn;
     IEnumerator Start()
     {
         DeactivateBoth();
         roundManager = RoundManager.instance;
         yield return new WaitUntil(() => roundManager.OnBattle);
-        ShowButtons(); 
-        
-        if (roundManager.getCardTurn() == CardTeam.Players)
+        cardTurn = roundManager.getCardTurn();
+
+        ShowButtons();
+        if (cardTurn == CardTeam.Players)
         {
             player1.CallFirstDraw();
         }
@@ -36,13 +39,13 @@ public class LocalVersusManager : MonoBehaviour
 
         yield return new WaitUntil(() => firstReadyCall);
 
-        if (roundManager.getCardTurn() == CardTeam.Players)
+        if (cardTurn == CardTeam.Players)
         {
-            player2.CallFirstDraw();
+            player1.CallFirstDraw();
         }
         else
         {
-            player1.CallFirstDraw();
+            player2.CallFirstDraw();
         }
     }
 
@@ -50,6 +53,28 @@ public class LocalVersusManager : MonoBehaviour
     {
         player1.playerAvailableCards = firstPlayer;
         player2.playerAvailableCards = secondPlayer;
+    }
+
+    public void SetPlayerDecks(bool enableAllCards, int CardAmount)
+    {
+        player1.playerAvailableCards.Clear();
+        player2.playerAvailableCards.Clear();
+
+        List<CardValues> cards = enableAllCards ? CardGameObjectPool.instance.AllCards.ToList() : CardGameObjectPool.instance.AvailableCards.ToList();
+        CardAmount = Mathf.Clamp(CardAmount, 0 , cards.Count);
+        for (int i = 0; i < CardAmount; i++)
+        {
+            int r = Random.Range(0, cards.Count);
+            player1.playerAvailableCards.Add(cards[r]);
+            cards.RemoveAt(r);
+        }
+        cards = enableAllCards ? CardGameObjectPool.instance.AllCards.ToList() : CardGameObjectPool.instance.AvailableCards.ToList();
+        for (int i = 0; i < CardAmount; i++)
+        {
+            int r = Random.Range(0, cards.Count);
+            player2.playerAvailableCards.Add(cards[r]);
+            cards.RemoveAt(r);
+        }
     }
 
     private void OnEnable()
@@ -66,7 +91,7 @@ public class LocalVersusManager : MonoBehaviour
     private void ShowButtons()
     {
         if (gameOver) return;
-        if (roundManager.getCardTurn() == CardTeam.Players)
+        if (cardTurn == CardTeam.Players)
         {
             Player1Active();
         } else
@@ -104,26 +129,28 @@ public class LocalVersusManager : MonoBehaviour
     }
     public void PlayerReady()
     {
-        if (roundManager.getCardGroup(CardTeam.Players).Length == 0 && roundManager.getCardTurn() == CardTeam.Players|| roundManager.getCardGroup(CardTeam.Enemies).Length == 0 && roundManager.getCardTurn() == CardTeam.Enemies)
+        if (roundManager.getCardGroup(CardTeam.Players).Length == 0 && cardTurn == CardTeam.Players|| roundManager.getCardGroup(CardTeam.Enemies).Length == 0 && cardTurn == CardTeam.Enemies)
         {
             return;
         }
         playerCount++;
         firstReadyCall = true;
+        cardTurn = cardTurn == CardTeam.Players ? CardTeam.Enemies : CardTeam.Players;
         if (playerCount == 2)
         {
             RoundManager.instance.PlayerIsReady();
             DeactivateBoth();
             playerCount = 0;
+            cardTurn = cardTurn == CardTeam.Players ? CardTeam.Enemies : CardTeam.Players;
         } else
         {
-            if (roundManager.getCardTurn() == CardTeam.Players)
+            if (cardTurn == CardTeam.Players)
             {
-                Player2Active();
+                Player1Active();
             }
             else
             {
-                Player1Active();
+                Player2Active();
             }
         }
     }

@@ -74,8 +74,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6965552558080
-    m_Localized: Copies the Stat and passives of the card in front of it and increases
-      by Value but loses 1 Stat each round
+    m_Localized: Copies the card in front of it but loses 1 Action and 1 Resistance
+      value every end of turn
     m_Metadata:
       m_Items: []
   - m_Id: 7245874671616

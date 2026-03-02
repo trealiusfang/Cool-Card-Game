@@ -592,6 +592,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -731,6 +732,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d50d95067995a469b6314e3bb8a678, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb4f90d76e29664bb75097ea1a7c8d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 10
+  constraint: 1
+  camera: {fileID: 519420031}
 --- !u!4 &542059524 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6167287716405510142, guid: af962599926e3714eb812aa81354c560, type: 3}
@@ -2599,10 +2616,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1789558762}
     m_Modifications:
-    - target: {fileID: 3490550764370609368, guid: e9d0428131e3a01458bed4a92685a99e, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
     - target: {fileID: 3490550764370609368, guid: e9d0428131e3a01458bed4a92685a99e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8286453

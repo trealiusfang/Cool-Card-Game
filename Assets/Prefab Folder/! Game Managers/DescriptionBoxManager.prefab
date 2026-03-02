@@ -48,11 +48,11 @@ MonoBehaviour:
   DescriptionBoxOffset: {x: 2, y: 1.65}
   followMouse: 0
   minLineAmount: 3
-  baseBoxSize: {x: 2.5, y: 1}
+  baseBoxSize: {x: 2.3, y: 1}
   sizeByLine: 0.18
   basePassiveColor: {r: 0.64339745, g: 0.8490566, b: 0.020024916, a: 1}
   passiveValueColor: {r: 0.2783019, g: 0.9011373, b: 1, a: 1}
-  dimensionalDistancesPorEachBox: {x: 2.7, y: 0.3}
+  dimensionalDistancesPorEachBox: {x: 2.5, y: 0.3}
   maxRowAmount: 2
   descriptionAndKeys:
   - Key: Inherit

@@ -32,5 +32,6 @@ public enum CardTimings
     StartOfRound,
     EndOfRound,
     WhenTargeted,
+    OnMatchUpdate,
 }
 

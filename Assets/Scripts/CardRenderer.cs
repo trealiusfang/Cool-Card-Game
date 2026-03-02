@@ -109,7 +109,9 @@ public class CardRenderer : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            pt.GetChild(i).GetComponent<SpriteRenderer>().enabled = card.targetSpots[i];
+            if (pt.GetChild(i) != null && pt.GetChild(i).GetComponent<SpriteRenderer>() != null)
+            pt.GetChild(i).GetComponent<SpriteRenderer>().enabled = 
+                    card.targetSpots[i];
         }
     }
 
